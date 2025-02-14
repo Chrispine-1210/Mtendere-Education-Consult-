@@ -283,9 +283,7 @@ span {
   color: #71c55d;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+/*Navigation Menu*/
 /* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
   margin: 0;
@@ -518,9 +516,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
+/*Sections*/
 .padd-section {
   padding-bottom: 80px;
   padding-top: -200px;
@@ -613,7 +609,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #71c55d;
 }
 
-/*---------end get started section-------*/
+/* end get started section */
 
 
 /* Screenshots Section
