@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background-color: #00000000;
-  color: ;
+  background-color: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,12 +9,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  color: #007499;
+  color: #f68122;
   font-weight: 600;
 }
 
 h4 {
-  color: #000;
+  color: #007499;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -128,11 +127,9 @@ span {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/*-- Header --*/
 #header {
-  background: #fff;
+  background: #;
   position: fixed;
   left: 0;
   top: 0;
@@ -147,11 +144,11 @@ span {
 }
 
 #header #logo h1 {
-  color: #505050;
+  color: #f68122;
   font-family: "Philosopher", sans-serif;
   font-size: 26px;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 0;
 }
 
