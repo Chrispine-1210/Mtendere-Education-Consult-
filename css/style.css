@@ -99,7 +99,7 @@ span {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #71c55d;
+  background: #f68122;
   line-height: 1;
   color: #fff;
   padding: 7px 12px 13px 12px;
@@ -117,13 +117,13 @@ span {
 }
 
 .back-to-top:focus {
-  background: #71c55d;
+  background: #aa1e21;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #55b03f;
+  background: #aa1e21;
   color: #fff;
 }
 
@@ -160,7 +160,7 @@ span {
 }
 
 #header #logo h1 a span {
-  color: #71c55d;
+  color: #f68122;
 }
 
 #header #logo img {
@@ -210,7 +210,7 @@ span {
   font-weight: 700;
   line-height: 56px;
   font-family: "Philosopher", sans-serif;
-  color: #71c55d;
+  color: #f68122;
 }
 
 @media (max-width: 768px) {
@@ -252,14 +252,14 @@ span {
   border-radius: 50px;
   transition: 0.5s;
   margin-bottom: 30px;
-  border: 2px solid #71c55d;
+  border: 2px solid #f68122;
   background: #fff;
-  color: #71c55d;
+  color: #f68122;
   text-decoration: none;
 }
 
 #hero .btn-get-started:hover {
-  background: #71c55d;
+  background: #f68122;
   color: #fff;
 }
 
@@ -280,7 +280,7 @@ span {
 }
 
 #hero .btns a:hover {
-  color: #71c55d;
+  color: #f68122;
 }
 
 /*Navigation Menu*/
@@ -368,7 +368,7 @@ span {
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #71c55d;
+  color: #f68122;
 }
 
 .nav-menu > li {
@@ -396,7 +396,7 @@ span {
 }
 
 .nav-menu ul li:hover > a {
-  color: #71c55d;
+  color: #f68122;
 }
 
 .nav-menu ul ul {
@@ -485,11 +485,11 @@ span {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #71c55d;
+  color: #f68122;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #71c55d;
+  color: #f68122;
 }
 
 #mobile-body-overly {
@@ -516,11 +516,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
 }
 
-/*Sections*/
+/*Sections
 .padd-section {
   padding-bottom: 80px;
   padding-top: -200px;
-}
+}*/
 
 @media (max-width: 992px) {
   .padd-section {
@@ -583,7 +583,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #get-started .feature-block:hover {
-	color: #b3ffb3;
+	color: #f68122;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out 0s;
 }
@@ -606,7 +606,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #get-started .feature-block a:hover {
-  color: #71c55d;
+  color: #f68122;
 }
 
 /* end get started section */
@@ -638,7 +638,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #71c55d;
+  background: #f68122;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -715,7 +715,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #video .overlay .play-btn:hover::after {
-  border-left: 15px solid #71c55d;
+  border-left: 15px solid #f68122;
   -webkit-transform: scale(20);
   transform: scale(20);
 }
@@ -780,8 +780,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 /* Team Section
 --------------------------------*/
-  /* #team .team-block {
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+#team .team-block {
+  box-shadow: 0 0 35px rgba(50, 13, 13, 0.1);
   height: 254px;
   overflow: hidden;
   position: relative;
@@ -830,7 +830,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #team .team-block .team-content ul li a .fa:hover {
-  color: #71c55d;
+  color: #f68122;
 }
 
 #team .team-block .team-content ul > span {
@@ -859,7 +859,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #testimonials .testimonials-content::before {
-  color: #71c55d;
+  color: #f68122;
   content: "";
   display: inline-block;
   font: 70px/1 FontAwesome;
@@ -903,7 +903,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #testimonials .btm-btm .active {
-  background: #71c55d;
+  background: #f68122;
 }
 
 .carousel-indicators {
@@ -929,7 +929,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 /* Blog Section
 --------------------------------*/
-/*@media (max-width: 991px) {
+@media (max-width: 991px) {
   #blog .block-blog {
     margin-bottom: 30px;
   }
@@ -963,7 +963,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #blog .block-blog .content-blog h4 a:hover {
-  color: #71c55d;
+  color: #f68122;
 }
 
 #blog .block-blog .content-blog > span {
@@ -982,12 +982,12 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #blog .block-blog .content-blog a.readmore:hover {
-  color: #71c55d;
+  color: #f68122;
 }*/
 
 /* Newsletter Section
 --------------------------------*/
-/*#newsletter {
+#newsletter {
   background: transparent url(../img/newsletter-bg.jpg) no-repeat center top fixed;
   background-size: cover;
 }
@@ -1019,13 +1019,13 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter .form-control:focus {
-  border-color: #71c55d;
+  border-color: #f68122;
   box-shadow: none;
   outline: 0 none;
 }
 
 #newsletter .btn {
-  background: #71c55d;
+  background: #f68122;
   border: 0;
   border-radius: 0;
   height: 50px;
@@ -1040,7 +1040,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter .btn:hover {
-  background: #55b03f;
+  background: #f68122;
 }
 
 #newsletter .btn .fa {
@@ -1054,7 +1054,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter ul li {
-  background: #71c55d;
+  background: #f68122;
   border-radius: 50px;
   float: left;
   height: 35px;
@@ -1066,7 +1066,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter ul li:hover {
-  background: #55b03f;
+  background: #f68122;
 }
 
 #newsletter ul li .fa {
@@ -1180,7 +1180,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background: #196719;
+  background: #007499;
   background-size: cover;
   padding-top: 50px;
 }
@@ -1204,7 +1204,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   letter-spacing: 1px;
 }
 
-/*.footer .list-menu > h4 {
+.footer .list-menu > h4 {
   color: #fff;
   padding-bottom: 20px;
 }
@@ -1218,7 +1218,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 
 .footer .copyrights {
-  background: ##30cf30;
+  background: #f68122;
   margin-top: 50px;
   text-align: center;
   padding: 15px;
