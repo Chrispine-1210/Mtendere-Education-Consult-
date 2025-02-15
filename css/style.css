@@ -87,7 +87,7 @@ span {
 
 .btn-default:hover {
   color: #fff;
-  background-color: #e6e6e6;
+  background-color: #007499;
   border-color: #adadad;
 }
 
@@ -123,13 +123,12 @@ span {
 }
 
 .back-to-top:hover {
-  background: #aa1e21;
+  background: #007499;
   color: #fff;
 }
 
 /*-- Header --*/
 #header {
-  background-image: url(img/c0f4e6ff-82a4-45d8-a3d5-8996247af5d0.jpg);
   position: fixed;
   left: 0;
   top: 0;
@@ -144,25 +143,19 @@ span {
 }
 
 #header #logo {
-  font-family: "Philosopher", sans-serif;
   height: 26px;
-  width: fit-content, 500px;
+  width: fit-content;
   padding: 2px;
-  margin 0;
+  margin:0%;
+  z-index: 99;
 }
 
-#header #logo h1 a {
-  color: #555;
+#header #logo a {
   line-height: 1;
   display: inline-block;
-  text-decoration: none;
 }
 
-#header #logo h1 a span {
-  color: #f68122;
-}
-
-#header #logo img {
+#header #logo a img {
   padding: 0;
   margin: 0;
 }
@@ -218,7 +211,7 @@ span {
 }
 
 #hero h2 {
-  color: #777;
+  color: #007499;
   margin-bottom: 30px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
@@ -250,7 +243,7 @@ span {
   transition: 0.5s;
   margin-bottom: 30px;
   border: 2px solid #f68122;
-  background: #fff;
+  background: #007499;
   color: #f68122;
   text-decoration: none;
 }
@@ -338,7 +331,7 @@ span {
   content: "\f105";
 }
 
-/* Nav Meu Container */
+/* Nav Menu Container */
 #nav-menu-container {
   float: right;
   margin: 0 0 0 0;
@@ -350,7 +343,7 @@ span {
   }
 }
 
-/* Nav Meu Styling */
+/* Nav Menu Styling */
 .nav-menu a {
   padding: 8px 8px;
   text-decoration: none;
