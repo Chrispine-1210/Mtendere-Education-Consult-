@@ -138,11 +138,20 @@ span {
   transition: all 0.5s ease;
 }
 
+.logo {
+  position: absolute;
+  Left: 4px;
+  z-index: 4;
+  height: 400px;
+  width: 380px;
+  padding-left: 6px;
+}
+
 .logo img {
   width: 500px;
   height: 500px;
-  margin-left: 6px;
   margin-right: 4px;
+  margin-left: 6px;
   float:left;
   cursor: pointer;
 }
@@ -494,16 +503,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 /*Sections */
-.padd-section {
-  padding-bottom: 80px;
-}
 
 @media (max-width: 992px) {
   .padd-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
+    padding-top
 
 .section-title {
   margin-bottom: 10px;
@@ -623,10 +626,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 
 
-/*-------------end screenshort--------------*/
+/*-- end screenshot --*/
 
-/* Video Section
---------------------------------*/
+/*-- Video Section --*/
 #video {
   background: url(../img/video-bg.png) center center;
   background-repeat: no-repeat;
@@ -643,7 +645,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #video .overlay .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#71c55d 50%, rgba(113, 197, 93, 0.15) 52%);
+  background: radial-gradient(#f68122 50%, rgba(113, 197, 93, 0.15) 52%);
   border-radius: 50%;
   display: block;
   margin: 153px auto 0;
