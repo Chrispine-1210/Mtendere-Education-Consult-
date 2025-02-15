@@ -147,11 +147,10 @@ span {
 
 .logo img {
   width: 200px;
-  height: 100px;
+  height: 250px;
   margin-top: 10px;
   margin-left: 20px;
   float:left;
-  margin-top:16px;
   cursor: pointer;
 }
 .scroll-headerll-header {
