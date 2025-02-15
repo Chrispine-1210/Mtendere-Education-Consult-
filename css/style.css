@@ -141,6 +141,8 @@ span {
 .logo img {
   width: 500px;
   height: 500px;
+  margin-left: 12px;
+  margin-right: 4px;
   float:left;
   cursor: pointer;
 }
