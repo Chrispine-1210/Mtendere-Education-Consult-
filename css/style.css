@@ -138,7 +138,18 @@ span {
   transition: all 0.5s ease;
 }
 
+#container #logo {
+  width:922px;
+  margin:0 auto;
+  text-align:left;
+  position:relative;
+ }
 
+#logo {
+  position:absolute;
+  top:0;
+  left:-10px;
+}
 
 .scroll-header {
   background: #fff;
