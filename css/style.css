@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 body {
-  background-color: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +86,7 @@ span {
 
 .btn-default:hover {
   color: #fff;
-  background-color: #007499;
+  background-color: #150b9ddb;
   border-color: #adadad;
 }
 
@@ -99,7 +98,7 @@ span {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #f68122;
+  background: #0a14a4de;
   line-height: 1;
   color: #fff;
   padding: 7px 12px 13px 12px;
@@ -240,7 +239,7 @@ span {
   margin-bottom: 30px;
   border: 2px solid #f68122;
   background: #007499;
-  color: #f68122;
+  color: #100da3cc;
   text-decoration: none;
 }
 
@@ -365,7 +364,7 @@ span {
   margin: 0;
   padding: 10px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: #fff;
+  background: #1b1476d8;
 }
 
 .nav-menu ul li {
@@ -540,8 +539,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   text-transform: capitalize;
 }
 
-/* Get Started Section
---------------------------------*/
+/* Get Started Section  */
 #get-started {
 	margin-top: -1000px;
   display: inline-block;
