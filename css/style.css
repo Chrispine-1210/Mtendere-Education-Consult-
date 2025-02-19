@@ -255,11 +255,11 @@ span {
 }
 
 .navbar-brand img{
-  width: 20vh;
+  width: 40vh;
   height: 40vh;
   position: absolute;
   display: block;
-  top: 100%;
+  top: 4px;
   z-index: 99;
 }
 
