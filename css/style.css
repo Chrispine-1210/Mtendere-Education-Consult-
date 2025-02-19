@@ -247,6 +247,14 @@ span {
   color: #f68122;
 }
 
+/* Navbar-brand */
+.navbar-brand{
+  width: auto;
+  height: 45px;
+  box-sizing: border-box;
+  float: left;
+}
+
 /*Navigation Menu*/
 /* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
@@ -1117,7 +1125,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 }
 
-/* end img section */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # Fo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          --------------------------------------------------------------*/
+/* end img section */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     --------------------------------------------------------------*/
 .footer {
   background: #007499;
   background-size: cover;
