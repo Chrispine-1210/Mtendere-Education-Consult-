@@ -249,17 +249,18 @@ span {
 
 /* Navbar-brand */
 .navbar-brand{
-  display: inline-block;
-  width: auto;
-  height: 45px;
-  box-sizing: border-box;
-  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: no
 }
 
 .navbar-brand img{
-  width: 200px;
-  height: 150px;
-  position: relative;
+  width: 20vh;
+  height: 40vh;
+  position: absolute;
+  display: block;
+  top: 100%;
+  z-index: 99;
 }
 
 /*Navigation Menu*/
