@@ -437,9 +437,8 @@ span {
 }
 
 .navbar-brand img{
-  width: 30vh;
+  width: 22vh;
   height: 25vh;
-  position: absolute;
   margin: 0 auto 0 0;
   display: block;
   top: 4px;
