@@ -430,10 +430,17 @@ span {
   list-style: none;
 }
 
+.navbar-brand a img{
+  height:65px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .navbar-brand img{
-  width: 40vh;
-  height: 40vh;
+  width: 30vh;
+  height: 25vh;
   position: absolute;
+  margin: 0 auto 0 0;
   display: block;
   top: 4px;
   z-index: 99;
