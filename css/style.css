@@ -63,7 +63,6 @@ body {
   line-height: 1.5;
   color: #686A6F;
   text-align: left;
-  background-color: #23058f9f;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -183,6 +182,7 @@ samp {
 }
 
 
+/*
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -237,6 +237,7 @@ p {
 span {
   letter-spacing: 1px;
 }
+*/ 
 
 .img-fluid {
   height: 60px;
