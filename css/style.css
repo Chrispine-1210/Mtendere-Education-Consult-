@@ -250,7 +250,7 @@ span {
 .navbar-brand{
   margin: 0;
   padding: 0;
-  list-style: no
+  list-style: none;
 }
 
 .navbar-brand img{
