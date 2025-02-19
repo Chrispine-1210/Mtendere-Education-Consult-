@@ -249,10 +249,17 @@ span {
 
 /* Navbar-brand */
 .navbar-brand{
+  display: inline-block;
   width: auto;
   height: 45px;
   box-sizing: border-box;
   float: left;
+}
+
+.navbar-brand img{
+  width: 200px;
+  height: 150px;
+  position: relative;
 }
 
 /*Navigation Menu*/
