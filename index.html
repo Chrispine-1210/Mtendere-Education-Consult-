@@ -15,9 +15,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
   <!-- Bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/bootstrap/css/style.min.css" rel="stylesheet">
+
 
   <!-- Libraries CSS Files -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -66,53 +71,36 @@
   </div>
   <!-- Topbar End -->
 
-  <header id="header" class="classeader header-hide">
-    <div class="container">
-      <div class="navbar-brand" style="background-color: rgb(27, 4, 161);">
-        <a href="#body"><img src="img/Mtendere_logo.png" alt="placeholder" title="Mtendere_logo" /></a>
-      </div>
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about-us">About</a>
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Objectives</a></li>
-            </ul>
-          </li>
-          <li><a href="#screenshots">Test Prepration</a>
-            <ul>
-              <li><a href="#">IELTS</a></li>
-              <li><a href="#">TOELF</a></li>
-              <li><a href="#">SAT</a></li>
-              <li><a href="#">GMAT</a></li>
-              <li><a href="#">GRE</a></li>
-              <li><a href="#">PTE</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Abroad Study</a>
-            <ul>
-              <li><a href="#">India</a></li>
-              <li><a href="#">Australia</a></li>
-              <li><a href="#">USA</a></li>
-              <li><a href="#">Canada</a></li>
-              <li><a href="#">UK</a></li>
-              <li><a href="#">New zealand</a></li>
-              <li><a href="#">Switzerland</a></li>
-            </ul>
-          </li>
-          <li><a href="#">University</a>
-            <ul>
-              <li><a href="#">Nepal</a></li>
-              <li><a href="#">Nepal</a></li>
-              <li><a href="#">Chandighai</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+  <!-- Navbar Start -->
+  <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+          <div class="navbar-brand" style="background-color: rgb(27, 4, 161);">
+            <a href="#body"><img src="img/Mtendere_logo.png" alt="placeholder" title="Mtendere_logo" /></a>
+          </div>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+              <div class="navbar-nav mx-auto py-0">
+                  <a href="index.html" class="nav-item nav-link active">Home</a>
+                  <a href="about.html" class="nav-item nav-link">About</a>
+                  <a href="course.html" class="nav-item nav-link">Courses</a>
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                      <div class="dropdown-menu m-0">
+                          <a href="detail.html" class="dropdown-item">Course Detail</a>
+                          <a href="feature.html" class="dropdown-item">Our Features</a>
+                          <a href="team.html" class="dropdown-item">Instructors</a>
+                          <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                      </div>
+                  </div>
+                  <a href="contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+              <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
+          </div>
+      </nav>
+  </div>
+  <!-- Navbar End -->
 
   <!-- Hero Section -->
   <section id="hero" class="wow fadeIn">
@@ -123,8 +111,8 @@
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
         <a href="#"><i class="fa facebook fa-3x"></i> Facebook</a>
-        <a href="#"><i class="fa instagram fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa twitter-official fa-3x"></i> windows</a>
+        <a href="#"><i class="fa instagram fa-3x"></i> Instagram</a>
+        <a href="#"> <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>Linkedin</a>
       </div>
     </div>
 
@@ -441,7 +429,7 @@
                           <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
                           <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
                       </div>
-                  </div>
+                  </div> 
                   <div class="w-100 bg-white text-center p-4" >
                       <a class="btn btn-primary" href="detail.html">Course Detail</a>
                   </div>
