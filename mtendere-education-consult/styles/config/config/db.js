@@ -1,7 +1,7 @@
 const { connect } = require('http2');
 
-cost mongoose = require('mongoose');
-cost connectDB = async () => {
+const mongoose = require('mongoose');
+const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
