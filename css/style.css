@@ -376,8 +376,6 @@ span {
   }
 }
 
-
-
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -1095,7 +1093,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 
- #testimonials .testimonials-content {
+#testimonials .testimonials-content {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   padding: 49px 20px;
 }
@@ -1168,19 +1166,18 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin: 0;
 }
 
- 
 /* Blog Section */
 @media (max-width: 991px) {
-  #blog .block-blog {
+  .blog {
     margin-bottom: 30px;
   }
 }
 
-#blog .block-blog img {
+.blog .block-item img {
   width: 100%;
 }
 
-#blog .block-blog .content-blog {
+.blog .block-item{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
   min-height: 125px;
@@ -1188,7 +1185,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   width: 100%;
 }
 
-#blog .block-blog .content-blog h4 {
+.block .blog-item h4 {
   line-height: 24px;
   margin-bottom: 20px;
   text-transform: capitalize;
@@ -1197,22 +1194,22 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-size: 16px;
 }
 
-#blog .block-blog .content-blog h4 a {
+.blog .blog-item .content-blog h4 a {
   color: #555;
   text-decoration: none;
   transition: 0.3s;
 }
 
-#blog .block-blog .content-blog h4 a:hover {
+.blog .blog-item h4 a:hover {
   color: #f68122;
 }
 
-#blog .block-blog .content-blog > span {
+.blog .blog-item .content-blog > span {
   float: left;
   font-size: 12px;
 }
 
-#blog .block-blog .content-blog a.readmore {
+.blog .blog-item .content-blog a.readmore {
   color: #505050;
   font-size: 12px;
   font-weight: 600;
@@ -1222,7 +1219,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   text-transform: capitalize;
 }
 
-#blog .block-blog .content-blog a.readmore:hover {
+.blog .blog-item .content-blog a.readmore:hover {
   color: #f68122;
 }*/
 
@@ -1326,7 +1323,7 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 
 */
 
-/* @import url(https://fonts.googleapis.com/css?family=Montserrat:500); */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
 :root {
   /* Base font size */
