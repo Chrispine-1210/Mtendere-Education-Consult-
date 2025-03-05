@@ -454,7 +454,7 @@ form .textarea textarea:focus::placeholder{
   top: 0;
   right: 0;
   height: 48px;
-  z-index: 3;
+  z-
   transition: all 0.5s ease;
 }
 
@@ -464,7 +464,7 @@ form .textarea textarea:focus::placeholder{
 }
 
 /* Hero Section */
-#hero {
+#header {
   width: 100%;
   height: calc(100vh - 40px);
   background-size: 100%;
@@ -473,12 +473,12 @@ form .textarea textarea:focus::placeholder{
 }
 
 @media (min-width: 1025px) {
-  #hero {
+  #headerstart {
     background-attachment: fixed;
   }
 }
 
-#hero .hero-container {
+#headerstart .hero-container {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -490,7 +490,7 @@ form .textarea textarea:focus::placeholder{
   text-align: center;
 }
 
-#hero h1 {
+#headerstart h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -501,13 +501,13 @@ form .textarea textarea:focus::placeholder{
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  #headerstart h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
 
-#hero h2 {
+#headerstart h2 {
   color: #007499;
   margin-bottom: 30px;
   font-size: 20px;
@@ -517,14 +517,14 @@ form .textarea textarea:focus::placeholder{
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
+  #headerstart h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
 
-#hero .btn-get-started {
+#headerstart .btn-get-started {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -541,12 +541,12 @@ form .textarea textarea:focus::placeholder{
   text-decoration: none;
 }
 
-#hero .btn-get-started:hover {
+#headerstart .btn-get-started:hover {
   background: #f68122;
   color: #fff;
 }
 
-#hero .btns a {
+#headerstart .btns a {
   color: #555;
   font-size: 11px;
   font-weight: 600;
@@ -557,12 +557,12 @@ form .textarea textarea:focus::placeholder{
 }
 
 @media (max-width: 575px) {
-  #hero .btns a {
+  #headerstart .btns a {
     margin: 4px 8px;
   }
 }
 
-#hero .btns a:hover {
+#headerstart .btns a:hover {
   color: #f68122;
 }
 
