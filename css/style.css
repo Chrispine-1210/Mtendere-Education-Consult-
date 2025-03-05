@@ -1323,7 +1323,31 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+*/
+
+:root {
+  --grid-gap: 20px;
+  --grid-cols: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: var(--grid-cols);
+  grid-gap: var(--grid-gap);
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 2rem;
+}
+
+/* Grid items */
+.grid-item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
 
 :root {
   /* Base font size */
