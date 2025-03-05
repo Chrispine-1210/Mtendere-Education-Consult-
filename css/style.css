@@ -974,6 +974,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   display: inline-block;
   height: 100%;
   width: 100%;
+  z-index: 200;
 }
 
 #get-started .feature-block {
