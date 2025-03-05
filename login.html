@@ -1,67 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1" />
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-</head>
-
-<body>
-    <div id="background">
-        <div class="background-Right"></div>
-        <div class="background-Left"></div>
-    </div>
-
-    <div id="slide">
-        <div class="top">
-            <div class="left">
-                <div class="content">
-                    <h2>Sign Up</h2>
-                    <form method="post" 
-                        onsubmit="return false;">
-                        <div>
-                            <input type="text" 
-                                placeholder="email" /> 
-                            
-                            <br />
-                            <input type="password" 
-                                placeholder="password" />
-                        </div>
-                    </form>
-
-                    <button id="LeftToRight" 
-                        class="on-off">Login
-                    </button>
-                    
-                    <button>Register</button>
-                </div>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Glowing Inputs Login Form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="login-form">
+            <div class="text">
+                LOGIN FORM
             </div>
-
-            <div class="right">
-                <div class="content">
-                    <h2>Login</h2>
-                    <form method="post" 
-                        onsubmit="return false;">
-                        <div>
-                            <input type="text" 
-                                placeholder="email" /> 
-                            
-                            <br />
-                            <input type="password" 
-                                placeholder="password" />
-                        </div>
-
-                        <button id="RightToLeft" 
-                            class="on-off">Register
-                        </button>
-                        
-                        <button>Login</button>
-                    </form>
+            <form action="login.php" method="post">
+                <div class="field">
+                    <div class="fas fa-envelope"></div>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
-            </div>
+                <div class="field">
+                    <div class="fas fa-lock"></div>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">LOGIN</button>
+                <div class="link">
+                    <a href="#" id="forgotPassword">Forgot Password?</a>
+                </div>
+                <div class="link">
+                    Not a member?
+                    <a href="#">Register now</a>
+                </div>
+            </form>
         </div>
-    </div>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
