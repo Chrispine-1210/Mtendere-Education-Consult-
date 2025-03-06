@@ -308,17 +308,17 @@ span {
 }
 
 label{
-  position: fixed;
+  position: relative;
   right: 30px;
-  bottom: 20px;
+  bottom: 45px;
   height: 55px;
   width: 55px;
-  background: #1e1e1e;
+  background: #110252c9;
   text-align: center;
   line-height: 55px;
   border-radius: 50px;
   font-size: 30px;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
