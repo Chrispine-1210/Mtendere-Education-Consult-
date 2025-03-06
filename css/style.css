@@ -991,10 +991,6 @@ input[type=radio]:checked {
 
 .service-card .btn-text:is(:hover, :focus-visible) { opacity: 0.9; }
 
-
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -1040,10 +1036,6 @@ input[type=radio]:checked {
   padding-block-end: 20px;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
@@ -1074,10 +1066,6 @@ input[type=radio]:checked {
 }
 
 .feature-card .card-icon ion-icon { --ionicon-stroke-width: 40px; }
-
-
-
-
 
 /*-----------------------------------*\
   #STATS
