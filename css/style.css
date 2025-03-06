@@ -1807,7 +1807,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 /* Blog Section */
-@media (max-width: 991px) {
+/*@media (max-width: 991px) {
   .blog {
     margin-bottom: 30px;
   }
