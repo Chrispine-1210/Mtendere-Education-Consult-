@@ -1279,6 +1279,39 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #f68122;
 }
 
+.img-fluid {
+  box-sizing: border-box;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  border-radius: 56px;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
+}
+
+
 /* end get started section */
 
 
