@@ -39,6 +39,7 @@
 
 html {
   font-family: sans-serif;
+  background-color: #031f54f4;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -51,7 +52,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
-  background-color: #1b0b48b0;
+  background-color: hsla(256, 62%, 19%, 0.69);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
