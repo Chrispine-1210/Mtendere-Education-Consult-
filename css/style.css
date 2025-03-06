@@ -300,7 +300,7 @@ span {
 }
 
 /* Chatbot */
-#chat-html {
+/*#chat-html {
   scroll-behavior: smooth;
 }
 
@@ -317,7 +317,7 @@ span {
   justify-content: space-around;
   transition: all 1s;
   font-family: "Comfortaa", cursive;
-}
+}*/
 
 #chat-header h2 {
   font-size: 1.35em;
