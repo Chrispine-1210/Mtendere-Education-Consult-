@@ -324,9 +324,7 @@ label{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 label i{
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   transform: translate(-50%, -50%);
   transition: all 0.4s ease;
 }
