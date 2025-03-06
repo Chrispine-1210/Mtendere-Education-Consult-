@@ -299,6 +299,7 @@ span {
   color: #fff;
 }
 
+/* Chatbox */
 #chatbox{
   overflow: hidden;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
@@ -323,7 +324,7 @@ label{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 label i{
-  position: relative;
+  position: fixed;
   transform: translate(-50%, -50%);
   transition: all 0.4s ease;
 }
@@ -342,7 +343,7 @@ label i.fas{
   transform: translate(-50%, -50%) rotate(180deg);
 }
 .wrapper{
-  position: absolute;
+  position: fixed;
   right: 30px;
   bottom: 0px;
   max-width: 400px;
