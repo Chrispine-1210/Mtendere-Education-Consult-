@@ -700,6 +700,7 @@ input[type=radio]:checked {
 
 /*Navigation Menu*/
 /* Nav Menu Essentials */
+/*
 .nav-menu, .nav-menu * {
   margin: 0;
   padding: 0;
@@ -736,8 +737,11 @@ input[type=radio]:checked {
 .nav-menu ul li {
   min-width: 180px;
 }
+*/
 
 /* Nav Menu Arrows */
+
+/*
 .sf-arrows .sf-with-ul {
   padding-right: 22px;
 }
@@ -755,8 +759,11 @@ input[type=radio]:checked {
 .sf-arrows ul .sf-with-ul:after {
   content: "\f105";
 }
+*/
+
 
 /* Nav Menu Container */
+/*
 #nav-menu-container {
   float: right;
   margin: 0 0 0 0;
@@ -767,8 +774,10 @@ input[type=radio]:checked {
     display: none;
   }
 }
+*/
 
 /* Nav Menu Styling */
+/*
 .nav-menu a {
   padding: 8px 8px;
   text-decoration: none;
@@ -817,8 +826,10 @@ input[type=radio]:checked {
 .nav-menu ul ul {
   margin: 0;
 }
+*/
 
 /* Mobile Nav Toggle */
+/*
 #mobile-nav-toggle {
   position: fixed;
   right: 0;
@@ -843,9 +854,10 @@ input[type=radio]:checked {
   #mobile-nav-toggle {
     display: inline;
   }
-}
+}*/
 
 /* Mobile Nav Styling */
+/*
 #mobile-nav {
   position: fixed;
   top: 0;
@@ -916,9 +928,12 @@ input[type=radio]:checked {
   position: fixed;
   background: rgba(52, 59, 64, 0.9);
   display: none;
-}
+}*/
+
+
 
 /* Mobile Nav body classes */
+/*
 body.mobile-nav-active {
   overflow: hidden;
 }
@@ -930,6 +945,7 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle i {
   color: #f68126;
 }
+*/
 
 /* Sections */
 
@@ -1723,11 +1739,6 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-}
-
-:root {
-  /* Base font size */
-  font-size: 10px;
 }
 
 *,
