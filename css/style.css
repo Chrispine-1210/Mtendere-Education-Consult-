@@ -303,13 +303,7 @@ span {
 #chat-html {
   scroll-behavior: smooth;
 }
-#chat-body {
-  background: #282828;
-  color: #eee;
-  font-family: "Poppins", sans-serif;
-  background-attachment: fixed;
-  position: relative;
-}
+
 #chat-header {
   background-color: #010101;
   position: fixed;
@@ -557,6 +551,7 @@ span {
   overflow: hidden;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
+
 #click{
   display: none;
 }
