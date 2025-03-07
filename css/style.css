@@ -2349,8 +2349,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
  * responsive for large than 992px screen
  */
 
-@media (min-width: 992px) {
-
   /**
    * REUSED STYLE
    */
@@ -2377,8 +2375,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
 /**
  * responsive for large than 1200px screen
  */
-
-@media (min-width: 1200px) {
 
   /**
    * REUSED STYLE
@@ -2414,8 +2410,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
  * responsive for large than 1400px screen
  */
 
-@media (min-width: 1400px) {
-
   /**
    * REUSED STYLE
    */
@@ -2428,6 +2422,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
    * FEATURE
    */
 
-  .feature-list { grid-template-columns: 1fr 1fr; }
-
-}
+  .feature-list { 
+    grid-template-columns: 1fr 1fr; 
+  }
