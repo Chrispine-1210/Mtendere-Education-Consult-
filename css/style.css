@@ -1459,37 +1459,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-  /**
-   * SERVICE
-   */
-
-  .service .section-title {
-    max-width: 30ch;
-    margin-inline: auto;
-  }
-
-  /**
-   * ABOUT
-   */
-
-  .about .container {
-    grid-template-columns: 1fr 0.7fr;
-    align-items: center;
-  }
-
-  /**
-   * FEATURE
-   */
-
-  .feature .container {
-    grid-template-columns: 0.7fr 1fr;
-    align-items: center;
-  }
-
-  .feature-banner {
-    order: 1;
-}
-
 
 /* end get started section */
 
@@ -2277,63 +2246,188 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 }
 
-/* end img section */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     --------------------------------------------------------------*/
-.footer {
-  background: #007499;
-  background-size: cover;
-  padding-top: 50px;
+/**
+ * responsive for large than 575px screen
+ */
+
+ @media (min-width: 575px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+
+  /**
+   * PROJECTS
+   */
+
+  .project-card .card-content { padding: 40px; }
+
 }
 
-.footer .footer-logo .navbar-brand {
-  color: #fff;
-  display: inline-block;
-  float: none;
-  font-family: "Philosopher", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  height: 100%;
-  letter-spacing: 0.2em;
-  padding-left: 0;
-  padding-top: 0;
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 120px;
+
+  }
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 720px; }
+
+  .grid-list { grid-template-columns: 1fr 1fr; }
+
+  /**
+   * HERO
+   */
+
+  .hero-content {
+    max-width: 85%;
+    margin-inline: auto;
+  }
+
+  .hero-text { --fs-5: 2rem; }
+
+
+
+  /**
+   * SERVICE
+   */
+
+  .service .section-title {
+    max-width: 30ch;
+    margin-inline: auto;
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    grid-template-columns: 1fr 0.7fr;
+    align-items: center;
+  }
+
+  /**
+   * FEATURE
+   */
+
+  .feature .container {
+    grid-template-columns: 0.7fr 1fr;
+    align-items: center;
+  }
+
+  .feature-banner { order: 1; }
+
 }
 
-.footer .footer-logo p {
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
+/**
+ * responsive for large than 992px screen
+ */
 
-.footer .list-menu > h4 {
-  color: #fff;
-  padding-bottom: 20px;
-}
+@media (min-width: 992px) {
 
-.footer .list-menu ul li a {
-  color: #fff;
-  font-size: 12px;
-  padding-left: 5px;
-  text-decoration: none;
-  letter-spacing: 0;
-}
+  /**
+   * REUSED STYLE
+   */
 
-.footer .copyrights {
-  background: #f68122;
-  margin-top: 50px;
-  text-align: center;
-  padding: 15px;
-}
+  .container { max-width: 960px; }
 
-.footer .copyrights p, .footer .copyrights .credits {
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  letter-spacing: 0;
-}
+  /**
+   * STATS
+   */
 
-.footer .copyrights p a, .footer .copyrights .credits a {
-  letter-spacing: 0;
-  color: #fff;
+  .stats-card { grid-template-columns: repeat(4, 1fr); }
+
+
+
+  /**
+   * PROJECT
+   */
+
+  .project .section-title {
+    max-width: 32ch;
+    margin-inline: auto;
+  }
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 1140px; }
+
+  /**
+   * SERVICE
+   */
+
+  .service .grid-list { grid-template-columns: repeat(4, 1fr); }
+
+
+
+  /**
+   * STATS
+   */
+
+  .stats .container { max-width: 70%; }
+
+  .stats-card { padding: 60px; }
+
+
+
+  /**
+   * PROJECT
+   */
+
+  .project .grid-list { grid-template-columns: repeat(3, 1fr); }
+
+/**
+ * responsive for large than 1400px screen
+ */
+
+@media (min-width: 1400px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 1320px; }
+
+  
+
+  /**
+   * FEATURE
+   */
+
+  .feature-list { grid-template-columns: 1fr 1fr; }
+
 }
