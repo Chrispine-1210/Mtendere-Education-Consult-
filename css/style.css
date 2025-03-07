@@ -1477,8 +1477,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
     align-items: center;
   }
 
-
-
   /**
    * FEATURE
    */
@@ -1488,8 +1486,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
     align-items: center;
   }
 
-  .feature-banner {{ order: 1; }
-
+  .feature-banner {
+    order: 1;
 }
 
 
