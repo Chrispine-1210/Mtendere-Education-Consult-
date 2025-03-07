@@ -1045,7 +1045,9 @@ input[type=radio]:checked {
   gap: 50px;
 }
 
-.feature .section-text { margin-block: 25px 30px; }
+.feature .section-text { 
+  margin-block: 25px 30px; 
+}
 
 .feature-list {
   display: grid;
@@ -1071,7 +1073,9 @@ input[type=radio]:checked {
   #STATS
 \*-----------------------------------*/
 
-.stats { background-image: linear-gradient(to bottom, var(--white) 50%, var(--cultured) 50%); }
+.stats { 
+  background-image: linear-gradient(to bottom, var(--white) 50%, var(--cultured) 50%); 
+}
 
 .stats-card {
   display: grid;
@@ -1082,7 +1086,9 @@ input[type=radio]:checked {
   border-radius: var(--radius-8);
 }
 
-.stats-card .card-text > * { color: var(--white); }
+.stats-card .card-text > * { 
+  color: var(--white); 
+}
 
 
 /*Navigation Menu*/
@@ -1447,6 +1453,43 @@ body.mobile-nav-active #mobile-nav-toggle i {
 .figure-caption {
   font-size: 90%;
   color: #6c757d;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+  /**
+   * SERVICE
+   */
+
+  .service .section-title {
+    max-width: 30ch;
+    margin-inline: auto;
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    grid-template-columns: 1fr 0.7fr;
+    align-items: center;
+  }
+
+
+
+  /**
+   * FEATURE
+   */
+
+  .feature .container {
+    grid-template-columns: 0.7fr 1fr;
+    align-items: center;
+  }
+
+  .feature-banner {{ order: 1; }
+
 }
 
 
@@ -2165,11 +2208,6 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: #fafafa;
 }
 
 .container {
