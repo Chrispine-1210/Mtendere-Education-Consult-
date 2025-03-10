@@ -150,75 +150,73 @@
         </div>
     </div>
     <!-- Header End -->
-
-
     <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="bg-light d-flex flex-column justify-content-center px-5" style="height: 450px;">
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-primary mr-4">
-                                <i class="fa fa-2x fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Our Location</h4>
-                                <p class="m-0">123 Street, New York, USA</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-secondary mr-4">
-                                <i class="fa fa-2x fa-phone-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Call Us</h4>
-                                <p class="m-0">+012 345 6789</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="btn-icon bg-warning mr-4">
-                                <i class="fa fa-2x fa-envelope text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Email Us</h4>
-                                <p class="m-0">info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <h3 class="mb-3">Contact Us</h3>
+                <p>
+                    Mtendere Education Consult<br>
+                    Plot No. 123, Street Name<br>
+                    City, State, Zip<br>
+                    Country
+                </p>
+                <p class="mb-4">
+                    <i class="fa fa-phone-alt mr-2"></i> +265 999 360 325<br>
+                    <i class="fa fa-envelope mr-2"></i> mtendereeduconsult@gmail.com
+                </p>
+                <div class="d-flex align-items-center">
+                    <i class="fab fa-facebook-square mr-2"></i>
+                    <i class="fab fa-twitter mr-2"></i>
+                    <i class="fab fa-instagram mr-2"></i>
+                    <i class="fab fa-linkedin mr-2"></i>
+                    <i class="fab fa-youtube mr-2"></i>
                 </div>
-                <div class="col-lg-7">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Need Help?</h6>
-                        <h1 class="display-4">Send Us A Message</h1>
+            </div>
+            <div class="col-md-6">
+                <h3 class="mb-3">Contact Form</h3>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 form-group">
-                                    <input type="text"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder="Your Name" required="required">
-                                </div>
-                                <div class="col-6 form-group">
-                                    <input type="email"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder="Your Email" required="required">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                    placeholder="Subject" required="required">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5"
-                                    placeholder="Message" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary px-4">Submit</button>
+                
+                <div id="contactFormSuccess" class="alert alert-success d-none">
+                        Thank you for your message. We will respond to you shortly.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <i class="fa fa-check"></i>
+                        <span class="sr-only">Close</span>  
+                </div>
+                <div id="contactFormError" class="alert alert-danger d-none">
+                    An error occurred while sending your message. Please try again later.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <span class="sr-only">Close</span>  
+                    <i class="fa fa-times"></i>
+                </div>
+                <div id="contactFormProcessing" class="alert alert-info d-none">
+                        Sending...
+                        <i class="fa fa-spinner fa-spin"></i>
                 </div>
             </div>
         </div>
