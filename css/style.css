@@ -941,7 +941,7 @@ form .textarea textarea:focus::placeholder {
 
 /* Header */
 #header {
-  position: fixed;
+  position:absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -949,13 +949,8 @@ form .textarea textarea:focus::placeholder {
   transition: all 0.5s ease;
 }
 
-.scroll-headerll-header {
-  background: #fff;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
-}
-
 /* Hero Section */
-#headerstart {
+#header  {
   width: 100%;
   height: calc(100vh - 40px);
   background-size: 100%;
@@ -969,7 +964,7 @@ form .textarea textarea:focus::placeholder {
   }
 }
 
-#headerstart .hero-container {
+#header .owl-carousel .owl-stage-outer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -981,7 +976,7 @@ form .textarea textarea:focus::placeholder {
   text-align: center;
 }
 
-#headerstart h1 {
+#header .owl-carousel h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -992,13 +987,13 @@ form .textarea textarea:focus::placeholder {
 }
 
 @media (max-width: 768px) {
-  #headerstart h1 {
+  #header .owl-carousel h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
 
-#headerstart h2 {
+#header .owl-carousel h2 {
   color: #007499;
   margin-bottom: 30px;
   font-size: 20px;
@@ -1008,14 +1003,14 @@ form .textarea textarea:focus::placeholder {
 }
 
 @media (max-width: 768px) {
-  #headerstart h2 {
+  #header .owl-carousel h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
 
-#headerstart .btn-get-started {
+#header .carouselitem .btn-get-started {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -1032,12 +1027,12 @@ form .textarea textarea:focus::placeholder {
   text-decoration: none;
 }
 
-#headerstart .btn-get-started:hover {
+#header .carouseitem  .btn-get-started:hover {
   background: #f68122;
   color: #fff;
 }
 
-#headerstart .btns a {
+#header .carouselitem .btns a {
   color: #555;
   font-size: 11px;
   font-weight: 600;
@@ -1048,17 +1043,17 @@ form .textarea textarea:focus::placeholder {
 }
 
 @media (max-width: 575px) {
-  #headerstart .btns a {
+  #header .carouselitem .btns a {
     margin: 4px 8px;
   }
 }
 
-#headerstart .btns a:hover {
+#header .carousel .btns a:hover {
   color: #f68122;
 }
 
 /* Corousel Starts */
-#headerstart {
+#header {
   display: fixed;
   flex-direction: column;
   justify-content: center;
@@ -1069,104 +1064,6 @@ form .textarea textarea:focus::placeholder {
   background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
   user-select: none;
   font-family: sans-serif;
-}
-
-#slider {
-  position: relative;
-  width: 50%;
-  height: 32vw;
-  font-family: 'Helvetica Neue', sans-serif;
-  perspective: 1400px;
-  transform-style: preserve-3d;
-}
-
-input[type=radio] {
-  position: relative;
-  top: 8px;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  margin: 0 15px 0 0;
-  opacity: 0.4;
-  transform: translateX(-83px);
-  cursor: pointer;
-}
-
-input[type=radio]:nth-child(5) {
-  margin-right: 0px;
-}
-
-input[type=radio]:checked {
-  opacity: 1;
-}
-
-#slider label,
-#slider label img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  color: white;
-  font-size: 70px;
-  font-weight: bold;
-  border-radius: 3px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 400ms ease;
-}
-
-/* Slider Functionality */
-/* Active Slide */
-#s1:checked~#slide1,
-#s2:checked~#slide2,
-#s3:checked~#slide3,
-#s4:checked~#slide4,
-#s5:checked~#slide5 {
-  box-shadow: 0 13px 26px rgba(14, 10, 65, 0.689), 0 12px 6px rgba(134, 3, 3, 0.584);
-  transform: translate3d(0%, 0, 0px);
-}
-
-/* Next Slide */
-#s1:checked~#slide2,
-#s2:checked~#slide3,
-#s3:checked~#slide4,
-#s4:checked~#slide5,
-#s5:checked~#slide1 {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-  transform: translate3d(20%, 0, -100px);
-}
-
-/* Next to Next Slide */
-#s1:checked~#slide3,
-#s2:checked~#slide4,
-#s3:checked~#slide5,
-#s4:checked~#slide1,
-#s5:checked~#slide2 {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-  transform: translate3d(40%, 0, -250px);
-}
-
-/* Previous to Previous Slide */
-#s1:checked~#slide4,
-#s2:checked~#slide5,
-#s3:checked~#slide1,
-#s4:checked~#slide2,
-#s5:checked~#slide3 {
-  box-shadow: 0 1px 4px rgba(63, 60, 2, 0.842);
-  transform: translate3d(-40%, 0, -250px);
-}
-
-/* Previous Slide */
-#s1:checked~#slide5,
-#s2:checked~#slide1,
-#s3:checked~#slide2,
-#s4:checked~#slide3,
-#s5:checked~#slide4 {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-  transform: translate3d(-20%, 0, -100px);
 }
 
 /* Navbar-brand */
@@ -1189,30 +1086,6 @@ input[type=radio]:checked {
   display: block;
   top: 4px;
   z-index: 99;
-}
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-#header .container .carousel{
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
 }
 
 /*-----------------------------------*\
