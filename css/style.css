@@ -676,7 +676,10 @@ form .textarea textarea:focus::placeholder {
 .chat-box form .field button:active {
   transform: scale(0.97);
 }
+/* Chatbox End */
 
+
+/* My Modal */
 #myModal{
   box-sizing: border-box;
   margin: 0;
