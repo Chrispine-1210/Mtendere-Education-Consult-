@@ -1095,10 +1095,6 @@ form .textarea textarea:focus::placeholder {
   opacity: 0.9;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -1151,10 +1147,6 @@ form .textarea textarea:focus::placeholder {
   max-height: max-content;
   padding-block-end: 20px;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #FEATURES
@@ -1215,10 +1207,6 @@ form .textarea textarea:focus::placeholder {
 .stats-card .card-text>* {
   color: var(--white);
 }
-
-
-
-
 
 /*-----------------------------------*\
   #PROJECT
@@ -2116,7 +2104,6 @@ form .textarea textarea:focus::placeholder {
   color: #fff;
 }
 
-*/
 /* img section */
 
 /*
@@ -2246,8 +2233,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
     margin-inline: auto;
   }
 
-
-
   /**
    * PROJECTS
    */
@@ -2277,7 +2262,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
     --section-padding: 120px;
 
   }
-
 
   /**
    * REUSED STYLE
@@ -2359,8 +2343,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
   grid-template-columns: repeat(4, 1fr);
 }
 
-
-
 /**
    * PROJECT
    */
@@ -2425,8 +2407,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
 .container {
   max-width: 1320px;
 }
-
-
 
 /**
    * FEATURE
