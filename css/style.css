@@ -1008,6 +1008,37 @@ form .textarea textarea:focus::placeholder {
   z-index: 99;
 }
 
+/* Indicator */
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 5px;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+.carousel-indicators,
+.carousel-indicators .active {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+}
+
+.carousel-indicators {
+  background: rgba(255, 255, 255, 0.39);
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.carousel-indicators .active {
+  background: yellow;
+}
+
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
