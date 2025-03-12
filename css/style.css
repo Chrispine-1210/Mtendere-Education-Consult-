@@ -1041,14 +1041,14 @@ form .textarea textarea:focus::placeholder {
 }
 
 .card::before {
-width: 100%;
-height: 100%;
-content: "";
-position: absolute;
-inset: 0;
-background: linear-gradient(180deg, #fff 0%, black 100%);
-z-index: 1;
-mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #fff 0%, black 100%);
+  z-index: 1;
+  mix-blend-mode: multiply;
 }
 
 .card-body {
@@ -1066,7 +1066,7 @@ mix-blend-mode: multiply;
   text-decoration: underline;
 }
 
-.icons{
+.icons {
   display: flex;
   justify-content: center;
   gap: 1.5em;
@@ -1077,10 +1077,55 @@ mix-blend-mode: multiply;
   gap: 0.3em;
 }
 
+/* Carousel */
+.carousel {
+  width: 100%;
+  height: 35%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 35%;
+  position: fixed;
+  top: auto;  
+}
+
+.carousel-inner .carousel-item {
+  width: 100%;
+  height: 35%;
+}
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 35%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.carousel-item::before {
+  width: 100%;
+  height: 35%;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 2;
+}
+
 /* Indicator */
 
 .carousel-indicators {
-  position: absolute;
+  position: relative;
   bottom: 5px;
   margin: 0;
   left: 0;
@@ -1100,7 +1145,6 @@ mix-blend-mode: multiply;
 }
 
 .carousel-indicators {
-  background: rgba(255, 255, 255, 0.39);
   margin-left: .5rem;
   margin-right: .5rem;
 }
