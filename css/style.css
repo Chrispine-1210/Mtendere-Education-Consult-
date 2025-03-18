@@ -1018,7 +1018,33 @@ form .textarea textarea:focus::placeholder {
   top: 4px;
   z-index: 99;
 }
-/*
+
+.navbar-brand img:hover {
+  opacity: 0.8;
+}
+
+.navbar-brand img:active {
+  opacity: 0.5;
+}
+
+.navbar-brand img:focus {
+  outline: none;
+}
+
+.navbar-brand img:visited {
+  opacity: 0.7;
+}
+
+.navbar-brand img:hover,
+.navbar-brand a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .carousel-indicators [data-bs-target] {
   width: 30px;
   height: 10px;
@@ -1080,7 +1106,7 @@ form .textarea textarea:focus::placeholder {
 
 
 /* carousel */
-/*
+
 .carousel{
     height: 100vh;
     margin-top: -9px;
@@ -1144,9 +1170,8 @@ form .textarea textarea:focus::placeholder {
     color: #eee;
 }
 
-*/
 /* thumbail */
-/*
+
 .thumbnail{
     position: absolute;
     bottom: 50px;
@@ -1180,10 +1205,9 @@ form .textarea textarea:focus::placeholder {
 }
 .thumbnail .item .content .description{
     font-weight: 300;
-}*/
+}
 
 /* arrows */
-/*
 .arrows{
     position: absolute;
     top: 80%;
@@ -1211,12 +1235,12 @@ form .textarea textarea:focus::placeholder {
     color: #000;
 }
 
-/* animation 
+/* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;
 }
 
-animation text in first item
+/* animation text in first item */
 
 .carousel .list .item:nth-child(1) .content .author,
 .carousel .list .item:nth-child(1) .content .title,
@@ -1289,7 +1313,7 @@ create animation when next click
     from{
         transform: translateX(150px);
     }
-}*/
+}
 
 /* running time */
 
