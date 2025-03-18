@@ -1562,10 +1562,6 @@ create animation when next click
   --ionicon-stroke-width: 40px;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #STATS
 \*-----------------------------------*/
@@ -2340,7 +2336,24 @@ create animation when next click
 
 
 /* Blog Section */
-/*@media (max-width: 991px) {
+@media (max-width: 991px) {
+  .blog .blog-item {
+    margin-bottom: 30px;
+  }
+  .blog-carousel {
+    margin-bottom: 15px;
+  }
+  .blog-carousel .owl-dots {
+    margin-top: 20px;
+  }
+  .blog-carousel .owl-nav {
+    display: none;
+  }
+  .blog-carousel.owl-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
   .blog {
     margin-bottom: 30px;
   }
@@ -2394,7 +2407,7 @@ create animation when next click
 
 .blog .blog-item .content-blog a.readmore:hover {
   color: #f68122;
-}*/
+}
 
 /* Newsletter Section */
 #newsletter {
@@ -2495,8 +2508,14 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 
 */
 
-/*@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500');
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --grid-gap: 20px;
