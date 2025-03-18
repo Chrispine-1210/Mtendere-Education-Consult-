@@ -185,7 +185,6 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -256,6 +255,7 @@ samp {
   background: #007499;
   color: #fff;
 }
+
 
 .typing {
   font-size: 0.85em;
@@ -509,7 +509,6 @@ samp {
   }
 }
 
-
 /* Chatbox */
 #chatbox {
   overflow: hidden;
@@ -688,11 +687,9 @@ form .textarea textarea:focus::placeholder {
 .chat-box form .field button:active {
   transform: scale(0.97);
 }
-
 /* Chatbox End */
 
-
-/* My Modal */
+/* My Modal
 #myModal {
   box-sizing: border-box;
   margin: 0;
@@ -995,7 +992,7 @@ form .textarea textarea:focus::placeholder {
   80% {
     transform: rotateY(180deg);
   }
-}
+}*/
 
 /* Navbar-brand */
 .navbar-brand {
@@ -1044,6 +1041,8 @@ form .textarea textarea:focus::placeholder {
   font-size: 24px;
   font-weight: bold;
 }
+
+/*
 
 .carousel-indicators [data-bs-target] {
   width: 30px;
@@ -1108,9 +1107,9 @@ form .textarea textarea:focus::placeholder {
 /* carousel */
 
 .carousel{
-    height: 100vh;
+    height: 75vh;
     margin-top: -9px;
-    width: 100vw;
+    width: 80vw;
     overflow: hidden;
     position: relative;
 }
@@ -1392,9 +1391,9 @@ create animation when next click
         font-size: 30px;
     }
 }
+/* Carousel End */
 
 /* University and scholarships */
-
 .university,
 .scholarships {
   display: flex;
@@ -1501,7 +1500,7 @@ create animation when next click
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-
+/*
 .about .container {
   display: grid;
   gap: 50px;
@@ -1550,39 +1549,39 @@ create animation when next click
   max-height: max-content;
   padding-block-end: 20px;
 }
-
+*/
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
 
-.feature .container {
+.service .container {
   display: grid;
   gap: 50px;
 }
 
-.feature .section-text {
+.service .service-box {
   margin-block: 25px 30px;
 }
 
-.feature-list {
+.service-box .service-card {
   display: grid;
   gap: 15px;
 }
 
-.feature-card {
+.service-box .service-card {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.feature-card .card-icon {
+.service-card fa {
   background-color: var(--lavender-web);
   font-size: 1.4rem;
   padding: 4px;
   border-radius: var(--radius-circle);
 }
 
-.feature-card .card-icon ion-icon {
+.service-card fa {
   --ionicon-stroke-width: 40px;
 }
 
@@ -2145,3 +2144,99 @@ create animation when next click
     margin-inline: auto;
   }
 }
+<<<<<<< HEAD
+
+/**
+ * responsive for large than 992px screen
+ */
+
+/**
+   * REUSED STYLE
+*/
+
+.container {
+  max-width: 960px;
+}
+
+/**
+   * STATS
+   */
+
+.stats-card {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/**
+   * PROJECT
+   */
+
+.project .section-title {
+  max-width: 32ch;
+  margin-inline: auto;
+}
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+/**
+   * REUSED STYLE
+   */
+
+.container {
+  max-width: 1140px;
+}
+
+/**
+   * SERVICE
+   */
+
+.service .grid-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+/**
+   * STATS
+   */
+
+.stats .container {
+  max-width: 70%;
+}
+
+.stats-card {
+  padding: 60px;
+}
+
+
+
+/**
+   * PROJECT
+   */
+
+.project .grid-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/**
+ * responsive for large than 1400px screen
+ */
+
+/**
+   * REUSED STYLE
+   */
+
+.container {
+  max-width: 1320px;
+}
+
+/**
+   * FEATURE
+   */
+
+.feature-list {
+  grid-template-columns: 1fr 1fr;
+}
+=======
+>>>>>>> 70c41e65291fa9c5a3be85b898636fccf39b83cd
