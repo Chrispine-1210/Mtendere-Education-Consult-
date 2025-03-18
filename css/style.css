@@ -256,7 +256,7 @@ samp {
   color: #fff;
 }
 
-
+/*
 .typing {
   font-size: 0.85em;
   color: chartreuse;
@@ -414,6 +414,7 @@ samp {
 .chat-submit svg:hover {
   fill: chartreuse;
 }
+*/
 
 .spinner {
   margin: 2px auto 0;
@@ -441,6 +442,7 @@ samp {
   animation-delay: -0.16s;
 }
 
+/*
 @media screen and (min-width: 680px) {
   .questions.container {
     flex-direction: row;
@@ -507,7 +509,7 @@ samp {
   80% {
     transform: rotateY(180deg);
   }
-}
+}*/
 
 /* Chatbox */
 #chatbox {
@@ -559,18 +561,6 @@ label i.fas {
 }
 
 .wrapper {
-  position: fixed;
-  right: 30px;
-  bottom: 0px;
-  max-width: 400px;
-  border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper #myModal {
   position: fixed;
   right: 30px;
   bottom: 0px;
@@ -906,7 +896,7 @@ form .textarea textarea:focus::placeholder {
   text-align: center;
 }
 
-.spinner>div {
+.spinner div {
   width: 14px;
   height: 14px;
   background-color: #eee;
@@ -1042,21 +1032,6 @@ form .textarea textarea:focus::placeholder {
   font-weight: bold;
 }
 
-/*
-
-.carousel-indicators [data-bs-target] {
-  width: 30px;
-  height: 10px;
-  background-color: #fff;
-  transition: all 0.5s ease;
-  border-radius: 15px;
-}
-
-.carousel-indicators button.active {
-  width: 60px;
-  border-radius: 10px;
-}
-
 .card {
   background-position: center center;
   background-size: cover;
@@ -1101,8 +1076,6 @@ form .textarea textarea:focus::placeholder {
   display: flex;
   gap: 0.3em;
 }
-*/
-
 
 /* carousel */
 
@@ -1394,7 +1367,6 @@ create animation when next click
 /* Carousel End */
 
 /* University and scholarships */
-.university,
 .scholarships {
   display: flex;
   justify-content: space-around;
@@ -1402,7 +1374,6 @@ create animation when next click
   gap: 30px;
 }
 
-.university .university-card,
 .scholarships .scholarship-card {
   width: 300px;
   height: 300px;
@@ -1415,21 +1386,18 @@ create animation when next click
   box-shadow: var(--shadow-2);
 }
 
-.university .university-card .university-name,
 .scholarships .scholarship-card .scholarship-name {
   font-size: 2rem;
   color: var(--white);
   margin-block: 20px;
 }
 
-.university .university-card .university-description,
 .scholarships .scholarship-card .scholarship-description {
   font-size: 1.2rem;
   color: var(--gray);
   margin-block: 20px;
 }
 
-.university .university-card .university-button,
 .scholarships .scholarship-card .scholarship-button {
   padding: 10px 20px;
   background-color: var(--orange);
@@ -1439,7 +1407,6 @@ create animation when next click
   cursor: pointer;
 }
 
-.university .university-card .university-button:hover,
 .scholarships .scholarship-card .scholarship-button:hover {
   background-color: var(--dark-orange);
 }
