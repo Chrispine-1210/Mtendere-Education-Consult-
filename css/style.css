@@ -1109,7 +1109,7 @@ form .textarea textarea:focus::placeholder {
 .carousel{
     height: 75vh;
     margin-top: -9px;
-    width: 80vw;
+    width: auto;
     overflow: hidden;
     position: relative;
 }
