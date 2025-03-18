@@ -2144,7 +2144,6 @@ create animation when next click
     margin-inline: auto;
   }
 }
-<<<<<<< HEAD
 
 /**
  * responsive for large than 992px screen
@@ -2238,5 +2237,3 @@ create animation when next click
 .feature-list {
   grid-template-columns: 1fr 1fr;
 }
-=======
->>>>>>> 70c41e65291fa9c5a3be85b898636fccf39b83cd
