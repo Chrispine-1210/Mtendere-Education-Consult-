@@ -1082,7 +1082,7 @@ form .textarea textarea:focus::placeholder {
   animation-delay: 1.8s !important;
 }
 
-create animation when next click .carousel.next .list .item:nth-child(1) img {
+.carousel.next .list .item:nth-child(1) img {
   width: 150px;
   height: 220px;
   position: absolute;
@@ -1318,7 +1318,7 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
 
 #frequent-asked {
   font-family: "IBM Plex Sans", sans-serif;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(10, 65, 166, 0.57);
 }
 
 h2 {
