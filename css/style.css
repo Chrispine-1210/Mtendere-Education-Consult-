@@ -852,7 +852,7 @@ form .textarea textarea:focus::placeholder {
 /* carousel */
 
 .carousel {
-  height: 75vh;
+  height: 350px;
   margin-top: -9px;
   width: auto;
   overflow: hidden;
@@ -868,7 +868,7 @@ form .textarea textarea:focus::placeholder {
 
 .carousel .list .item img {
   width: 100%;
-  height: 100%;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -930,7 +930,7 @@ form .textarea textarea:focus::placeholder {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 400px;
   background-color: var(--color);
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 500ms;
@@ -970,7 +970,6 @@ form .textarea textarea:focus::placeholder {
 }
 
 /* thumbail */
-
 .thumbnail {
   position: absolute;
   bottom: 50px;
