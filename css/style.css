@@ -1318,11 +1318,6 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
 }
 
 .faq-container {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: var(--bg-color);
-  color: var(--font-color);
   display: flex;
   align-items: center;
   flex-direction: column;
