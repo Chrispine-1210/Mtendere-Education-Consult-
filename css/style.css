@@ -2048,7 +2048,6 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
 .feature-list {
   grid-template-columns: 1fr 1fr;
 }
-<<<<<<< HEAD
 
 @keyframes parralax {
   0% {
@@ -2180,6 +2179,3 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
   /*background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);*/
   animation-duration: 600s;
 }
-=======
-
->>>>>>> 8cf31e8a7523186acb27ba2f8162e4b168e40cee
