@@ -1367,7 +1367,6 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
   }
 }
 
-
 .tabs-main{
   background: #191828;
   color: #efedef;
@@ -1378,7 +1377,7 @@ create animation when next click .carousel.next .list .item:nth-child(1) img {
   line-height: 1.6em;
   margin: 0;
   padding: 100px; 
-} 
+}
 
 .tabs {
   display: block;
