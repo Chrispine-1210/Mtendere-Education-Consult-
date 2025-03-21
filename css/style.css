@@ -2305,6 +2305,115 @@ details[open] .control-icon-expand {
 	outline: 0;
 }
 
+#page-body{
+  background: #2b2a2b;
+  color: white;
+  padding: 0;
+}
+
+#event-page{
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
+
+}
+
+h1{
+  font-family:  $header-font;
+}
+h2{
+  color: #ed666f;
+  font-family: $header-font;
+  font-weight: 500;
+}
+
+h3{
+  font-family: $header-font;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.grid-wrapper{
+
+  /* // Adding grid layout for screen size above 600*/ 
+  @media screen and (min-width: 600px){
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+   
+  }
+
+  @media screen and (min-width: 1025px){
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+  }
+  @media screen and (min-width: 600px) and (max-width: 1024px){
+    grid-template-columns: 1fr 2fr;
+  }
+
+}
+
+article{
+  p{
+    font-family: 'Karla', sans-serif;
+    font-size: 0.95rem;
+    color: #c8c8c8;
+  }
+  padding-bottom: 1rem;
+  border-bottom: $border;
+
+
+  // using Grid area to place the 4th and 8th element. 
+
+  &:nth-child(4){
+    grid-area: 1/2/4/3;   
+  }
+
+  &:nth-child(8){
+    @media screen and (min-width: 1025px){
+      grid-area: 1/4/4/-1;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1024px){
+      grid-area: 4/2/8/3;
+    }
+  }
+
+  &:nth-child(4n+3){
+    @media screen and (min-width: 1025px){
+      border-bottom: 0;
+    }   
+  }
+  &:nth-child(4){
+    @media screen and (min-width: 1025px){
+      border-right: $border;
+      padding-right: 1rem;
+    }
+
+  }
+  &:nth-child(4n){
+    @media screen and (min-width: 600px){
+      border-left: $border;
+      border-bottom: 0;
+      padding-left: 1rem;
+    }
+  }
+
+
+}
+
+.footer-note{
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.9rem;
+  background: white;
+  padding: 1rem;
+  color: black;
+  border-radius: 5px;
+  a{
+    color: inherit;
+    font-weight: 600;
+  }
+}
+
 /*** Training Start ***/
 .training-carousel .owl-stage-outer {
   margin-top: 30px;
