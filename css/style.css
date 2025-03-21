@@ -2233,13 +2233,11 @@ details[open] .control-icon-expand {
 	background-color: #323232;
 	overflow: hidden;
 	background-blend-mode: multiply;
-	img {
-	}
+}
 
-	& + .article-author-info {
+& + .article-author-info {
 		margin-left: 0.5rem;
 	}
-}
 
 .article-author-info {
 	line-height: 1.375;
