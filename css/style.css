@@ -2318,21 +2318,6 @@ details[open] .control-icon-expand {
 
 }
 
-h1{
-  font-family:  $header-font;
-}
-h2{
-  color: #ed666f;
-  font-family: $header-font;
-  font-weight: 500;
-}
-
-h3{
-  font-family: $header-font;
-  font-weight: 500;
-  margin: 0.5rem 0;
-}
-
 .grid-wrapper{
 
   /* // Adding grid layout for screen size above 600*/ 
@@ -2340,7 +2325,6 @@ h3{
     display: grid;
     grid-auto-flow: column;
     grid-gap: 1rem;
-   
   }
 
   @media screen and (min-width: 1025px){
@@ -2359,10 +2343,10 @@ article{
     color: #c8c8c8;
   }
   padding-bottom: 1rem;
-  border-bottom: $border;
+  border-bottom: border;
 
 
-  // using Grid area to place the 4th and 8th element. 
+ /* // using Grid area to place the 4th and 8th element. */
 
   &:nth-child(4){
     grid-area: 1/2/4/3;   
@@ -2384,20 +2368,18 @@ article{
   }
   &:nth-child(4){
     @media screen and (min-width: 1025px){
-      border-right: $border;
+      border-right: border;
       padding-right: 1rem;
     }
 
   }
   &:nth-child(4n){
     @media screen and (min-width: 600px){
-      border-left: $border;
+      border-left: border;
       border-bottom: 0;
       padding-left: 1rem;
     }
   }
-
-
 }
 
 .footer-note{
