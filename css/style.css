@@ -31,6 +31,16 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+$accent: #eceff1;
+$progress: #33a5ff;
+$progress2: #4dcb52;
+$testimonialCount: 4;
+$testimonialPause: 15;
+$testimonialSlide: .25;
+$profileImgSize: 48;
+$progressStrokeW: 3.5px;
+$pi: 3.14159265;
+
 *,
 *::before,
 *::after {
@@ -449,15 +459,6 @@ form .textarea textarea:focus::placeholder {
   transform: scale(0.97);
 }
 
-$accent: #eceff1;
-$progress: #33a5ff;
-$progress2: #4dcb52;
-$testimonialCount: 4;
-$testimonialPause: 15;
-$testimonialSlide: .25;
-$profileImgSize: 48;
-$progressStrokeW: 3.5px;
-$pi: 3.14159265;
 #slider {
 	overflow: hidden;
 	font-family: "Montserrat", sans-serif;
