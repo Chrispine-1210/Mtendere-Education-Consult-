@@ -339,12 +339,9 @@ samp {
   left: 50px;
   transform-origin: 100% 50%;
   animation: lines 1s ease-in-out 0.8s, line-left 1s steps(1) 0.8s;
-	background: $lines-color;
-}
 
 .line.right {
   right: 50px;
-	background: $lines-color;
   transform-origin: 0% 50%;
   animation: lines 1s ease-in-out 0.8s, line-right 1s steps(1) 0.8s;
 }
@@ -355,7 +352,6 @@ samp {
   height: 130px;
   width: 1px;
   top: 137px;
-  background: $lines-color;
   animation: bracket .4s ease-out 1.7s;
   animation-fill-mode: both;
 }
@@ -366,10 +362,6 @@ samp {
   content: '';
   width: 25px;
   height: 1px;
-}
-
-.bracket.right:before, .bracket.right:after {
-  background: $lines-color;
 }
 
 .bracket.left {
@@ -390,10 +382,6 @@ samp {
   transform-origin: 0% 50%;
   animation: bracket-line .2s ease-out 2.1s;
   animation-fill-mode: both;
-}
-
-.bracket.left:before, .bracket.left:after {
-	background: $lines-color;
 }
 
 .bracket.right {
