@@ -143,7 +143,6 @@ body {
 }
 
 .frame {
-  position: absolute;
   width: 400px;
   height: 400px;
   margin-top: -200px;
