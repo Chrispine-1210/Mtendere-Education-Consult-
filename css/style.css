@@ -742,7 +742,6 @@ form .textarea textarea:focus::placeholder {
 .card-custom-img::after {
   position: absolute;
   content: '';
-  top: 161px;
   left: 0;
   width: 0;
   height: 0;
@@ -847,7 +846,7 @@ outline: none !important;
 }
 
 .step {
-     height: 40px;
+  height: 40px;
   width: 40px;
   margin: 0 2px;
   background-color: #bbbbbb;
@@ -3410,89 +3409,6 @@ article {
 }
 
 /*** Contact End ***/
-
-/**
- * responsive for large than 992px screen
- */
-
-/**
-   * REUSED STYLE
-*/
-
-.container {
-  max-width: 960px;
-}
-
-/**
-   * STATS
-   */
-
-.stats-card {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/**
-   * PROJECT
-   */
-
-.project .section-title {
-  max-width: 32ch;
-  margin-inline: auto;
-}
-
-/**
- * responsive for large than 1200px screen
- */
-
-/**
-   * REUSED STYLE
-   */
-
-.container {
-  max-width: 1140px;
-}
-
-/**
-   * SERVICE
-   */
-
-.service .grid-list {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/**
-   * STATS
-   */
-
-.stats .container {
-  max-width: 70%;
-}
-
-.stats-card {
-  padding: 60px;
-}
-
-/**
-   * PROJECT
-   */
-
-.project .grid-list {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/** responsive for large than 1400px screen*/
-
-/** REUSED STYLE */
-
-.container {
-  max-width: 1320px;
-}
-
-/** FEATURE */
-
-.feature-list {
-  grid-template-columns: 1fr 1fr;
-}
 
 @keyframes parralax {
   0% {
