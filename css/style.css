@@ -1571,50 +1571,6 @@ input.invalid {
 }
 
 /* Carousel End */
-
-/* University and scholarships */
-.scholarships {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.scholarships .scholarship-card {
-  width: 300px;
-  height: 300px;
-  background-color: var(--light-blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-6);
-  box-shadow: var(--shadow-2);
-}
-
-.scholarships .scholarship-card .scholarship-name {
-  font-size: 2rem;
-  color: var(--white);
-  margin-block: 20px;
-}
-
-.scholarships .scholarship-card .scholarship-description {
-  font-size: 1.2rem;
-  color: var(--gray);
-  margin-block: 20px;
-}
-
-.scholarships .scholarship-card .scholarship-button {
-  padding: 10px 20px;
-  background-color: var(--orange);
-  color: var(--white);
-  border: none;
-  border-radius: var(--radius-6);
-  cursor: pointer;
-}
-
-.scholarships .scholarship-card .scholarship-button:hover {
-  background-color: var(--dark-orange);
 }
 
 /*-----------------------------------*\
