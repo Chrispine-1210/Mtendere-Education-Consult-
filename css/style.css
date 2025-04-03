@@ -165,8 +165,8 @@ body {
 	transform: translate(-50%, -50%);
   background-image: linear-gradient(45deg, #ff049f, #9a0fe0 45%);
   border-radius: 50%;
-          animation: circle 1s ease-in-out;
-          animation-fill-mode: forwards;
+  animation: circle 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .line {
@@ -182,6 +182,7 @@ body {
   left: 50px;
   transform-origin: 100% 50%;
   animation: lines 1s ease-in-out 0.8s, line-left 1s steps(1) 0.8s;
+}
 
 .line.right {
   right: 50px;
@@ -651,13 +652,11 @@ input {
 
 
 .tab input:focus{
-
-border:1px solid #6a1b9a !important;
-outline: none;
+  border:1px solid #6a1b9a !important;
+  outline: none;
 }
 
 input.invalid {
-
   border:1px solid #e03a0666;
 }
 
