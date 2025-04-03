@@ -593,7 +593,6 @@ form .textarea textarea:focus::placeholder {
   border-color: inherit;
 }
 
-/* First border-left-width setting is a fallback */
 .card-custom-img::after {
   position: absolute;
   content: '';
