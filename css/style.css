@@ -27,9 +27,6 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Rubik", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 
 /*
 $accent: #eceff1;
@@ -49,9 +46,6 @@ $pi: 3.14159265;*/
 }
 
 html {
-  font-family: sans-serif;
-  background-color: #031f54f4;
-  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -71,12 +65,8 @@ section {
 
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
   background-color: hsla(256, 62%, 19%, 0.69);
-  font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
-  text-align: left;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
