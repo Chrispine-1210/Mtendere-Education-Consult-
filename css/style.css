@@ -1,3 +1,278 @@
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  font-size: 16px;
+  color: #666;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+body.offcanvas-menu:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-black {
+  color: #000000 !important;
+}
+
+.text-secondary {
+  color: #00aeff !important;
+}
+
+.bg-primary-light {
+  background-color: rgba(19, 106, 213, 0.05);
+}
+
+.bg-secondary-light {
+  background-color: rgba(0, 174, 255, 0.05);
+}
+
+a {
+  color: #136ad5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+a:hover {
+  color: #136ad5;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+.text-primary {
+  color: #136ad5 !important;
+}
+
+a.text-primary {
+  color: #136ad5 !important;
+}
+
+a.text-primary:hover {
+  color: #136ad5 !important;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: "Display Playfair", serif;
+  color: #black;
+}
+
+.btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05rem;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn.btn-primary {
+  background: #136ad5;
+  border-color: #136ad5;
+}
+
+.btn.btn-primary:hover {
+  border-color: #1573e8;
+  background: #1573e8;
+}
+
+.btn.btn-secondary {
+  background: #00aeff;
+  border-color: #00aeff;
+}
+
+.btn.btn-secondary:hover {
+  border-color: #14b4ff;
+  background: #14b4ff;
+}
+
+.btn.btn-sm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn.btn-outline-primary {
+  border-color: #136ad5;
+  color: #136ad5;
+}
+
+.btn.btn-outline-primary:hover {
+  background: #136ad5;
+  color: #ffffff;
+}
+
+.form-control,
+.custom-select {
+  border: none;
+  font-size: 16px;
+  height: 55px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  color: #000000;
+}
+
+.form-control:active,
+.form-control:focus,
+.custom-select:active,
+.custom-select:focus {
+  color: #000000;
+  border-color: #136ad5;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.form-control::-webkit-input-placeholder,
+.custom-select::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-control::-moz-placeholder,
+.custom-select::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-control:-ms-input-placeholder,
+.custom-select:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-control:-moz-placeholder,
+.custom-select:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.gutter-v1 {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+@media (max-width: 991.98px) {
+  .gutter-v1 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.gutter-v1>.col,
+.gutter-v1>[class*="col-"] {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (max-width: 991.98px) {
+
+  .gutter-v1>.col,
+  .gutter-v1>[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.gutter-v2 {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+@media (max-width: 991.98px) {
+  .gutter-v2 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.gutter-v2>.col,
+.gutter-v2>[class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@media (max-width: 991.98px) {
+
+  .gutter-v2>.col,
+  .gutter-v2>[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.gutter-v3 {
+  margin-right: -40px;
+  margin-left: -40px;
+}
+
+@media (max-width: 991.98px) {
+  .gutter-v3 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.gutter-v3>.col,
+.gutter-v3>[class*="col-"] {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@media (max-width: 991.98px) {
+
+  .gutter-v3>.col,
+  .gutter-v3>[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 .top-bar a {
   color: #ffffff;
 }
