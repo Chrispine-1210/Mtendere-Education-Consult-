@@ -114,44 +114,7 @@
     padding: 8px 0;
     z-index: 1001;
   }
-
-
-  .fh5co-nav .top-menu {
-    padding: 28px 0;
-  }
-
-  .fh5co-nav .top {
-    padding: 7px 0;
-    margin-bottom: 0;
-  }
-
-  .fh5co-nav .top .num,
-  .fh5co-nav .top .fh5co-social {
-    display: inline-block;
-    margin: 0;
-  }
-
-  .fh5co-nav .top .num {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 13px;
-    padding-right: 10px;
-    margin-right: 5px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    letter-spacing: 0px;
-  }
-
-  .fh5co-nav .top .fh5co-social li {
-    font-size: 14px;
-  }
-
-  .fh5co-nav .top .fh5co-social li a {
-    padding: 0 7px;
-  }
-
-  .fh5co-nav .top .fh5co-social li a i {
-    font-size: 14px;
-  }
-
+  
   .fh5co-nav #fh5co-logo {
     font-size: 24px;
     margin: 0;
