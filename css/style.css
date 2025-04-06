@@ -106,13 +106,15 @@
 
   .fh5co-nav {
     position: absolute;
-    top: 0;
+    float: right;
+    display: inline-block;
     margin: 0;
     padding: 0;
     width: 100%;
-    padding: 0;
+    padding: 8px 0;
     z-index: 1001;
   }
+
 
   .fh5co-nav .top-menu {
     padding: 28px 0;
@@ -176,22 +178,29 @@
   }
 
   .fh5co-nav ul {
+    zoom: 1;
+    float: right;
+    width: auto;
     padding: 0;
     margin: 5px 0 0 0;
   }
 
   .fh5co-nav ul li {
+    float: right;
     padding: 0;
     margin: 0;
     list-style: none;
-    display: inline;
+    display: inline-block;
   }
 
   .fh5co-nav ul li a {
     font-size: 15px;
+    float: right;
     padding: 30px 15px;
     color: rgba(255, 255, 255, 0.5);
     -webkit-transition: 0.5s;
+    box-sizing: border-box;
+    border-radius: 12px;
     -o-transition: 0.5s;
     transition: 0.5s;
   }
@@ -1577,7 +1586,7 @@
   }
 
   .navbar-brand a img {
-    height: 48pxpx;
+    height: 48px;
     display: inline-block;
     justify-content: flex-start;
   }
@@ -2535,15 +2544,7 @@
     }
   }
 
-
-  #header-detail {
-    font-family: "DM Sans", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: #f8f3eb;
-    color: #484847;
-    padding-bottom: 5rem;
-  }
+  /*
 
   .responsive-wrapper {
     width: 95%;
@@ -2637,6 +2638,8 @@
       right: 8px;
     }
   }
+*/
+
 
   .page-title {
     padding-left: 1.5rem;
