@@ -965,6 +965,8 @@ h4,
   top: 23px;
 }
 
+bg-1
+
 /* Click */
 .burger.active span {
   opacity: 0;
@@ -992,45 +994,6 @@ h4,
 .burger:focus {
   outline: none;
 }
-
-.testimonial-carousel .owl-item img {
-  width: 80px;
-  height: 80px;
-}
-
-.testimonial-carousel .owl-nav {
-  position: absolute;
-  width: 120px;
-  height: 60px;
-  top: 0;
-  right: 0;
-  display: flex;
-  z-index: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  background: #2878EB;
-  font-size: 22px;
-  transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next:hover {
-  background: #F14D5D;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover {
-  background: #2878EB;
-}
-
 
 .top-bar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1384,7 +1347,6 @@ h4,
   position: absolute;
   width: 150%;
   height: 70%;
-  right: -100%;
   top: -40px;
   z-index: -1;
   background: rgba(19, 106, 213, 0.2);
@@ -1395,7 +1357,6 @@ h4,
   position: absolute;
   height: 40%;
   width: 70%;
-  left: -50%;
   top: 0px;
   z-index: -1;
   background: rgba(236, 102, 31, 0.1);
