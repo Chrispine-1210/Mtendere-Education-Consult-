@@ -2366,3 +2366,53 @@ bg-1
 .site-footer .copyright {
   color: rgba(255, 255, 255, 0.5);
 }
+
+.team-carousel .owl-nav {
+  position: absolute;
+  width: 60px;
+  height: 180px;
+  top: calc(50% - 90px);
+  left: 0;
+  z-index: 1;
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222429;
+  background: #FFAA17;
+  border-radius: 4px;
+  font-size: 22px;
+  transition: .5s;
+}
+
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+  color: #FFAA17;
+  background: #222429;
+}
+
+.team-item .team-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border-radius: 4px;
+  background: #222429;
+  transition: .5s;
+  opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+  opacity: 1;
+}
