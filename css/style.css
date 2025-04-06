@@ -1345,9 +1345,9 @@ bg-1
 .bg-1:before {
   content: "";
   position: absolute;
-  width: 150%;
+  width: 70%  ;
   height: 70%;
-  top: -40px;
+  top: -10px;
   z-index: -1;
   background: rgba(19, 106, 213, 0.2);
 }
