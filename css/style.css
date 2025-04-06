@@ -108,17 +108,21 @@
     position: absolute;
     float: right;
     display: inline-block;
-    margin: 0;
-    padding: 0;
     width: 100%;
     padding: 8px 0;
     z-index: 1001;
   }
   
   .fh5co-nav #fh5co-logo {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
+    float: left;
+    top: 5px;
+    left: 4px;
+    font-weight: 700;
+  }
+
+  .fh5co-nav #fh5co-logo img {
+    float: left;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
     font-weight: 700;
@@ -142,8 +146,8 @@
 
   .fh5co-nav ul {
     zoom: 1;
+    left: 4px;
     float: right;
-    width: auto;
     padding: 0;
     margin: 5px 0 0 0;
   }
@@ -159,6 +163,7 @@
   .fh5co-nav ul li a {
     font-size: 15px;
     float: right;
+    right: 0;
     padding: 30px 15px;
     color: rgba(255, 255, 255, 0.5);
     -webkit-transition: 0.5s;
@@ -203,6 +208,7 @@
 
   .fh5co-nav ul li.has-dropdown .dropdown:before {
     bottom: 100%;
+    cursor: pointer;
     left: 40px;
     border: solid transparent;
     content: " ";
