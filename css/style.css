@@ -957,8 +957,6 @@ h4,
   top: 23px;
 }
 
-bg-1
-
 /* Click */
 .burger.active span {
   opacity: 0;
@@ -991,21 +989,18 @@ bg-1
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#hero,
-.bg-img {
+#hero {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.hero.overlay,
-.bg-img.overlay {
+.hero .hero-carouse {
   position: relative;
 }
 
-#hero .overlay:before,
-.bg-img.overlay:before {
+#hero .hero-container:before {
   position: absolute;
   content: "";
   top: 0;
@@ -1016,16 +1011,13 @@ bg-1
   z-index: -0;
 }
 
-#hero>.container,
-.bg-img>.container {
+#hero>.container {
   position: relative;
   z-index: 2;
 }
 
 #hero,
-.untree_co-hero>.container>.row,
-.bg-img,
-.bg-img>.container>.row {
+#hero>.container {
   height: 100vh;
   min-height: 650px;
 }
@@ -1033,9 +1025,7 @@ bg-1
 @media (max-width: 767.98px) {
 
   #hero,
-  #hero>.container>.row,
-  .bg-img,
-  .bg-img>.container>.row {
+  #hero>.container>.row {
     min-height: 750px;
   }
 }
@@ -1058,8 +1048,8 @@ bg-1
   }
 }
 
-#hero .caption,
-.bg-img .caption {
+#hero p,
+.img p {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 12px;
