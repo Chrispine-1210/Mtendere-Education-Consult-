@@ -192,6 +192,22 @@ h4,
   color: rgba(0, 0, 0, 0.5);
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.whatsapp-float img {
+  width: 25px;
+  height: 25px;
+}
+
 .gutter-v1 {
   margin-right: -20px;
   margin-left: -20px;
