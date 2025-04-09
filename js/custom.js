@@ -278,6 +278,60 @@ $(function () {
 		});
 	});
 
+	document.addEventListener("DOMContentLoaded", function () {
+		const testimonials = document.querySelectorAll('.testimonial-item');
+		const prevBtn = document.querySelector('.prev-btn');
+		const nextBtn = document.querySelector('.next-btn');
+
+		let currentIndex = 0;
+		let autoScrollInterval;
+
+		// Show the initial testimonial
+		showTestimonial(currentIndex);
+
+		// Auto-scroll testimonials
+		function startAutoScroll() {
+			autoScrollInterval = setInterval(function () {
+				currentIndex = (currentIndex + 1) % testimonials.length;
+				showTestimonial(currentIndex);
+			}, 5000); // Change testimonial every 5 seconds
+		}
+
+		// Stop auto-scroll when user interacts
+		function stopAutoScroll() {
+			clearInterval(autoScrollInterval);
+		}
+
+		// Show a specific testimonial based on index
+		function showTestimonial(index) {
+			testimonials.forEach((testimonial, idx) => {
+				testimonial.classList.remove('active');
+				if (idx === index) {
+					testimonial.classList.add('active');
+				}
+			});
+		}
+
+		// Navigate to next testimonial
+		nextBtn.addEventListener('click', function () {
+			stopAutoScroll();
+			currentIndex = (currentIndex + 1) % testimonials.length;
+			showTestimonial(currentIndex);
+			startAutoScroll(); // Restart auto-scroll
+		});
+
+		// Navigate to previous testimonial
+		prevBtn.addEventListener('click', function () {
+			stopAutoScroll();
+			currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+			showTestimonial(currentIndex);
+			startAutoScroll(); // Restart auto-scroll
+		});
+
+		// Start the auto-scroll when the page is loaded
+		startAutoScroll();
+	});
+
 	// Open FAQ Popup
 	document.getElementById("help-icon").addEventListener("click", function () {
 		document.getElementById("faq-popup").style.display = "block";
