@@ -233,27 +233,253 @@ h4,
 
 /* Pop-up FAQ Section */
 .faq-popup {
-  display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  overflow-y: auto;
-  padding: 20px;
+  z-index: 2;
+
+  .faq-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+    font-family: inherit;
+    border: 0;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 1px;
+    width: 200px;
+    overflow: hidden;
+    outline: 0;
+    @include transition(all .4s);
+    visibility: visible;
+    opacity: 1;
+    font-weight: bold;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+
+      opacity: 1;
+    }
+  }
+
+  &.clicked {
+    button {
+      visibility: hidden;
+      oacity: 0;
+    }
+  }
 }
 
 .faq-popup-content {
-  position: relative;
-  background-color: white;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.3s ease-in-out;
+  /* POP-UP
+========================================== */
+
+.pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%) scale(0.9));
+  overflow-y: auto; 
+  box-shadow: 0px 6px 30px rgba(0,0,0,0.4);
+  visibility: hidden;
+  opacity: 0;
+  @include transition(all .3s);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  
+  @media (min-width: 768px) {
+    width: calc(100% - 40px);
+    height: auto;
+    max-width: 900px;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    
+    @media (min-width: 768px) {
+      min-height: inherit;
+    }
+    
+    .container {
+      padding: 100px 20px 140px;
+      
+      @media (min-width: 568px) {
+        padding: 50px 20px 80px;
+      }
+      
+      @media (min-width: 768px) {
+        padding: 70px 0px 90px;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
+    
+    .close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem;
+      @include transition(all .4s);
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    
+    .dots {
+      .dot {
+        position: absolute;
+        border-radius: 100%;
+        z-index: 11;
+        
+        &:nth-of-type(1) {
+          top: -80px;
+          right: -80px;
+          width: 160px;
+          height: 160px;
+          @include animation(float 6s ease-in-out infinite);
+          
+          @media (min-width: 768px) {
+            top: -190px;
+            right: -190px;
+            width: 380px;
+            height: 380px;
+          }
+        }
+        
+        &:nth-of-type(2) {
+          bottom: -120px;
+          left: -120px;
+          width: 240px;
+          height: 240px;
+          @include animation(float 8s ease-in-out infinite);
+        }
+        
+        &:nth-of-type(3) {
+          bottom: -50px;
+          right: -50px;
+          width: 100px;
+          height: 100px;
+          @include animation(float 4s ease-in-out infinite);
+        }
+      }
+    }
+    
+    .title {
+      h1 {
+        text-align: center;
+        color: $orange;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 2.8rem; //1.4
+        letter-spacing: 0.05rem;
+      }
+    }
+    
+    img {
+      width: 100%;
+      max-width: 220px;
+      display: inline-block;
+      margin: 30px 0 40px 0;
+      opacity: 0;
+      @include transform(translateX(60px));
+      @include transition(.2s);
+      -webkit-backface-visibility: hidden;
+      
+      @media (min-width: 768px) {
+        max-width: 300px;
+      }
+    }
+    
+    .subscribe {
+      h1 {
+        font-size: 1.5rem;
+        line-height: 130%;
+        letter-spacing: 0.07rem;
+        margin-bottom: 30px;
+        
+        span {
+          color: $orange;
+        }
+      }
+      
+      form {
+        overflow: hidden;
+        
+        input {
+          width: 100%;
+          float: left;
+          padding: 15px 20px;
+          text-align: center;
+          font-family: inherit;
+          font-size: 1.1rem;
+          letter-spacing: 0.05rem;
+          outline: 0;
+          
+          &[type=email] {
+            margin-bottom: 15px;
+            border: 1px solid lighten($gray, 50%);
+            @include transition(all .4s);
+            
+            @media (min-width: 768px) {
+              margin-bottom: 0px;
+              width: 75%;
+              border-right-width: 0px;
+            }
+            
+            &:focus {
+              border-color: 
+
+              ;
+            }
+          }
+          
+          &[type=submit] {
+            border: 1px solid $purple;
+            @include transition(all .4s);
+            
+            @media (min-width: 768px) {
+              width: 25%;
+            }
+            
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    @include transform(translate(-50%, -50%) scale(1));
+    
+    img {
+      opacity: 1;
+      @include transition(1s);
+      @include transition-delay(.3s);
+      @include transform(translateX(0px));
+    }
+  }
+}
 }
 
 .close-btn {
@@ -308,6 +534,7 @@ h4,
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -324,8 +551,9 @@ h4,
   border-radius: 50%;
   padding: 15px;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 .whatsapp-float img {
   width: 25px;
   height: 25px;
@@ -440,7 +668,7 @@ h4,
     position: fixed;
     left: 4px;
   }
-  
+
 }
 
 @media screen and (max-width: 575.98px) {
@@ -1354,7 +1582,7 @@ h4,
 .untree_co-section {
   padding: 4rem 0;
   width: auto;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .line-bottom {
@@ -1424,7 +1652,7 @@ h4,
 /* Responsive Design */
 @media (max-width: 767px) {
   .wide-slider-testimonial {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1547,7 +1775,7 @@ h4,
 .bg-1:before {
   content: "";
   position: absolute;
-  width: 70%  ;
+  width: 70%;
   height: 70%;
   top: -10px;
   z-index: -1;
