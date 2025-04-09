@@ -1352,8 +1352,9 @@ h4,
 
 /* Main Styling */
 .untree_co-section {
-  background-color: #f7fafc;
-  padding: 6rem 0;
+  padding: 4rem 0;
+  width: auto;
+  margin: 0 auto;  
 }
 
 .line-bottom {
