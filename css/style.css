@@ -192,6 +192,17 @@ h4,
   color: rgba(0, 0, 0, 0.5);
 }
 
+.back-to-top:focus {
+  background: #aa1e21;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #007499;
+  color: #fff;
+}
+
 .story-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #eaeaea;
@@ -281,6 +292,8 @@ h4,
     }
   }
 }
+
+
 
 /* KEYFRAMES
 ========================================== */
