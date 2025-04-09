@@ -30,8 +30,6 @@
         <div class="site-mobile-menu-body"></div>
     </div>
 
-
-
     <nav class="site-nav mb-5">
         <div class="pb-2 top-bar mb-3">
             <div class="container">
@@ -39,7 +37,44 @@
 
                     <div class="col-6 col-lg-9">
                         <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span
-                                class="d-none d-lg-inline-block">Have a questions?</span></a>
+                                class="d-none d-lg-inline-block">
+                            <!-- Floating Help Icon -->
+                            <div class="help-icon" id="help-icon">
+                                <i class="uil uil-question-circle"></i> Help
+                            </div>
+                            
+                            <!-- Pop-up FAQ Section -->
+                            <div id="faq-popup" class="faq-popup">
+                                <div class="faq-popup-content">
+                                <button class="close-btn" id="close-btn">&times;</button>
+                                <h3 class="text-center text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+                                <div class="faq-item">
+                                    <button class="faq-question">What are the scholarship eligibility requirements?</button>
+                                    <div class="faq-answer">
+                                    <p>To be eligible for our scholarships, you need to meet the academic standards of your chosen university, demonstrate financial need, and meet the required language proficiency.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question">How do I know if I qualify for a visa?</button>
+                                    <div class="faq-answer">
+                                    <p>The visa requirements depend on the destination country. We guide you through each country's specific visa requirements to ensure you're fully prepared.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question">Can I apply for multiple scholarships?</button>
+                                    <div class="faq-answer">
+                                    <p>Yes! We recommend applying for multiple scholarships to increase your chances of receiving financial aid.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question">What support services do you offer for students?</button>
+                                    <div class="faq-answer">
+                                    <p>We offer comprehensive support, including visa assistance, accommodation finding, travel planning, and personalized counseling throughout your academic journey.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </span></a>
                         <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span
                                 class="d-none d-lg-inline-block">
 
@@ -337,66 +372,114 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="line-bottom text-center mb-4"></h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <h2 class="line-bottom text-center mb-4">Study Programs</h2>
+                    <p>Each student’s academic path is unique, and we’re here to guide you to the best-fit program that suits your passion and career aspirations. By offering personalized consultations, access to the latest scholarship opportunities, and a wide network of global universities, we ensure that you can make an informed decision to pursue your dream program abroad.
+
+                        If you're unsure about which area of study best fits your career goals, our dedicated team of educational consultants is here to help you discover your true calling.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature">
-                        <span class="uil uil-music"></span>
-                        <h3>Music Class</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                    <div class="feature text-center">
+                        <span class="uil uil-cogs" style="font-size: 40px; color: #4A90E2;"></span>
+                        <h3>Engineering & Technology</h3>
+                        <p>From Civil Engineering to Artificial Intelligence, explore diverse opportunities in the tech-driven world.</p>
                     </div>
                 </div>
+            
                 <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature">
-                        <span class="uil uil-calculator-alt"></span>
-                        <h3>Math Class</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                    <div class="feature text-center">
+                        <span class="uil uil-business" style="font-size: 40px; color: #E94E77;"></span>
+                        <h3>Business & Management</h3>
+                        <p>Discover paths in Finance, Marketing, International Business, and more for global leadership roles.</p>
                     </div>
                 </div>
+            
                 <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature">
-                        <span class="uil uil-book-open"></span>
-                        <h3>English Class</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                    <div class="feature text-center">
+                        <span class="uil uil-heart" style="font-size: 40px; color: #F4A300;"></span>
+                        <h3>Health & Medical Sciences</h3>
+                        <p>Pursue a career in Medicine, Public Health, Pharmacy, and help improve global health outcomes.</p>
                     </div>
                 </div>
-
-
-                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay=100">
-                    <div class="feature">
-                        <span class="uil uil-book-alt"></span>
-                        <h3>Reading for Kids</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature text-center">
+                        <span class="uil uil-book-reader" style="font-size: 40px; color: #2A9D8F;"></span>
+                        <h3>Arts & Humanities</h3>
+                        <p>Study disciplines from Literature to Philosophy and shape global cultural and social movements.</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature">
-                        <span class="uil uil-history"></span>
-                        <h3>History Class</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature text-center">
+                        <span class="uil uil-brain" style="font-size: 40px; color: #F1C40F;"></span>
+                        <h3>Science & Research</h3>
+                        <p>Engage in groundbreaking studies in Biology, Chemistry, Environmental Science, and more.</p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature">
-                        <span class="uil uil-headphones"></span>
-                        <h3>Music</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature text-center">
+                        <span class="uil uil-gavel" style="font-size: 40px; color: #9B59B6;"></span>
+                        <h3>Law & Governance</h3>
+                        <p>Study law, governance, and public policy to create positive societal and legal change.</p>
+                    </div>
+                </div>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature text-center">
+                        <span class="uil uil-airplane" style="font-size: 40px; color: #1ABC9C;"></span>
+                        <h3>Hospitality & Tourism</h3>
+                        <p>Build your career in tourism, hospitality management, and event planning in the global market.</p>
+                    </div>
+                </div>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="feature text-center">
+                        <span class="uil uil-tractor" style="font-size: 40px; color: #E67E22;"></span>
+                        <h3>Agriculture & Food Sciences</h3>
+                        <p>Focus on sustainable agriculture, food safety, and animal science to create global food security.</p>
                     </div>
                 </div>
             </div>
+
+
         </div> <!-- /.container -->
     </div> <!-- /.untree_co-section -->
 
+    <div class="container mt-12">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-6">Success Stories</h2>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img src="path_to_image.jpg" alt="Student Image" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-700">Thoko's Journey to Success</h3>
+                    <p class="text-gray-600 mt-2">"Thanks to Mtendere Education Consult, I found the right scholarship in Germany, where I studied Engineering. My dream career is now a reality!"</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read Full Story</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="story-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img src="path_to_image2.jpg" alt="Student Image" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-700">John's Path to a Medical Career</h3>
+                    <p class="text-gray-600 mt-2">"Mtendere guided me in securing a medical scholarship in the UK. I’m now pursuing my dream of becoming a doctor, and I couldn’t have done it without their help."</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read Full Story</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="story-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img src="path_to_image3.jpg" alt="Student Image" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-700">Martha’s Success in Business Studies</h3>
+                    <p class="text-gray-600 mt-2">"With the help of Mtendere, I secured an internship in a top firm in the USA. Their support made my dreams of studying and working abroad come true!"</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <div class="untree_co-section bg-light">
         <div class="container">

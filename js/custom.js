@@ -278,6 +278,26 @@ $(function () {
 		});
 	});
 
+	// Open FAQ Popup
+	document.getElementById("help-icon").addEventListener("click", function () {
+		document.getElementById("faq-popup").style.display = "block";
+	});
+
+	// Close FAQ Popup
+	document.getElementById("close-btn").addEventListener("click", function () {
+		document.getElementById("faq-popup").style.display = "none";
+	});
+
+	// Toggle FAQ answers
+	const faqQuestions = document.querySelectorAll(".faq-question");
+	faqQuestions.forEach((faq) => {
+		faq.addEventListener("click", function () {
+			const answer = this.nextElementSibling;
+			answer.style.display = answer.style.display === "block" ? "none" : "block";
+		});
+	});
+
+
 	const videoModal = document.getElementById("videoModal");
 	videoModal.addEventListener("hidden.bs.modal", function () {
 		const iframe = document.getElementById("videoFrame");
