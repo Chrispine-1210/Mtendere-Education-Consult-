@@ -309,6 +309,90 @@ $(function () {
 		return false;
 	});
 
+	const universityData = {
+		chandigarh: {
+			intakes: ["January", "July"],
+			programs: ["Engineering", "Business", "IT", "Hospitality"],
+			documents: "Passport, Academic Transcript, English Proficiency (IELTS 6.0+)",
+			requirements: "Minimum 60% aggregate in high school, IELTS 6.0 or equivalent"
+		},
+		parul: {
+			intakes: ["February", "September"],
+			programs: ["Medicine", "Physiotherapy", "Engineering", "Design"],
+			documents: "Transcript, Passport, Medical Certificate",
+			requirements: "High school diploma with science subjects, minimum 55%, valid ID"
+		},
+		ct: {
+			intakes: ["January", "July", "November"],
+			programs: ["Applied Sciences", "Agriculture", "Media"],
+			documents: "Transcript, Passport, Proof of English",
+			requirements: "Pass in relevant subjects, English proficiency certificate"
+		},
+		shoolini: {
+			intakes: ["March", "August"],
+			programs: ["Pharmacy", "Biotech", "Liberal Arts"],
+			documents: "60%+ in core subjects, English Proof, ID",
+			requirements: "60% in Science stream, good communication skills, basic computer knowledge"
+		},
+		jain: {
+			intakes: ["January", "June", "October"],
+			programs: ["Sports Science", "Aviation", "Engineering"],
+			documents: "GPA ≥ 2.5, English Test, Passport Copy",
+			requirements: "Minimum GPA of 2.5, strong academic background in chosen program"
+		}
+	};
+
+	const universitySelect = document.getElementById("university");
+	const intakeSelect = document.getElementById("intakeMonth");
+	const programSelect = document.getElementById("program");
+	const documentsField = document.getElementById("documents");
+	const requirementsField = document.getElementById("requirements");
+
+	universitySelect.addEventListener("change", function () {
+		const selected = this.value;
+		const data = universityData[selected];
+
+		intakeSelect.innerHTML = "";
+		programSelect.innerHTML = "";
+
+		if (data) {
+			data.intakes.forEach(month => {
+				const option = document.createElement("option");
+				option.value = month;
+				option.textContent = month;
+				intakeSelect.appendChild(option);
+			});
+
+			data.programs.forEach(program => {
+				const option = document.createElement("option");
+				option.value = program;
+				option.textContent = program;
+				programSelect.appendChild(option);
+			});
+
+			documentsField.value = data.documents;
+			requirementsField.value = data.requirements;
+		} else {
+			documentsField.value = "";
+			requirementsField.value = "";
+		}
+	});
+
+	document.getElementById("applicationForm").addEventListener("submit", function (e) {
+		e.preventDefault();
+		alert("Your application has been submitted!");
+		this.reset();
+		closeForm();
+	});
+
+	function openForm() {
+		document.getElementById("popupFormContainer").style.display = "flex";
+	}
+
+	function closeForm() {
+		document.getElementById("popupFormContainer").style.display = "none";
+	}
+
 
 	$('button').click(function () {
 		$('.pop-up-content').addClass('open');
