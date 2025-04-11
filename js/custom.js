@@ -387,24 +387,6 @@ $(function () {
 		closeForm();
 	});
 
-	function openForm() {
-		document.getElementById("popupFormContainer").style.display = "flex";
-	}
-
-	function closeForm() {
-		document.getElementById("popupFormContainer").style.display = "none";
-	}
-
-
-	$('button').click(function () {
-		$('.pop-up-content').addClass('open');
-	});
-
-	$('.pop-up .close').click(function () {
-		$('.pop-up').removeClass('open');
-	});;
-
-
 	const videoModal = document.getElementById("videoModal");
 	videoModal.addEventListener("hidden.bs.modal", function () {
 		const iframe = document.getElementById("videoFrame");
@@ -446,6 +428,28 @@ $(function () {
 	};
 	jarallaxPlugin();
 
+	const faqBtn = document.getElementById("faqBtn");
+	const faqModal = document.getElementById("faqModal");
+	const closeBtn = document.querySelector(".close-btn");
+
+	faqBtn.onclick = () => faqModal.style.display = "block";
+	closeBtn.onclick = () => faqModal.style.display = "none";
+	window.onclick = (e) => {
+		if (e.target === faqModal) faqModal.style.display = "none";
+	};
+
+	const accordions = document.querySelectorAll(".accordion");
+	accordions.forEach(acc => {
+		acc.addEventListener("click", function () {
+			this.classList.toggle("active");
+			const panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		});
+	});
 
 
 	var accordion = function () {
@@ -475,4 +479,4 @@ $(function () {
 	siteSticky();
 
 
-})
+});

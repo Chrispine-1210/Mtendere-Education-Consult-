@@ -36,8 +36,8 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-lg-9">
-                        <a href="#faq-popup" id="" class="small mr-3"><span class="icon-question-circle-o mr-2"></span>
-                            <span class="d-none d-lg-inline-block">Have a questions?</span></a <a href="#"
+                        <a class="small mr-3"><span class="icon-question-circle-o mr-2"></span>
+                            <span id="faqBtn" d-none d-lg-inline-block">Have a questions?</span></a <a href="#"
                             class="small mr-3"><span class="icon-phone mr-2"></span> <span
                             class="d-none d-lg-inline-block">
 
@@ -458,6 +458,49 @@
         </div>
     </div>
 
+    <div id="faqModal" class="faq-modal">
+        <div class="faq-content">
+            <span class="close-btn">&times;</span>
+            <h2>Frequently Asked Questions</h2>
+
+            <button class="accordion">What services does Mtendere Education Consult provide?</button>
+            <div class="panel">
+                <p>We assist students in securing international university placements, provide scholarship guidance,
+                    career consulting, and pre-departure orientation.</p>
+            </div>
+
+            <button class="accordion">How can I apply for a scholarship?</button>
+            <div class="panel">
+                <p>You can apply through our unified application portal. Make sure to upload all required documents such
+                    as transcripts, CV, and identification documents.</p>
+            </div>
+
+            <button class="accordion">What are the entry requirements for partner universities?</button>
+            <div class="panel">
+                <p>Entry requirements vary depending on the university and program. Generally, you’ll need academic
+                    transcripts, proof of English proficiency, and a valid passport.</p>
+            </div>
+
+            <button class="accordion">Can I apply to more than one university?</button>
+            <div class="panel">
+                <p>Yes. Our system allows you to choose and submit applications to multiple partner universities within
+                    a single form.</p>
+            </div>
+
+            <button class="accordion">When are the intakes?</button>
+            <div class="panel">
+                <p>Most of our universities offer intakes in January, July, and September. Check the specific university
+                    page for details.</p>
+            </div>
+
+            <button class="accordion">Is Mtendere Education Consult affiliated with universities?</button>
+            <div class="panel">
+                <p>Yes. We have official partnerships with reputable institutions like Chandigarh University, Parul
+                    University, Jain University, and more.</p>
+            </div>
+
+        </div>
+    </div>
 
     <div class="untree_co-section bg-light">
         <div class="container">
@@ -535,7 +578,7 @@
                     </h2>
                     <p class="text-white h5 mb-4" data-aos="fade-up" data-aos-delay="100">Far far away, behind the word
                         mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p ><a href="#popupFormContainer" class="btn btn-secondary" onclick="openForm()" data-aos="fade-up"
+                    <p><a href="#popupFormContainer" class="btn btn-secondary" onclick="openForm()" data-aos="fade-up"
                             data-aos-delay="200">Enroll Now</a></p>
                 </div>
             </div>
@@ -997,46 +1040,7 @@
         </div>
     </div> <!-- /.untree_co-section -->
 
-    <!-- Pop-up FAQ Section -->
-    <div id="faq-popup" class="faq-popup">
-        <div class="faq-popup-content">
-            <div class="dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <button class="close-btn" id="close-btn">&times;</button>
-            <h3 class="text-center text-xl font-semibold mb-4">Frequently Asked Questions</h3>
-            <div class="faq-item">
-                <button class="faq-question">What are the scholarship eligibility requirements?</button>
-                <div class="faq-answer">
-                    <p>To be eligible for our scholarships, you need to meet the academic standards of your chosen
-                        university, demonstrate financial need, and meet the required language proficiency.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How do I know if I qualify for a visa?</button>
-                <div class="faq-answer">
-                    <p>The visa requirements depend on the destination country. We guide you through each country's
-                        specific visa requirements to ensure you're fully prepared.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Can I apply for multiple scholarships?</button>
-                <div class="faq-answer">
-                    <p>Yes! We recommend applying for multiple scholarships to increase your chances of receiving
-                        financial aid.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">What support services do you offer for students?</button>
-                <div class="faq-answer">
-                    <p>We offer comprehensive support, including visa assistance, accommodation finding, travel
-                        planning, and personalized counseling throughout your academic journey.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Footer Start -->
     <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
@@ -1143,7 +1147,7 @@
     <a href="https://wa.me/999431115" class="whatsapp-float" target="_blank">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" />
     </a>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" title="Back to top">↑</button>
 
