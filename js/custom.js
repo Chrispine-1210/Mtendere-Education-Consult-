@@ -296,18 +296,20 @@ $(function () {
 		});
 	});
 
-	// Back to top button
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$(".back-to-top").fadeIn("slow");
-		} else {
-			$(".back-to-top").fadeOut("slow");
-		}
-	});
-	$(".back-to-top").click(function () {
-		$("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
-		return false;
-	});
+	// Back to Top functionality
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
 	const universityData = {
 		chandigarh: {
