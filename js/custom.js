@@ -477,4 +477,72 @@ $(function () {
 		$(".js-sticky-header").sticky({ topSpacing: 0 });
 	};
 	siteSticky();
+
+	const universityDatabase = [
+		{
+			university: 'Chandigarh University',
+			programs: [
+				{ name: 'Engineering', level: 'Undergraduate', country: 'India' },
+				{ name: 'MBA', level: 'Postgraduate', country: 'India' }
+			]
+		},
+		{
+			university: 'Jain University',
+			programs: [
+				{ name: 'Sports Science', level: 'Masters', country: 'India' },
+				{ name: 'Aviation Management', level: 'Undergraduate', country: 'India' }
+			]
+		}
+		// Add more universities and programs
+	];
+
+	function filterPrograms(keyword, level) {
+		const results = [];
+
+		universityDatabase.forEach(univ => {
+			univ.programs.forEach(program => {
+				const nameMatch = program.name.toLowerCase().includes(keyword.toLowerCase());
+				const levelMatch = level ? program.level === level : true;
+
+				if (nameMatch && levelMatch) {
+					results.push({
+						university: univ.university,
+						program: program.name,
+						level: program.level,
+						country: program.country
+					});
+				}
+			});
+		});
+
+		return results;
+	}
+
+	function displayResults(results) {
+		const container = document.getElementById('searchResults');
+		container.innerHTML = '';
+
+		if (results.length === 0) {
+			container.innerHTML = '<p class="text-danger">No matching programs found.</p>';
+			return;
+		}
+
+		results.forEach(res => {
+			const card = document.createElement('div');
+			card.className = 'mb-3 p-3 bg-white border rounded';
+			card.innerHTML = `
+			<h5>${res.program} (${res.level})</h5>
+			<p><strong>University:</strong> ${res.university}<br>
+			<strong>Country:</strong> ${res.country}</p>`	
+			;
+			container.appendChild(card);
+		});
+	}
+
+	document.getElementById('searchBtn').addEventListener('click', () => {
+		const keyword = document.getElementById('searchInput').value;
+		const level = document.getElementById('courseLevelSelect').value;
+		const results = filterPrograms(keyword, level);
+		displayResults(results);
+	});
 });
