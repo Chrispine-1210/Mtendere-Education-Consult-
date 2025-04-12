@@ -478,5 +478,74 @@ $(function () {
 	};
 	siteSticky();
 
+	const universities = [
+		{ name: "University of Oxford", country: "UK", course: "MBA", score: 9 },
+		{ name: "Harvard University", country: "USA", course: "Computer Science", score: 10 },
+		{ name: "Technical University of Munich", country: "Germany", course: "Engineering", score: 8 },
+		{ name: "University of Melbourne", country: "Australia", course: "Biotech", score: 7 },
+		{ name: "Khalifa University", country: "UAE", course: "AI", score: 6 },
+	];
+
+	// Placeholder: Simulate algorithmic sorting (e.g., Knapsack-based priority)
+	function sortUniversities(data) {
+		return data.sort((a, b) => b.score - a.score); // Highest score first
+	}
+
+	function applyFilters() {
+		const search = document.getElementById("searchInput").value.toLowerCase();
+		const country = document.getElementById("countryFilter").value;
+
+		let filtered = universities.filter(u =>
+			(u.name.toLowerCase().includes(search) || u.course.toLowerCase().includes(search)) &&
+			(country === "" || u.country === country)
+		);
+
+		// Apply sorting algorithm
+		filtered = sortUniversities(filtered);
+		renderUniversities(filtered);
+	}
+
+	function renderUniversities(list) {
+		const container = document.getElementById("universityList");
+		container.innerHTML = "";
+
+		if (list.length === 0) {
+			container.innerHTML = "<p class='text-center'>No results found.</p>";
+			return;
+		}
+
+		list.forEach(u => {
+			container.innerHTML += `
+			<div class="col-md-4">
+			<div class="university-card">
+				<h5>${u.name}</h5>
+				<p><strong>Course:</strong> ${u.course}</p>
+				<p><strong>Country:</strong> ${u.country}</p>
+				<a href="#" class="btn btn-outline-primary mt-2">Apply</a>
+			</div>
+			</div>
+		`;
+		});
+	}
+
+	// Load all on first render
+	renderUniversities(sortUniversities(universities));
+
+	document.getElementById('courseSearch').addEventListener('input', function () {
+		const search = this.value.toLowerCase();
+		const rows = document.querySelectorAll('#courseTable tbody tr');
+
+		rows.forEach(row => {
+			const text = row.textContent.toLowerCase();
+			row.style.display = text.includes(search) ? '' : 'none';
+		});
+	});
+
+	// Placeholder for advanced algorithm integration (e.g., knapsack for course selection):
+	function knapsackCourseSelection(userPreferences, courses) {
+		// TODO: Implement optimization based on user budget, goals, and duration constraints.
+		return []; // Return filtered/sorted course objects.
+	}
+
 
 });

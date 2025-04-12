@@ -279,6 +279,22 @@ h4,
   transition: background-color 0.3s ease;
 }
 
+.grayscale-hover {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.grayscale-hover:hover {
+  filter: grayscale(0%);
+}
+
+#apply-cta .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#apply-cta .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .accordion:hover {
   background-color: #e0e0e0;
 }
