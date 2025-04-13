@@ -605,33 +605,19 @@ $(function () {
 		{ name: "PhD in Robotics", level: "PhD Degree", university: "Jain University" }
 	];
 
-	function searchCourses() {
-		const type = document.getElementById("courseType").value;
-		const keyword = document.getElementById("keyword").value.toLowerCase();
-		const resultBox = document.getElementById("searchResults");
-		resultBox.innerHTML = "";
+	function togglePopup(register = false) {
+		const popup = document.getElementById("popupContainer");
+		const card = document.getElementById("flipCard");
+		popup.style.display = "flex";
+		card.classList.remove("flipped");
+		if (register) card.classList.add("flipped");
+	}
 
-		const filtered = courseList.filter(course => {
-			const matchType = (type === "All" || course.level === type);
-			const matchKeyword = course.name.toLowerCase().includes(keyword);
-			return matchType && matchKeyword;
-		});
+	function closePopup() {
+		document.getElementById("popupContainer").style.display = "none";
+	}
 
-		if (filtered.length === 0) {
-			resultBox.innerHTML = '<p class="text-white text-center">No matching courses found.</p>';
-			return;
-		}
-
-		filtered.forEach(course => {
-			resultBox.innerHTML += `
-				<div class="col-md-4 mb-3">
-					<div class="bg-white p-4 shadow-sm rounded">
-						<h5>${course.name}</h5>
-						<p><strong>Level:</strong> ${course.level}</p>
-						<p><strong>University:</strong> ${course.university}</p>
-					</div>
-				</div>
-			`;
-		});
+	function flipCard() {
+		document.getElementById("flipCard").classList.toggle("flipped");
 	}
 });
