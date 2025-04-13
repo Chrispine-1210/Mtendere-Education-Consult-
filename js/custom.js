@@ -91,6 +91,7 @@ $(function () {
 		});
 	};
 	siteMenuClone();
+	});
 
 	var owlPlugin = function () {
 		if ($('.owl-3-slider').length > 0) {
@@ -281,8 +282,8 @@ $(function () {
 
 	// Function to handle autoscrolling
 	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
+		window.scrollTo({ top: 0, behavior: 'smooth'});
+	};
 
 	// Initialize Owl Carousel for dynamic testimonial sliding
 	$(document).ready(function () {
@@ -464,7 +465,6 @@ $(function () {
 		});
 	});
 
-
 	var accordion = function () {
 		$('.btn-link[aria-expanded="true"]').closest('.accordion-item').addClass('active');
 		$('.collapse').on('show.bs.collapse', function () {
@@ -529,7 +529,7 @@ $(function () {
 		});
 
 		return results;
-	}
+	};
 
 	function displayResults(results) {
 		const container = document.getElementById('searchResults');
@@ -594,21 +594,21 @@ $(function () {
 			resultsContainer.innerHTML = `<p class="text-center">No matching results found.</p>`;
 			return;
 		}
+	}); // End of Search functionality
 
-		// Display filtered results
-		filtered.forEach(course => {
-			const col = document.createElement("div");
-			col.className = "col-md-6 col-lg-4 mb-4";
-			col.innerHTML = `
-			<div class="card shadow-sm border-0">
-				<div class="card-body">
-					<h5 class="card-title">${course.title}</h5>
-					<p class="card-text"><strong>Type:</strong> ${course.type}</p>
-					<p class="card-text"><strong>University:</strong> ${course.university}</p>
-				</div>
-			</div>`;
-			resultsContainer.appendChild(col);
-		});
+	// Display filtered results
+	filtered.forEach(course => {
+		const col = document.createElement("div");
+		col.className = "col-md-6 col-lg-4 mb-4";
+		col.innerHTML = `
+		<div class="card shadow-sm border-0">
+			<div class="card-body">
+				<h5 class="card-title">${course.title}</h5>
+				<p class="card-text"><strong>Type:</strong> ${course.type}</p>
+				<p class="card-text"><strong>University:</strong> ${course.university}</p>
+			</div>
+		</div>`;
+		resultsContainer.appendChild(col);
 	});
 
 	const courseList = [
@@ -624,13 +624,12 @@ $(function () {
 		popup.style.display = "flex";
 		card.classList.remove("flipped");
 		if (register) card.classList.add("flipped");
-	}
+	};
 
 	function closePopup() {
 		document.getElementById("popupContainer").style.display = "none";
-	}
+	};
 
 	function flipCard() {
 		document.getElementById("flipCard").classList.toggle("flipped");
-	}
-});
+	};
