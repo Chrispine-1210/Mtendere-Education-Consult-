@@ -358,8 +358,68 @@
                     </form>
                 </div>
             </div>
-
-
+            <!--- Map Section--->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div id="untree_map">
+                        <div id="untree_map_canvas">
+                            <div id="untree_map_info">
+                                <h4 class="text-white">Location</h4>
+                                <p class="text-white">43 Raymouth Rd. Baltemoer, London 3910</p>
+                            </div>
+                            <div id="untree_map_controls">
+                                <button class="btn btn-primary btn-sm" id="untree_map_zoom_in">
+                                    <i class="icon-plus"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm" id="untree_map_zoom_out">
+                                    <i class="icon-minus"></i>
+                                </button>
+                            </div>
+                            <div id="untree_map_legend">
+                                <p class="mb-1">
+                                    <i class="icon-circle-o text-primary mr-2"></i> Primary Location
+                                </p>
+                                <p class="mb-1">
+                                    <i class="icon-circle-o text-secondary mr-2"></i> Secondary Location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        var map;
+                        var markers = [];
+                        var mapOptions = {
+                            center: new google.maps.LatLng(51.5074, -0.1278),
+                            zoom: 8
+                        };
+                        map = new google.maps.Map(document.getElementById('untree_map_canvas'), mapOptions);
+                        var infoWindow = new google.maps.InfoWindow();
+                        var locations = [
+                            ['Primary Location', 51.5074, -0.1278, 1],
+                            ['Secondary Location', 51.5044, -0.1257, 2]
+                        ];
+                        for (var i = 0; i < locations.length; i++) {
+                            var marker = new google.maps.Marker({
+                                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                map: map,
+                                icon: 'img/map-marker-' + locations[i][3] + '.png'
+                            });
+                            markers.push(marker);
+                            marker.addListener('click', (function(marker, i) {
+                                return function() {
+                                    infoWindow.setContent(locations[i][0]);
+                                    infoWindow.open(map, marker);
+                                }
+                            })(marker, i));
+                        }
+                        var bounds = new google.maps.LatLngBounds();
+                        for (var i = 0; i < markers.length; i++) {
+                            bounds.extend(markers[i].getPosition());
+                        }
+                        map.fitBounds(bounds);
+                    </script>
+                </div>
+            </div>
         </div>
     </div> <!-- /.untree_co-section -->
 
