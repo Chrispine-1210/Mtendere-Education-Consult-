@@ -620,4 +620,27 @@ $(function () {
 	function flipCard() {
 		document.getElementById("flipCard").classList.toggle("flipped");
 	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const counters = document.querySelectorAll('.counter-value');
+		const speed = 100;
+
+		counters.forEach(counter => {
+			const animate = () => {
+				const value = +counter.getAttribute('data-count');
+				const data = +counter.innerText;
+
+				const time = value / speed;
+				if (data < value) {
+					counter.innerText = Math.ceil(data + time);
+					setTimeout(animate, 15);
+				} else {
+					counter.innerText = value;
+				}
+			};
+
+			animate();
+		});
+	});
+
 });

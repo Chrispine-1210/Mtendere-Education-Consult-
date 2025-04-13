@@ -75,7 +75,7 @@
 
                     <!-- Language Selector -->
                     <div class="d-lg-inline-block">
-                        <select class="form-select small mr-3"" id="language-select">
+                        <select class="form-select small mr-3"" id=" language-select">
                             <option value="en">English</option>
                             <option value="es">Español</option>
                             <option value="fr">Français</option>
@@ -83,16 +83,8 @@
                         </select>
                     </div>
 
-                    <div class="col-6 col-lg-3 text-right">
-                        <a id="faqBtn" class="small mr-3">
-                            <span class="icon-lock"></span>
-                            Log In
-                        </a>
-                        <a id="faqBtn" class="small mr-3">
-                            <span class="icon-person"></span>
-                            Register
-                        </a>
-                    </div>
+                    <a href="#" onclick="togglePopup(false)" style=" margin-right: 10px;">Log In</a>
+                    <a href="#" onclick="togglePopup(true)">Register</a>
 
                 </div>
             </div>
@@ -449,6 +441,48 @@
         </div>
     </div>
 
+    <!-- Popup Overlay -->
+    <div id="popupContainer" class="popup-overlay" style="display: none;">
+        <div class="popup-box">
+            <div class="flip-card" id="flipCard">
+                <!-- LOGIN FORM -->
+                <div class="flip-face front">
+                    <h2>Login</h2>
+                    <form action="login.php" method="POST">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <button type="submit">Login</button>
+                        <div class="social-login">
+                            <button type="button" class="google">Login with Google</button>
+                            <button type="button" class="facebook">Login with Facebook</button>
+                            <button type="button" class="twitter">Login with Twitter</button>
+                        </div>
+                        <p onclick="flipCard()" class="switch-text">Don’t have an account? Register</p>
+                    </form>
+                </div>
+                <!-- REGISTER FORM -->
+                <div class="flip-face back">
+                    <h2>Register</h2>
+                    <form action="register.php" method="POST">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <button type="submit">Register</button>
+                        <div class="social-login">
+                            <button type="button" class="google">Register with Google</button>
+                            <button type="button" class="facebook">Register with Facebook</button>
+                            <button type="button" class="twitter">Register with Twitter</button>
+                        </div>
+                        <p onclick="flipCard()" class="switch-text">Already have an account? Login</p>
+                    </form>
+                </div>
+            </div>
+            <span class="popup-close" onclick="closePopup()">×</span>
+        </div>
+    </div>
+
     <div id="faqModal" class="faq-modal">
         <div class="faq-content">
             <span class="close-btn">&times;</span>
@@ -491,48 +525,6 @@
             </div>
 
         </div>
-    </div>
-
-    <div id="faqModal" class="faq-modal">
-        <div class="faq-content">
-            <div class="flip-card" id="flipCard">
-                <!-- LOGIN FORM -->
-                <div class="flip-face front">
-                    <h2>Login</h2>
-                    <form action="login.php" method="POST">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                        <button type="submit">Login</button>
-                        <div class="social-login">
-                            <button type="button" class="google">Login with Google</button>
-                            <button type="button" class="facebook">Login with Facebook</button>
-                            <button type="button" class="twitter">Login with Twitter</button>
-                        </div>
-                        <p onclick="flipCard()" class="switch-text">Don’t have an account? Register</p>
-                    </form>
-                </div>
-                <!-- REGISTER FORM -->
-                <div class="flip-face back">
-                    <h2>Register</h2>
-                    <form action="register.php" method="POST">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                        <button type="submit">Register</button>
-                        <div class="social-login">
-                            <button type="button" class="google">Register with Google</button>
-                            <button type="button" class="facebook">Register with Facebook</button>
-                            <button type="button" class="twitter">Register with Twitter</button>
-                        </div>
-                        <p onclick="flipCard()" class="switch-text">Already have an account? Login</p>
-                    </form>
-                </div>
-            </div>
-            <span class="popup-close" onclick="closePopup()">×</span>
-        </div>
-
     </div>
     </div>
 
@@ -1109,6 +1101,9 @@
             <p>&copy; Copyrights 2025 @Mtendere. All rights reserved.</<p>
         </div>
     </div>
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Floating WhatsApp Chat Button -->
     <a href="https://wa.me/999431115" class="whatsapp-float" target="_blank">
