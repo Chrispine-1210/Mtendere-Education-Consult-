@@ -18,6 +18,7 @@ $(function () {
 			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
 		});
 
+		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
 
 		setTimeout(function () {
 
@@ -299,6 +300,18 @@ $(function () {
 	// Back to Top functionality
 	const backToTopButton = document.getElementById("backToTop");
 
+	$('#universitySelect').on('change', function () {
+		const selectedUni = $(this).val();
+		const data = universityData[selectedUni];
+	
+		if (data) {
+			$('#intakesList').text(data.intakes.join(', '));
+			$('#programsList').text(data.programs.join(', '));
+			$('#documentsList').text(data.documents);
+			$('#requirementsText').text(data.requirements);
+		}
+	});
+
 	window.onscroll = function () {
 		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
 			backToTopButton.style.display = "block";
@@ -334,7 +347,7 @@ $(function () {
 			intakes: ["March", "August"],
 			programs: ["Pharmacy", "Biotech", "Liberal Arts"],
 			documents: "60%+ in core subjects, English Proof, ID",
-			requirements: "60% in Science stream, good communication skills, basic computer knowledge"
+			requirements: "Minimum 60% in science stream, English proficiency"
 		},
 		jain: {
 			intakes: ["January", "June", "October"],
@@ -620,27 +633,4 @@ $(function () {
 	function flipCard() {
 		document.getElementById("flipCard").classList.toggle("flipped");
 	}
-
-	document.addEventListener("DOMContentLoaded", () => {
-		const counters = document.querySelectorAll('.counter-value');
-		const speed = 100;
-
-		counters.forEach(counter => {
-			const animate = () => {
-				const value = +counter.getAttribute('data-count');
-				const data = +counter.innerText;
-
-				const time = value / speed;
-				if (data < value) {
-					counter.innerText = Math.ceil(data + time);
-					setTimeout(animate, 15);
-				} else {
-					counter.innerText = value;
-				}
-			};
-
-			animate();
-		});
-	});
-
 });
