@@ -533,8 +533,8 @@ $(function () {
 			card.innerHTML = `
 			<h5>${res.program} (${res.level})</h5>
 			<p><strong>University:</strong> ${res.university}<br>
-			<strong>Country:</strong> ${res.country}</p>`	
-			;
+			<strong>Country:</strong> ${res.country}</p>`
+				;
 			container.appendChild(card);
 		});
 	}
@@ -545,4 +545,93 @@ $(function () {
 		const results = filterPrograms(keyword, level);
 		displayResults(results);
 	});
+
+	const courseData = [
+		{ title: "Bachelor of Science in Engineering", type: "Undergraduate Degree", university: "Chandigarh University" },
+		{ title: "Master of Business Administration", type: "Masters Degree", university: "Parul University" },
+		{ title: "PhD in Biotechnology", type: "PhD Degree", university: "Shoolini University" },
+		{ title: "Doctor of Philosophy in Education", type: "Doctoral Degree", university: "Jain University" },
+		{ title: "Postgraduate Diploma in Computer Science", type: "Post-graduate Degree", university: "CT University" },
+		{ title: "Master of Science in Data Analytics", type: "Masters Degree", university: "Parul University" },
+	];
+
+	let selectedType = "";
+
+	// Handle dropdown type selection
+	document.querySelectorAll(".dropdown-item").forEach(item => {
+		item.addEventListener("click", function () {
+			selectedType = this.textContent.trim();
+			document.querySelector(".dropdown-toggle").textContent = selectedType;
+		});
+	});
+
+	// Handle Search
+	document.querySelector(".btn-secondary").addEventListener("click", function () {
+		const keyword = document.querySelector("input.form-control").value.toLowerCase().trim();
+		const resultsContainer = document.getElementById("resultsContainer");
+		resultsContainer.innerHTML = ""; // Clear old results
+
+		// Filter data
+		const filtered = courseData.filter(course =>
+			course.type === selectedType &&
+			course.title.toLowerCase().includes(keyword)
+		);
+
+		if (filtered.length === 0) {
+			resultsContainer.innerHTML = `<p class="text-center">No matching results found.</p>`;
+			return;
+		}
+
+		// Display filtered results
+		filtered.forEach(course => {
+			const col = document.createElement("div");
+			col.className = "col-md-6 col-lg-4 mb-4";
+			col.innerHTML = `
+			<div class="card shadow-sm border-0">
+				<div class="card-body">
+					<h5 class="card-title">${course.title}</h5>
+					<p class="card-text"><strong>Type:</strong> ${course.type}</p>
+					<p class="card-text"><strong>University:</strong> ${course.university}</p>
+				</div>
+			</div>`;
+			resultsContainer.appendChild(col);
+		});
+	});
+
+	const courseList = [
+		{ name: "Bachelor of Computer Science", level: "Undergraduate Degree", university: "Chandigarh University" },
+		{ name: "MBA in Finance", level: "Post-graduate Degree", university: "Parul University" },
+		{ name: "MSc in Data Science", level: "Masters Degree", university: "CT University" },
+		{ name: "PhD in Robotics", level: "PhD Degree", university: "Jain University" }
+	];
+
+	function searchCourses() {
+		const type = document.getElementById("courseType").value;
+		const keyword = document.getElementById("keyword").value.toLowerCase();
+		const resultBox = document.getElementById("searchResults");
+		resultBox.innerHTML = "";
+
+		const filtered = courseList.filter(course => {
+			const matchType = (type === "All" || course.level === type);
+			const matchKeyword = course.name.toLowerCase().includes(keyword);
+			return matchType && matchKeyword;
+		});
+
+		if (filtered.length === 0) {
+			resultBox.innerHTML = '<p class="text-white text-center">No matching courses found.</p>';
+			return;
+		}
+
+		filtered.forEach(course => {
+			resultBox.innerHTML += `
+				<div class="col-md-4 mb-3">
+					<div class="bg-white p-4 shadow-sm rounded">
+						<h5>${course.name}</h5>
+						<p><strong>Level:</strong> ${course.level}</p>
+						<p><strong>University:</strong> ${course.university}</p>
+					</div>
+				</div>
+			`;
+		});
+	}
 });
