@@ -442,6 +442,10 @@ $(function () {
 	};
 	jarallaxPlugin();
 
+	setTimeout(() => {
+		document.getElementById('enquireForm').classList.add('show');
+	}, 10000);
+
 	const faqBtn = document.getElementById("faqBtn");
 	const faqModal = document.getElementById("faqModal");
 	const closeBtn = document.querySelector(".close-btn");

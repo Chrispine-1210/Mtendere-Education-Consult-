@@ -518,6 +518,37 @@ h4,
   }
 }
 
+.enquire-now {
+  position: fixed;
+  top: 50%;
+  left: -350px;
+  transform: translateY(-50%);
+  width: 300px;
+  background: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.5s ease;
+  z-index: 1000;
+}
+
+.enquire-now.show {
+  left: 0;
+}
+
+.enquire-now h5 {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.bi {
+  margin-right: 5px;
+} S
+
 .site-nav {
   position: absolute;
   width: 100%;
