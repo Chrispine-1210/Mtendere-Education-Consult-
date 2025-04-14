@@ -1204,7 +1204,63 @@ h4,
   outline: none;
 }
 
+.profile {
+  background: url("https://assets.codepen.io/406785/Ansel_Adams_and_camera.jpg") center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.content {
+  padding: 3rem 1rem;
+  background: #fff;
+}
+.headline-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #083c5f;
+}
+.headline-2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0f7c90;
+}
+.subheading {
+  font-size: 1.25rem;
+  color: #555;
+}
+img {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+.comment-section {
+  margin-top: 3rem;
+}
+.call-to-action {
+  background-color: #0f7c90;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+.cta-btn {
+  background: white;
+  color: #0f7c90;
+  font-weight: bold;
+}
+.likes {
+  font-size: 1rem;
+  color: #888;
+}
+
 .top-bar {
+  background-color: #17586456;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1213,10 +1269,21 @@ h4,
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero .hero-carousel {
   position: relative;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 #hero .hero-container:before {
@@ -1231,6 +1298,13 @@ h4,
 }
 
 #hero>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
   position: relative;
   z-index: 2;
 }
