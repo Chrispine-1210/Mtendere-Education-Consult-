@@ -1,129 +1,36 @@
-# Mtendere-Education-Consult-
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Tech Stack:
-Frontend: HTML5, CSS3, JavaScript, and Bootstrap for responsiveness and dynamic UI.
-Backend: Node.js with Express.js for fast, scalable server-side logic.
-Database: MongoDB for flexible data storage and retrieval.
-CMS Integration: Strapi or WordPress (Headless) for easy content management.
-Hosting: Cloud service (e.g., AWS, DigitalOcean, or Vercel) for reliable deployment and scalability.
+## Getting Started
 
-REPO STRUCTURE
+First, run the development server:
 
-mtendere-education-consult-website/  
-│   README.md  
-│   package.json  
-│   .env  
-│   .gitignore  
-│  
-├── public/  
-│   ├── images/  
-│   ├── videos/  
-│   └── assets/  
-│  
-├── src/  
-│   ├── config/  
-│   │   └── db.js  
-│   │   └── mail.js  
-│   │   └── auth.js  
-│   │  
-│   ├── controllers/  
-│   │   └── authController.js  
-│   │   └── blogController.js  
-│   │   └── contactController.js  
-│   │  
-│   ├── models/  
-│   │   └── User.js  
-│   │   └── Blog.js  
-│   │   └── University.js  
-│   │  
-│   ├── routes/  
-│   │   └── authRoutes.js  
-│   │   └── blogRoutes.js  
-│   │   └── contactRoutes.js  
-│   │  
-│   ├── views/  
-│   │   └── home.ejs  
-│   │   └── about.ejs  
-│   │   └── services.ejs  
-│   │   └── contact.ejs  
-│   │   └── universities.ejs  
-│   │   └── dashboard.ejs  
-│   │  
-│   ├── middlewares/  
-│   │   └── authMiddleware.js  
-│   │   └── errorHandler.js  
-│   │  
-│   └── server.js  
-│  
-└── package.json  
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Features and Implementation:
-Home Page:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Dynamic sliders and hero section video integration.
-Call-to-action buttons for key services.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-About Us Page:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Professional layout with mission, vision, and background details.
+## Learn More
 
-Services Page:
+To learn more about Next.js, take a look at the following resources:
 
-Detailed service descriptions using dynamic content management.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Partner Universities Page:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Dynamic search/filter options.
-Profiles with university details, programs, and application links.
+## Deploy on Vercel
 
-Contact Us Page:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Integrated contact form (NodeMailer for emails).
-Google Maps API for location embedding.
-
-Testimonials/Success Stories:
-
-Rotating testimonials using a carousel library.
-
-Blog/Resources Section:
-
-CMS-managed blog with categories (tips, scholarships, visa guidance).
-
-Eligibility Checker Tool:
-
-Form with logic for eligibility assessment and instant feedback.
-
-Virtual Consultation Booking System:
-
-Integration with third-party booking API or custom-built scheduling system.
-
-Student Dashboard:
-
-Secure login (JWT authentication).
-Application progress tracker and document upload portal.
-
-Live Chat Support:
-
-Integration with third-party solutions like Tawk.to or custom WebSocket implementation.
-
-SEO Optimization:
-
-Metadata management, schema markup, and content optimization.
-
-Responsive Design:
-
-Full responsiveness across all devices using Bootstrap grid system.
-
-Multilingual Support:
-
-i18n integration for translations (French, Swahili, etc.).
-
-Admin Backend Tools:
-
-CMS dashboard for content management.
-CRM integration for lead and customer management.
-Google Analytics or alternative analytics setup.
-
-Custom Add-ons:
-
-Career Quiz and Cost Calculator for guidance and budget planning.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
