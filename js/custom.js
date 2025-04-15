@@ -1,3 +1,14 @@
+import $ from 'jquery';
+import 'bootstrap';
+import 'owl.carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.carousel.theme.default.css';
+import 'animate.css';
+import 'jarallax';
+import 'jarallax/dist/jarallax.css';
+import 'jquery-ui/ui/widgets/datepicker';
+import 'jquery-ui/themes/base/all.css';
+
 AOS.init({
 	duration: 800,
 	easing: 'ease-out',
@@ -125,14 +136,15 @@ var owlPlugin = function () {
 			}
 		});
 	}
+
 	$('.js-custom-next-v2').click(function (e) {
 		e.preventDefault();
 		owl3.trigger('next.owl.carousel');
-	})
+	});
 	$('.js-custom-prev-v2').click(function (e) {
 		e.preventDefault();
 		owl3.trigger('prev.owl.carousel');
-	})
+	});
 	if ($('.owl-4-slider').length > 0) {
 		var owl4 = $('.owl-4-slider').owlCarousel({
 			loop: true,
@@ -299,9 +311,6 @@ $(document).ready(function () {
 	});
 });
 
-// Back to Top functionality
-const backToTopButton = document.getElementById("backToTop");
-
 document.addEventListener("DOMContentLoaded", function () {
 	// --- University Selection & Display ---
 	const universityData = {
@@ -431,7 +440,7 @@ const counter = function () {
 			});
 		}
 	}, { offset: '95%' });
-};
+}
 counter();
 
 // --- Jarallax ---
@@ -455,28 +464,29 @@ window.addEventListener("click", e => {
 	if (e.target === faqModal) faqModal.style.display = "none";
 });
 
-// --- Accordion Logic ---
-const accordions = document.querySelectorAll(".accordion");
-accordions.forEach(acc => {
-	acc.addEventListener("click", function () {
-		this.classList.toggle("active");
-		const panel = this.nextElementSibling;
-		panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-	});
-});
-
 $('.btn-link[aria-expanded="true"]').closest('.accordion-item').addClass('active');
 $('.collapse').on('show.bs.collapse', function () {
 	$(this).closest('.accordion-item').addClass('active');
 });
-$('.collapse').on('hidden.bs.collapse', function () {
-	$(this).closest('.accordion-item').removeClass('active');
+
+// Remove active class from all accordion items when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll(".accordion-item").forEach(item => {
+		item.classList.remove("active");
+	});
 });
 
-// --- Date Picker ---
-if ($('.datepicker').length > 0) {
-	$('.datepicker').datepicker();
-}
+// Import the jQuery UI library
+import $ from 'jquery-ui/ui/widgets/datepicker';
+
+// Initialize the date picker functionality
+$(document).ready(function () {
+	// Check if there is an element with the class "datepicker" present in the HTML document
+	if ($('.datepicker').length > 0) {
+		// Initialize the date picker functionality using the 'datepicker' method provided by the jQuery UI library
+		$('.datepicker').datepicker();
+	}
+});
 
 // --- Sticky Header ---
 $(".js-sticky-header").sticky({ topSpacing: 0 });
@@ -501,13 +511,13 @@ const universityDatabase = [
 
 function filterPrograms(keyword, level) {
 	const results = [];
-	universityDatabase.forEach(univ => {
-		univ.programs.forEach(program => {
+	universityDatabase.forEach(university => {
+		university.programs.forEach(program => {
 			const nameMatch = program.name.toLowerCase().includes(keyword.toLowerCase());
 			const levelMatch = level ? program.level === level : true;
 			if (nameMatch && levelMatch) {
 				results.push({
-					university: univ.university,
+					university: university.university,
 					program: program.name,
 					level: program.level,
 					country: program.country
@@ -525,45 +535,112 @@ function displayResults(results) {
 		container.innerHTML = '<p class="text-danger">No matching programs found.</p>';
 		return;
 	}
-	results.forEach(res => {
-		const card = document.createElement('div');
-		card.className = 'mb-3 p-3 bg-white border rounded';
-		card.innerHTML = `<h5>${res.program} (${res.level})</h5>
-			<p><strong>University:</strong> ${res.university}<br>
-			<strong>Country:</strong> ${res.country}</p>`;
-		container.appendChild(card);
+	results.forEach(result => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+            <td>${result.program}</td>
+            <td>${result.level}</td>
+            <td>${result.university}</td>
+            <td>${result.country}</td>
+        `;
+		container.appendChild(row);
 	});
 }
 
-document.getElementById('searchBtn')?.addEventListener('click', () => {
+document.getElementById('searchBtn').addEventListener('click', () => {
 	const keyword = document.getElementById('searchInput').value;
 	const level = document.getElementById('courseLevelSelect').value;
 	const results = filterPrograms(keyword, level);
 	displayResults(results);
 });
 
+// --- Accordion Logic ---
+const accordions = document.querySelectorAll < HTMLElement > (".accordion");
+accordions.forEach(acc => {
+	acc.addEventListener("click", function () {
+		// Remove active class from all accordion items
+		document.querySelectorAll < HTMLElement > (".accordion-item").forEach(item => {
+			item.classList.remove("active");
+		});
+
+		// Add active class to the clicked accordion item
+		this.classList.toggle("active");
+
+		const panel = this.nextElementSibling as HTMLElement;
+		panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+	});
+});
+
+// --- Sticky Header ---
+$(".js-sticky-header").sticky({ topSpacing: 0 });
+
+// --- Program Filter ---
+const universityDatabase: { university: string; programs: { name: string; level: string; country: string }[] }[] = [
+	// ...
+];
+
+function filterPrograms(keyword: string, level: string): { university: string; program: string; level: string; country: string }[] {
+	const results: { university: string; program: string; level: string; country: string }[] = [];
+	universityDatabase.forEach(university => {
+		university.programs.forEach(program => {
+			const nameMatch = program.name.toLowerCase().includes(keyword.toLowerCase());
+			const levelMatch = level ? program.level === level : true;
+			if (nameMatch && levelMatch) {
+				results.push({
+					university: university.university,
+					program: program.name,
+					level: program.level,
+					country: program.country
+				});
+			}
+		});
+	});
+	return results;
+}
+
+function displayResults(results: { university: string; program: string; level: string; country: string }[]): void {
+	const container = document.getElementById('searchResults') as HTMLElement;
+	container.innerHTML = '';
+	if (results.length === 0) {
+		container.innerHTML = '<p class="text-danger">No matching programs found.</p>';
+		return;
+	}
+	results.forEach(result => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+            <td>${result.program}</td>
+            <td>${result.level}</td>
+            <td>${result.university}</td>
+            <td>${result.country}</td>
+        `;
+		container.appendChild(row);
+	});
+}
+
+document.getElementById('searchBtn')?.addEventListener('click', () => {
+	const keyword = document.getElementById('searchInput')?.value ?? '';
+	const level = document.getElementById('courseLevelSelect')?.value;
+	const results = filterPrograms(keyword, level);
+	displayResults(results);
+});
+
 // --- Course Filter with Dropdown ---
-const courseData = [
-	{ title: "Bachelor of Science in Engineering", type: "Undergraduate Degree", university: "Chandigarh University" },
-	{ title: "Master of Business Administration", type: "Masters Degree", university: "Parul University" },
-	{ title: "PhD in Biotechnology", type: "PhD Degree", university: "Shoolini University" },
-	{ title: "Doctor of Philosophy in Education", type: "Doctoral Degree", university: "Jain University" },
-	{ title: "Postgraduate Diploma in Computer Science", type: "Post-graduate Degree", university: "CT University" },
-	{ title: "Master of Science in Data Analytics", type: "Masters Degree", university: "Parul University" },
+const courseData: { title: string; type: string; university: string }[] = [
+	// ...
 ];
 
 let selectedType = "";
 
 document.querySelectorAll(".dropdown-item").forEach(item => {
 	item.addEventListener("click", function () {
-		selectedType = this.textContent.trim();
-		document.querySelector(".dropdown-toggle").textContent = selectedType;
+		selectedType = this.textContent?.trim() ?? '';
+		document.querySelector(".dropdown-toggle")?.textContent = selectedType;
 	});
 });
 
-document.querySelector(".btn-secondary").addEventListener("click", function () {
-	const keyword = document.querySelector("input.form-control").value.toLowerCase().trim();
-	const resultsContainer = document.getElementById("resultsContainer");
+document.querySelector(".btn-secondary")?.addEventListener("click", function () {
+	const keyword = document.querySelector("input.form-control")?.value?.toLowerCase().trim() ?? '';
+	const resultsContainer = document.getElementById("resultsContainer") as HTMLElement;
 	resultsContainer.innerHTML = "";
 
 	const filtered = courseData.filter(course =>
@@ -580,13 +657,13 @@ document.querySelector(".btn-secondary").addEventListener("click", function () {
 		const col = document.createElement("div");
 		col.className = "col-md-6 col-lg-4 mb-4";
 		col.innerHTML = `
-				<div class="card shadow-sm border-0">
-					<div class="card-body">
-						<h5 class="card-title">${course.title}</h5>
-						<p class="card-text"><strong>Type:</strong> ${course.type}</p>
-						<p class="card-text"><strong>University:</strong> ${course.university}</p>
-					</div>
-				</div>`;
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text"><strong>Type:</strong> ${course.type}</p>
+                        <p class="card-text"><strong>University:</strong> ${course.university}</p>
+                    </div>
+                </div>`;
 		resultsContainer.appendChild(col);
 	});
 });
