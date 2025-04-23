@@ -280,11 +280,6 @@ $(document).ready(function () {
 	});
 });
 
-// Function to handle autoscrolling
-function scrollToTop() {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
 // Initialize Owl Carousel for dynamic testimonial sliding
 $(document).ready(function () {
 	$(".owl-carousel").owlCarousel({
@@ -445,6 +440,7 @@ jarallaxPlugin();
 setTimeout(() => {
 	document.getElementById('enquireForm').classList.add('show');
 }, 10000);
+
 
 const faqBtn = document.getElementById("faqBtn");
 const faqModal = document.getElementById("faqModal");
