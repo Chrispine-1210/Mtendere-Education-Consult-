@@ -852,7 +852,7 @@ h4,
 .site-mobile-menu {
   width: 300px;
   position: fixed;
-  display: contents;
+  right: 0;
   z-index: 2000;
   padding-top: 20px;
   background: #00779B;
