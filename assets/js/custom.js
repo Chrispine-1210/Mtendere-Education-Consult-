@@ -710,3 +710,20 @@ $('#videoModal').on('show.bs.modal', function (e) {
 $('#videoModal').on('hide.bs.modal', function (e) {
 	$("#video").attr('src', '');
 });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+		btn.classList.add('active');
+		const filter = btn.getAttribute('data-filter');
+
+		document.querySelectorAll('.category-card').forEach(card => {
+			if (filter === 'all' || card.getAttribute('data-category') === filter) {
+				card.style.display = 'block';
+			} else {
+				card.style.display = 'none';
+			}
+		});
+	});
+});
+
