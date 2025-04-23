@@ -15,7 +15,6 @@ body:before {
   z-index: 99;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: .3s all ease;
@@ -24,6 +23,11 @@ body:before {
 }
 
 body.offcanvas-menu:before {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #222429;
+  padding: 20px;
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -197,7 +201,6 @@ h4,
   bottom: 90px;
   right: 20px;
   background-color: #007BFF;
-  color: #fff;
   border: none;
   border-radius: 50%;
   width: 45px;
@@ -212,7 +215,7 @@ h4,
   float: left;
   display: block;
   position: fixed;
-  bottom: 20px;
+  bottom: 45px;
   right: 20px;
   background-color: #25D366;
   color: #fff;
