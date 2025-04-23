@@ -700,3 +700,13 @@ document.querySelectorAll('.btn-like').forEach(button => {
 
 // Initialize the slideshow on page load
 startSlideshow();
+
+// Modal Video Handling
+var videoSrc;
+$('#videoModal').on('show.bs.modal', function (e) {
+	videoSrc = $(e.relatedTarget).data('src');
+	$("#video").attr('src', videoSrc);
+});
+$('#videoModal').on('hide.bs.modal', function (e) {
+	$("#video").attr('src', '');
+});
