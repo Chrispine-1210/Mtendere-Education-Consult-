@@ -1,267 +1,500 @@
-import $ from 'jquery';
-import 'owl.carousel';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-// Initialize AOS
 AOS.init({
-    duration: 800,
-    easing: 'ease-out',
-    once: true
+	duration: 800,
+	easing: 'slide',
+	once: true
 });
-
-import Jarallax from 'jarallax';
-import 'jarallax/dist/jarallax.css';
-
-$(document).ready(function() {
-    // Apply Jarallax to elements with the .jarallax class
-    if ($('.jarallax').length) {
-        $('.jarallax').jarallax();
-    }
-});
-
-
-// Owl Carousel Initialization for .owl-3-slider
-$(document).ready(function() {
-    if ($('.owl-3-slider').length) {
-        $('.owl-3-slider').owlCarousel({
-            loop: true,
-            margin: 40,
-            autoplay: true,
-            smartSpeed: 700,
-            items: 4,
-            stagePadding: 0,
-            nav: true,
-            dots: true,
-            navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
-            responsive: {
-                0: { items: 1 },
-                600: { items: 1 },
-                800: { items: 2 },
-                1000: { items: 2 },
-                1100: { items: 3 },
-            }
-        });
-    }
-});
-
-import $ from 'jquery';
 
 $(function () {
-    var siteMenuClone = function () {
-        $('.js-clone-nav').each(function () {
-            var $this = $(this);
-            $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-        });
 
-        // More logic for menu handling...
-    };
-    siteMenuClone();
+	'use strict';
+
+	$(".loader").delay(200).fadeOut("slow");
+	$("#overlayer").delay(200).fadeOut("slow");
+
+	var siteMenuClone = function () {
+
+		$('.js-clone-nav').each(function () {
+			var $this = $(this);
+			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+		});
+
+		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
+
+		setTimeout(function () {
+
+			var counter = 0;
+			$('.site-mobile-menu .has-children').each(function () {
+				var $this = $(this);
+
+				$this.prepend('<span class="arrow-collapse collapsed">');
+
+				$this.find('.arrow-collapse').attr({
+					'data-toggle': 'collapse',
+					'data-target': '#collapseItem' + counter,
+				});
+
+				$this.find('> ul').attr({
+					'class': 'collapse',
+					'id': 'collapseItem' + counter,
+				});
+
+				counter++;
+
+			});
+
+		}, 1000);
+
+		$('body').on('click', '.arrow-collapse', function (e) {
+			var $this = $(this);
+			if ($this.closest('li').find('.collapse').hasClass('show')) {
+				$this.removeClass('active');
+			} else {
+				$this.addClass('active');
+			}
+			e.preventDefault();
+
+		});
+
+		$(window).resize(function () {
+			var $this = $(this),
+				w = $this.width();
+
+			if (w > 768) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+				}
+			}
+		})
+
+		$('body').on('click', '.js-menu-toggle', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			if ($('body').hasClass('offcanvas-menu')) {
+				$('body').removeClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').removeClass('active');
+			} else {
+				$('body').addClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').addClass('active');
+			}
+		})
+
+		// click outisde offcanvas
+		$(document).mouseup(function (e) {
+			var container = $(".site-mobile-menu");
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+					$('body').find('.js-menu-toggle').removeClass('active');
+				}
+			}
+		});
+	};
+	siteMenuClone();
 });
 
+var owlPlugin = function () {
+	if ($('.owl-3-slider').length > 0) {
+		var owl3 = $('.owl-3-slider').owlCarousel({
+			loop: true,
+			autoHeight: true,
+			margin: 40,
+			autoplay: true,
+			smartSpeed: 700,
+			items: 4,
+			stagePadding: 0,
+			nav: true,
+			dots: true,
+			navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				800: {
+					items: 2
+				},
+				1000: {
+					items: 2
+				},
+				1100: {
+					items: 3
+				}
+			}
+		});
+	}
+	$('.js-custom-next-v2').click(function (e) {
+		e.preventDefault();
+		owl3.trigger('next.owl.carousel');
+	})
+	$('.js-custom-prev-v2').click(function (e) {
+		e.preventDefault();
+		owl3.trigger('prev.owl.carousel');
+	})
+	if ($('.owl-4-slider').length > 0) {
+		var owl4 = $('.owl-4-slider').owlCarousel({
+			loop: true,
+			autoHeight: true,
+			margin: 10,
+			autoplay: true,
+			smartSpeed: 700,
+			items: 4,
+			nav: false,
+			dots: true,
+			navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				800: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				},
+				1100: {
+					items: 4
+				}
+			}
+		});
+	}
 
-// Owl Carousel Initialization
-function initCarousel() {
-	$(".owl-carousel").owlCarousel({
+
+	if ($('.owl-single-text').length > 0) {
+		var owlText = $('.owl-single-text').owlCarousel({
+			loop: true,
+			autoHeight: true,
+			margin: 0,
+			autoplay: true,
+			smartSpeed: 1200,
+			items: 1,
+			nav: false,
+			navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>']
+		});
+	}
+
+	if ($('.events-slider').length > 0) {
+		var owl = $('.events-slider').owlCarousel({
+			loop: true,
+			autoHeight: true,
+			margin: 0,
+			autoplay: true,
+			smartSpeed: 800,
+			mouseDrag: false,
+			touchDrag: false,
+			items: 1,
+			nav: false,
+			navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
+		});
+	}
+	if ($('.owl-single').length > 0) {
+
+		var owl = $('.owl-single').owlCarousel({
+			loop: true,
+			autoHeight: true,
+			margin: 0,
+			autoplay: true,
+			smartSpeed: 800,
+			mouseDrag: false,
+			touchDrag: false,
+			items: 1,
+			nav: false,
+			navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
+			onChanged: changed,
+		});
+
+		function changed(event) {
+			var i = event.item.index;
+
+			if (i == 0 || i == null) {
+				i = 1;
+			} else {
+				i = i - 1;
+
+				$('.js-custom-dots li').removeClass('active');
+				$('.js-custom-dots li[data-index="' + i + '"]').addClass('active');
+			}
+		}
+
+		$('.js-custom-dots li').each(function (i) {
+
+			var i = i + 1;
+			$(this).attr('data-index', i);
+		});
+
+		$('.js-custom-dots a').on('click', function (e) {
+			e.preventDefault();
+			owl.trigger('stop.owl.autoplay');
+			var k = $(this).closest('li').data('index');
+			k = k - 1;
+			owl.trigger('to.owl.carousel', [k, 500]);
+		})
+
+	}
+
+
+	if ($('.wide-slider-testimonial').length > 0) {
+		$('.wide-slider-testimonial').owlCarousel({
+			loop: true,
+			autoplay: true,
+			margin: 0,
+			nav: false,
+			autoplayHoverPause: false,
+			items: 1,
+			smartSpeed: 1000,
+			autoHeight: true,
+			navText: ["<span class='ion-android-arrow-dropleft'></span>", "<span class='ion-android-arrow-dropright'></span>"],
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				600: {
+					items: 1,
+					nav: false
+				},
+				1000: {
+					items: 1,
+					nav: false
+				}
+			}
+		});
+	}
+
+}
+owlPlugin();
+
+$(document).ready(function () {
+	$(".hero-carousel").owlCarousel({
 		items: 1,
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 5000,
-		autoplayHoverPause: true,
+		autoplayTimeout: 6000,
 		nav: true,
-		dots: true,
+		dots: true
 	});
-}
+});
 
-// University Dropdown Setup
-function setupUniversityDropdown(universityData) {
-	$('#universitySelect').on('change', function () {
-		const selectedUni = $(this).val();
-		const data = universityData[selectedUni];
-		if (data) {
-			$('#intakesList').text(data.intakes.join(', '));
-			$('#programsList').text(data.programs.join(', '));
-			$('#documentsList').text(data.documents);
-			$('#requirementsText').text(data.requirements);
-		}
+// Function to handle autoscrolling
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// Initialize Owl Carousel for dynamic testimonial sliding
+$(document).ready(function () {
+	$(".owl-carousel").owlCarousel({
+		items: 1, // Display one item at a time
+		loop: true, // Continuous loop of items
+		autoplay: true, // Auto-play testimonials
+		autoplayTimeout: 5000, // Scroll every 5 seconds
+		autoplayHoverPause: true, // Pause on hover
+		nav: true, // Show next/prev buttons
+		dots: true, // Show dots
 	});
+});
 
-	const universitySelect = document.getElementById("university");
-	const intakeSelect = document.getElementById("intakeMonth");
-	const programSelect = document.getElementById("program");
-	const documentsField = document.getElementById("documents");
-	const requirementsField = document.getElementById("requirements");
+// Back to Top functionality
+const backToTopButton = document.getElementById("backToTop");
 
-	universitySelect.addEventListener("change", function () {
-		const selected = this.value;
-		const data = universityData[selected];
-		intakeSelect.innerHTML = "";
-		programSelect.innerHTML = "";
-		if (data) {
-			data.intakes.forEach(month => {
-				const option = document.createElement("option");
-				option.value = month;
-				option.textContent = month;
-				intakeSelect.appendChild(option);
-			});
-			data.programs.forEach(program => {
-				const option = document.createElement("option");
-				option.value = program;
-				option.textContent = program;
-				programSelect.appendChild(option);
-			});
-			documentsField.value = data.documents;
-			requirementsField.value = data.requirements;
-		} else {
-			documentsField.value = "";
-			requirementsField.value = "";
-		}
-	});
-}
+$('#universitySelect').on('change', function () {
+	const selectedUni = $(this).val();
+	const data = universityData[selectedUni];
 
-// Back to Top Button
-function setupBackToTop() {
-	const backToTopButton = document.getElementById("backToTopButton");
-	window.onscroll = function () {
-		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-			backToTopButton.style.display = "block";
-		} else {
-			backToTopButton.style.display = "none";
-		}
-	};
-	backToTopButton.addEventListener("click", function () {
-		window.scrollTo({ top: 0, behavior: "smooth" });
-	});
-}
-
-// Form Submission
-function setupFormSubmission() {
-	document.getElementById("applicationForm").addEventListener("submit", function (e) {
-		e.preventDefault();
-		alert("Your application has been submitted!");
-		this.reset();
-		if (typeof closeForm === "function") closeForm();
-	});
-}
-
-// Video Modal Reset
-function setupVideoReset() {
-	const videoModal = document.getElementById("videoModal");
-	if (videoModal) {
-		videoModal.addEventListener("hidden.bs.modal", function () {
-			document.getElementById("videoFrame").src = document.getElementById("videoFrame").src;
-		});
+	if (data) {
+		$('#intakesList').text(data.intakes.join(', '));
+		$('#programsList').text(data.programs.join(', '));
+		$('#documentsList').text(data.documents);
+		$('#requirementsText').text(data.requirements);
 	}
-}
+});
 
-// Animated Counter
-function setupCounter() {
+window.onscroll = function () {
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		backToTopButton.style.display = "block";
+	} else {
+		backToTopButton.style.display = "none";
+	}
+};
+
+backToTopButton.addEventListener("click", function () {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const universityData = {
+	chandigarh: {
+		intakes: ["January", "July"],
+		programs: ["Engineering", "Business", "IT", "Hospitality"],
+		documents: "Passport, Academic Transcript, English Proficiency (IELTS 6.0+)",
+		requirements: "Minimum 60% aggregate in high school, IELTS 6.0 or equivalent"
+	},
+	parul: {
+		intakes: ["February", "September"],
+		programs: ["Medicine", "Physiotherapy", "Engineering", "Design"],
+		documents: "Transcript, Passport, Medical Certificate",
+		requirements: "High school diploma with science subjects, minimum 55%, valid ID"
+	},
+	ct: {
+		intakes: ["January", "July", "November"],
+		programs: ["Applied Sciences", "Agriculture", "Media"],
+		documents: "Transcript, Passport, Proof of English",
+		requirements: "Pass in relevant subjects, English proficiency certificate"
+	},
+	shoolini: {
+		intakes: ["March", "August"],
+		programs: ["Pharmacy", "Biotech", "Liberal Arts"],
+		documents: "60%+ in core subjects, English Proof, ID",
+		requirements: "Minimum 60% in science stream, English proficiency"
+	},
+	jain: {
+		intakes: ["January", "June", "October"],
+		programs: ["Sports Science", "Aviation", "Engineering"],
+		documents: "GPA ≥ 2.5, English Test, Passport Copy",
+		requirements: "Minimum GPA of 2.5, strong academic background in chosen program"
+	}
+};
+
+const universitySelect = document.getElementById("university");
+const intakeSelect = document.getElementById("intakeMonth");
+const programSelect = document.getElementById("program");
+const documentsField = document.getElementById("documents");
+const requirementsField = document.getElementById("requirements");
+
+universitySelect.addEventListener("change", function () {
+	const selected = this.value;
+	const data = universityData[selected];
+
+	intakeSelect.innerHTML = "";
+	programSelect.innerHTML = "";
+
+	if (data) {
+		data.intakes.forEach(month => {
+			const option = document.createElement("option");
+			option.value = month;
+			option.textContent = month;
+			intakeSelect.appendChild(option);
+		});
+
+		data.programs.forEach(program => {
+			const option = document.createElement("option");
+			option.value = program;
+			option.textContent = program;
+			programSelect.appendChild(option);
+		});
+
+		documentsField.value = data.documents;
+		requirementsField.value = data.requirements;
+	} else {
+		documentsField.value = "";
+		requirementsField.value = "";
+	}
+});
+
+document.getElementById("applicationForm").addEventListener("submit", function (e) {
+	e.preventDefault();
+	alert("Your application has been submitted!");
+	this.reset();
+	closeForm();
+});
+
+const videoModal = document.getElementById("videoModal");
+videoModal.addEventListener("hidden.bs.modal", function () {
+	const iframe = document.getElementById("videoFrame");
+	iframe.src = iframe.src; // resets the video
+});
+
+var counter = function () {
+
 	$('.count-numbers').waypoint(function (direction) {
+
 		if (direction === 'down' && !$(this.element).hasClass('ut-animated')) {
-			var comma_separator = $.animateNumber.numberStepFactories.separator(',');
+
+			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
 			$('.counter > span').each(function () {
 				var $this = $(this),
 					num = $this.data('number');
-				$this.animateNumber({ number: num, numberStep: comma_separator }, 5000);
+				$this.animateNumber(
+					{
+						number: num,
+						numberStep: comma_separator_number_step
+					}, 5000
+				);
 			});
+
 		}
+
 	}, { offset: '95%' });
-}
 
-// Jarallax Effect
-function setupJarallax() {
+}
+counter();
+
+// jarallax
+var jarallaxPlugin = function () {
 	if ($('.jarallax').length > 0) {
-		$('.jarallax').jarallax({ speed: 0.2 });
+		$('.jarallax').jarallax({
+			speed: 0.2
+		});
 	}
-}
+};
+jarallaxPlugin();
 
-// Enquiry Form Delay
-function showEnquiryFormLater() {
-	setTimeout(() => {
-		document.getElementById('enquireForm')?.classList.add('show');
-	}, 10000);
-}
+setTimeout(() => {
+	document.getElementById('enquireForm').classList.add('show');
+}, 10000);
 
-// FAQ Modal
-function setupFAQModal() {
-	const faqBtn = document.getElementById("faqBtn");
-	const faqModal = document.getElementById("faqModal");
-	const closeBtn = document.querySelector(".close-btn");
+const faqBtn = document.getElementById("faqBtn");
+const faqModal = document.getElementById("faqModal");
+const closeBtn = document.querySelector(".close-btn");
 
-	faqBtn?.addEventListener("click", () => faqModal.style.display = "block");
-	closeBtn?.addEventListener("click", () => faqModal.style.display = "none");
-	window.addEventListener("click", e => {
-		if (e.target === faqModal) faqModal.style.display = "none";
+faqBtn.onclick = () => faqModal.style.display = "block";
+closeBtn.onclick = () => faqModal.style.display = "none";
+window.onclick = (e) => {
+	if (e.target === faqModal) faqModal.style.display = "none";
+};
+
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(acc => {
+	acc.addEventListener("click", function () {
+		this.classList.toggle("active");
+		const panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
 	});
-}
+});
 
-// Accordion Setup
-function setupAccordion() {
+var accordion = function () {
 	$('.btn-link[aria-expanded="true"]').closest('.accordion-item').addClass('active');
 	$('.collapse').on('show.bs.collapse', function () {
 		$(this).closest('.accordion-item').addClass('active');
 	});
-	document.querySelectorAll(".accordion-item").forEach(item => {
-		item.classList.remove("active");
+
+	$('.collapse').on('hidden.bs.collapse', function () {
+		$(this).closest('.accordion-item').removeClass('active');
 	});
 }
+accordion();
 
-// Date Picker Initialization
-function setupDatePicker() {
+var siteDatePicker = function () {
+
 	if ($('.datepicker').length > 0) {
 		$('.datepicker').datepicker();
 	}
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-	const universityData = {
-		chandigarh: {
-			intakes: ["January", "July"],
-			programs: ["Engineering", "Business", "IT", "Hospitality"],
-			documents: "Passport, Academic Transcript, English Proficiency (IELTS 6.0+)",
-			requirements: "Minimum 60% aggregate in high school, IELTS 6.0 or equivalent"
-		},
-		parul: {
-			intakes: ["February", "September"],
-			programs: ["Medicine", "Physiotherapy", "Engineering", "Design"],
-			documents: "Transcript, Passport, Medical Certificate",
-			requirements: "High school diploma with science subjects, minimum 55%, valid ID"
-		},
-		ct: {
-			intakes: ["January", "July", "November"],
-			programs: ["Applied Sciences", "Agriculture", "Media"],
-			documents: "Transcript, Passport, Proof of English",
-			requirements: "Pass in relevant subjects, English proficiency certificate"
-		},
-		shoolini: {
-			intakes: ["March", "August"],
-			programs: ["Pharmacy", "Biotech", "Liberal Arts"],
-			documents: "60%+ in core subjects, English Proof, ID",
-			requirements: "Minimum 60% in science stream, English proficiency"
-		},
-		jain: {
-			intakes: ["January", "June", "October"],
-			programs: ["Sports Science", "Aviation", "Engineering"],
-			documents: "GPA ≥ 2.5, English Test, Passport Copy",
-			requirements: "Minimum GPA of 2.5, strong academic background in chosen program"
-		}
-	};
+};
+siteDatePicker();
 
-	initCarousel();
-	setupUniversityDropdown(universityData);
-	setupBackToTop();
-	setupFormSubmission();
-	setupVideoReset();
-	setupCounter();
-	setupJarallax();
-	showEnquiryFormLater();
-	setupFAQModal();
-	setupAccordion();
-	setupDatePicker();
-});
+var siteSticky = function () {
+	$(".js-sticky-header").sticky({ topSpacing: 0 });
+};
+siteSticky();
 
-// --- University Database ---
 const universityDatabase = [
 	{
 		university: 'Chandigarh University',
@@ -277,20 +510,20 @@ const universityDatabase = [
 			{ name: 'Aviation Management', level: 'Undergraduate', country: 'India' }
 		]
 	}
+	// Add more universities and programs
 ];
 
-// --- Filtering Logic ---
 function filterPrograms(keyword, level) {
 	const results = [];
 
-	universityDatabase.forEach(university => {
-		university.programs.forEach(program => {
+	universityDatabase.forEach(univ => {
+		univ.programs.forEach(program => {
 			const nameMatch = program.name.toLowerCase().includes(keyword.toLowerCase());
 			const levelMatch = level ? program.level === level : true;
 
 			if (nameMatch && levelMatch) {
 				results.push({
-					university: university.university,
+					university: univ.university,
 					program: program.name,
 					level: program.level,
 					country: program.country
@@ -300,160 +533,107 @@ function filterPrograms(keyword, level) {
 	});
 
 	return results;
-}
+};
 
-// --- Display Logic ---
 function displayResults(results) {
 	const container = document.getElementById('searchResults');
 	container.innerHTML = '';
 
 	if (results.length === 0) {
-		container.innerHTML = '<tr><td colspan="4" class="text-danger text-center">No matching programs found.</td></tr>';
+		container.innerHTML = '<p class="text-danger">No matching programs found.</p>';
 		return;
 	}
 
-	results.forEach(result => {
-		const row = document.createElement('tr');
-		row.innerHTML = `
-			<td>${result.program}</td>
-			<td>${result.level}</td>
-			<td>${result.university}</td>
-			<td>${result.country}</td>
-		`;
-		container.appendChild(row);
+	results.forEach(res => {
+		const card = document.createElement('div');
+		card.className = 'mb-3 p-3 bg-white border rounded';
+		card.innerHTML = `
+			<h5>${res.program} (${res.level})</h5>
+			<p><strong>University:</strong> ${res.university}<br>
+			<strong>Country:</strong> ${res.country}</p>`
+			;
+		container.appendChild(card);
 	});
 }
 
-// --- Search Button Event ---
 document.getElementById('searchBtn').addEventListener('click', () => {
-	const keyword = document.getElementById('searchInput').value.trim();
+	const keyword = document.getElementById('searchInput').value;
 	const level = document.getElementById('courseLevelSelect').value;
 	const results = filterPrograms(keyword, level);
 	displayResults(results);
 });
 
-// --- Accordion Logic ---
-document.querySelectorAll(".accordion").forEach(acc => {
-	acc.addEventListener("click", function () {
-		// Collapse all
-		document.querySelectorAll(".accordion-item").forEach(item => {
-			item.classList.remove("active");
-			item.querySelector('.panel').style.maxHeight = null;
-		});
-
-		// Toggle active class
-		const parent = this.closest('.accordion-item');
-		const panel = parent.querySelector(".panel");
-
-		if (!parent.classList.contains("active")) {
-			parent.classList.add("active");
-			panel.style.maxHeight = panel.scrollHeight + "px";
-		}
-	});
-});
-
-
-// ----- Data -----
-const universityDatabase = [
-	{
-		university: "Harvard",
-		programs: [
-			{ name: "Computer Science", level: "Undergraduate", country: "USA" },
-			{ name: "Data Science", level: "Masters", country: "USA" }
-		]
-	},
-	{
-		university: "Oxford",
-		programs: [
-			{ name: "Medicine", level: "Undergraduate", country: "UK" },
-			{ name: "AI Research", level: "PhD", country: "UK" }
-		]
-	}
-];
-
 const courseData = [
-	{ title: "AI Bootcamp", type: "Short Course", university: "MIT" },
-	{ title: "MBA", type: "Degree", university: "Stanford" }
+	{ title: "Bachelor of Science in Engineering", type: "Undergraduate Degree", university: "Chandigarh University" },
+	{ title: "Master of Business Administration", type: "Masters Degree", university: "Parul University" },
+	{ title: "PhD in Biotechnology", type: "PhD Degree", university: "Shoolini University" },
+	{ title: "Doctor of Philosophy in Education", type: "Doctoral Degree", university: "Jain University" },
+	{ title: "Postgraduate Diploma in Computer Science", type: "Post-graduate Degree", university: "CT University" },
+	{ title: "Master of Science in Data Analytics", type: "Masters Degree", university: "Parul University" },
 ];
 
-// ----- State -----
 let selectedType = "";
 
-// ----- Filter Functions -----
-function filterPrograms(keyword: string, level: string) {
-	return universityDatabase.flatMap(u =>
-		u.programs
-			.filter(p =>
-				p.name.toLowerCase().includes(keyword.toLowerCase()) &&
-				(level ? p.level === level : true)
-			)
-			.map(p => ({ university: u.university, ...p }))
-	);
-}
-
-function filterCourses(keyword: string, type: string) {
-	return courseData.filter(course =>
-		course.type === type &&
-		course.title.toLowerCase().includes(keyword.toLowerCase())
-	);
-}
-
-// ----- Display Renderer -----
-function renderResults(data: any[], type: 'program' | 'course') {
-	const container = document.getElementById(type === 'program' ? 'searchResults' : 'resultsContainer');
-	if (!container) return;
-
-	container.innerHTML = '';
-
-	if (data.length === 0) {
-		container.innerHTML = `<p class="text-danger text-center">No matching ${type}s found.</p>`;
-		return;
-	}
-
-	if (type === 'program') {
-		data.forEach(p => {
-			const row = document.createElement("tr");
-			row.innerHTML = `
-		  <td>${p.name}</td>
-		  <td>${p.level}</td>
-		  <td>${p.university}</td>
-		  <td>${p.country}</td>`;
-			container.appendChild(row);
-		});
-	} else {
-		data.forEach(course => {
-			const col = document.createElement("div");
-			col.className = "col-md-6 col-lg-4 mb-4";
-			col.innerHTML = `
-		  <div class="card shadow-sm border-0">
-			<div class="card-body">
-			  <h5 class="card-title">${course.title}</h5>
-			  <p class="card-text"><strong>Type:</strong> ${course.type}</p>
-			  <p class="card-text"><strong>University:</strong> ${course.university}</p>
-			</div>
-		  </div>`;
-			container.appendChild(col);
-		});
-	}
-}
-
-// ----- Event Bindings -----
-document.getElementById("searchBtn")?.addEventListener("click", () => {
-	const keyword = (document.getElementById("searchInput") as HTMLInputElement)?.value ?? '';
-	const level = (document.getElementById("courseLevelSelect") as HTMLSelectElement)?.value;
-	const programResults = filterPrograms(keyword, level);
-	renderResults(programResults, 'program');
-});
-
+// Handle dropdown type selection
 document.querySelectorAll(".dropdown-item").forEach(item => {
 	item.addEventListener("click", function () {
-		selectedType = this.textContent?.trim() ?? '';
-		document.querySelector(".dropdown-toggle")!.textContent = selectedType;
+		selectedType = this.textContent.trim();
+		document.querySelector(".dropdown-toggle").textContent = selectedType;
 	});
 });
 
-document.querySelector(".btn-secondary")?.addEventListener("click", () => {
-	const keyword = (document.querySelector("input.form-control") as HTMLInputElement)?.value.toLowerCase().trim() ?? '';
-	const courseResults = filterCourses(keyword, selectedType);
-	renderResults(courseResults, 'course');
+// Handle Search
+document.querySelector(".btn-secondary").addEventListener("click", function () {
+	const keyword = document.querySelector("input.form-control").value.toLowerCase().trim();
+	const resultsContainer = document.getElementById("resultsContainer");
+	resultsContainer.innerHTML = ""; // Clear old results
+
+	// Filter data
+	const filtered = courseData.filter(course =>
+		course.type === selectedType &&
+		course.title.toLowerCase().includes(keyword)
+	);
+
+	if (filtered.length === 0) {
+		resultsContainer.innerHTML = `<p class="text-center">No matching results found.</p>`;
+		return;
+	}
+}); // End of Search functionality
+
+// Display filtered results
+filtered.forEach(course => {
+	const col = document.createElement("div");
+	col.className = "col-md-6 col-lg-4 mb-4";
+	col.innerHTML = `
+		<div class="card shadow-sm border-0">
+			<div class="card-body">
+				<h5 class="card-title">${course.title}</h5>
+				<p class="card-text"><strong>Type:</strong> ${course.type}</p>
+				<p class="card-text"><strong>University:</strong> ${course.university}</p>
+			</div>
+		</div>`;
+	resultsContainer.appendChild(col);
 });
+
+const courseList = [
+	{ name: "Bachelor of Computer Science", level: "Undergraduate Degree", university: "Chandigarh University" },
+	{ name: "MBA in Finance", level: "Post-graduate Degree", university: "Parul University" },
+	{ name: "MSc in Data Science", level: "Masters Degree", university: "CT University" },
+	{ name: "PhD in Robotics", level: "PhD Degree", university: "Jain University" }
+];
+
+function togglePopup(register = false) {
+	const popup = document.getElementById("popupContainer");
+	const card = document.getElementById("flipCard");
+	popup.style.display = "flex";
+	card.classList.remove("flipped");
+	if (register) card.classList.add("flipped");
+};
+
+function closePopup() {
+	document.getElementById("popupContainer").style.display = "none";
+};
+
+function flipCard() {
+	document.getElementById("flipCard").classList.toggle("flipped");
+};
