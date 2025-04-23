@@ -515,7 +515,7 @@ h4,
 .logo img:hover {
   zoom: 2;
   transition: zoom 0.3s ease;
-  
+
 }
 
 .menu-absolute {
@@ -576,6 +576,11 @@ h4,
   position: relative;
   z-index: 9;
   cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #083c5f;
+  color: #ffffff;
+  
 }
 
 .site-nav {
@@ -849,6 +854,7 @@ h4,
   width: 300px;
   position: fixed;
   right: 0;
+  left: 0;
   z-index: 2000;
   padding-top: 20px;
   background: #ffffff;
@@ -1092,6 +1098,9 @@ h4,
 }
 
 .sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
