@@ -306,23 +306,62 @@
         </div>
     </div>
 
-    <!-- Enquire Now Form -->
-    <div class="enquire-now" id="enquireForm">
-        <h5><i class="bi bi-chat-dots"></i> Enquire Now</h5>
-        <form action="sendmail.php" method="POST">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4" style="color: var(--primary-color);">Our Services</h2>
+        <div class="row">
+          <div class="col-md-4 service-card">
+            <div class="service-inner">
+              <div class="service-front">
+                <h5>University Application</h5>
+                <p>We guide students through applications to top international universities.</p>
+              </div>
+              <div class="service-back">
+                <p>Includes documentation review, application writing, visa support & interview coaching.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 service-card">
+            <div class="service-inner">
+              <div class="service-front">
+                <h5>Scholarship Advisory</h5>
+                <p>Find and apply for available scholarships tailored to your goals.</p>
+              </div>
+              <div class="service-back">
+                <p>We assess eligibility, prepare you for success, and help with all paperwork.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 service-card">
+            <div class="service-inner">
+              <div class="service-front">
+                <h5>Virtual Consultations</h5>
+                <p>Book sessions with our advisors to plan your academic journey.</p>
+              </div>
+              <div class="service-back">
+                <p>One-on-one sessions to explore university programs and career paths.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Enquire Form (Popup) -->
+    <div class="enquire-form" id="enquireForm">
+        <h5>Enquire Now</h5>
+        <form action="form-handler.php" method="POST">
             <div class="form-group">
-                <label for="name"><i class="bi bi-person"></i> Name</label>
+                <label>Full Name</label>
                 <input type="text" name="name" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="email"><i class="bi bi-envelope"></i> Email</label>
+                <label>Email Address</label>
                 <input type="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="message"><i class="bi bi-pencil"></i> Message</label>
-                <textarea name="message" class="form-control" rows="3"></textarea>
+                <label>Program of Interest</label>
+                <input type="text" name="program" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-light btn-block"><i class="bi bi-send"></i> Submit</button>
+            <button type="submit" class="btn btn-warning btn-block">Submit Enquiry</button>
         </form>
     </div>
 

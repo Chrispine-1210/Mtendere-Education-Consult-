@@ -633,3 +633,70 @@ function closePopup() {
 function flipCard() {
 	document.getElementById("flipCard").classList.toggle("flipped");
 };
+
+let slideIndex = 0;
+const galleryItems = document.querySelectorAll('.gallery-item');
+const toggleButton = document.getElementById('toggleGallery');
+let galleryInterval;
+
+// Function to start the slideshow
+const startSlideshow = () => {
+  galleryInterval = setInterval(() => {
+    galleryItems.forEach(item => item.classList.remove('active'));
+    slideIndex = (slideIndex + 1) % galleryItems.length;
+    galleryItems[slideIndex].classList.add('active');
+    animateLike(galleryItems[slideIndex]);
+  }, 5000);
+};
+
+// Function to stop the slideshow
+const stopSlideshow = () => {
+  clearInterval(galleryInterval);
+};
+
+// Function for like animation
+const animateLike = (item) => {
+  const likeAnim = item.querySelector('.like-animation');
+  anime({
+    targets: likeAnim,
+    scale: [1, 1.5],
+    opacity: [0, 1],
+    easing: 'easeInOutQuad',
+    duration: 600,
+    complete: () => {
+      setTimeout(() => {
+        anime({
+          targets: likeAnim,
+          scale: [1.5, 1],
+          opacity: [1, 0],
+          easing: 'easeInOutQuad',
+          duration: 600
+        });
+      }, 1000);
+    }
+  });
+};
+
+// Toggle button functionality
+toggleButton.addEventListener('click', () => {
+  if (galleryInterval) {
+    stopSlideshow();
+    toggleButton.textContent = 'Resume Slideshow';
+  } else {
+    startSlideshow();
+    toggleButton.textContent = 'Pause Slideshow';
+  }
+});
+
+// Like button functionality
+document.querySelectorAll('.btn-like').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const likeStatus = event.target.closest('.gallery-item').querySelector('.like-status');
+    const currentLikes = parseInt(likeStatus.querySelector('span').textContent.split(' ')[1]);
+    likeStatus.querySelector('span').textContent = `👍 ${currentLikes + 1} Likes`;
+    animateLike(event.target.closest('.gallery-item'));
+  });
+});
+
+// Initialize the slideshow on page load
+startSlideshow();

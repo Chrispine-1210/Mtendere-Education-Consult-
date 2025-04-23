@@ -1141,6 +1141,89 @@ h4,
   color: #00779B !important;
 }
 
+
+/* Gallery item hover animation */
+.gallery-item { position: relative; }
+.gallery-img { 
+  width: 100%; 
+  transition: transform 0.3s ease; 
+  border-radius: 8px; 
+}
+.gallery-img:hover { 
+  transform: scale(1.1); 
+}
+
+/* Like status style */
+.like-status {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-animation { 
+  display: none; 
+  font-size: 40px; 
+  color: #ff4d4d; 
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+}
+
+.gallery-item.active .like-animation {
+  display: block;
+  animation: likeAnim 1s ease-in-out;
+}
+
+@keyframes likeAnim {
+  0% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+
+.service-card {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+.service-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.service-card:hover .service-inner {
+  transform: rotateY(180deg);
+}
+.service-front, .service-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+.service-front {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.service-back {
+  background: var(--primary-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
 /* Burger */
 .burger {
   width: 28px;
