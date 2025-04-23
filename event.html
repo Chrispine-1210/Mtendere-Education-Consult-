@@ -8,15 +8,15 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -36,26 +36,28 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-lg-9">
-                        <a href="#faq-popup" id="" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span
-                            class="d-none d-lg-inline-block">Have a questions?</span></a
-                        <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span
+                        <a class="small mr-3"><span class="icon-question-circle-o mr-2"></span>
+                            <span data-target="#formModal" onclick="formModal(true)" class="d-lg-inline-block">Have a questions?</span></a>
+                        <a href="#" class="small mr-3"><i class="fa fa-phone" aria-hidden="true"></i><span
                                 class="d-none d-lg-inline-block">
 
                             </span></a>
-                        <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span
+                        <a href="#" class="small mr-3"><i class="fa fa-envelope" aria-hidden="true"></i> <span
                                 class="d-none d-lg-inline-block">mtendereeducationconsult@gmail.com</span></a>
                     </div>
 
-                    <div class="col-6 col-lg-3 text-right">
-                        <a href="login.html" class="small mr-3">
-                            <span class="icon-lock"></span>
-                            Log In
-                        </a>
-                        <a href="register.html" class="small">
-                            <span class="icon-person"></span>
-                            Register
-                        </a>
+                    <!-- Language Selector -->
+                    <div class="d-lg-inline-block">
+                        <select class="form-select small mr-3" id=" language-select">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <!-- Add more languages here -->
+                        </select>
                     </div>
+
+                    <a href="#" onclick="togglePopup(false)" style=" margin-right: 10px;">Log In</a>
+                    <a href="#" onclick="togglePopup(true)">Register</a>
 
                 </div>
             </div>
@@ -63,10 +65,9 @@
         <div class="sticky-nav js-sticky-header">
             <div class="container position-relative">
                 <div class="site-navigation text-center">
-                    <a href="index.html" class="logo menu-absolute m-0">
+                    <a href="index.html" class="logo m-0">
                         <img src="img/Mtendere_logo.png" alt="Image" class="img-fluid">
                     </a>
-
                     <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="course.html">Scholarships</a></li>
@@ -74,46 +75,46 @@
                         <li class="has-children">
                             <a href="#">Universities</a>
                             <ul class="dropdown">
-                                <li><a href="#">Partners</a></li>
+                                <li><a href="elements.html">Partners</a></li>
                                 <li><a href="chardigarh.html">Chandigarh University</a></li>
-                                <li><a href="#">Parul University</a></li>
-                                <li><a href="#">CT University</a></li>
-                                <li><a href="#">Shoolin University</a></li>
-                                <li><a href="#">Jain University</a></li>
-                                <li><a href="#">Royal Global University</a></li>
-                                <li><a href="#">Symboisis University</a></li>
-                                <li><a href="#">Galgocia University</a></li>
-                                <li><a href="#">Noida University</a></li>
-                                <li><a href="#">Khalsa College</a></li>
-                                <li><a href="#">Lovey Professional University</a></li>
+                                <li><a href="Paruluniversity.html">Parul University</a></li>
+                                <li><a href="Paruluniversity.html">CT University</a></li>
+                                <li><a href="Paruluniversity.html">Shoolin University</a></li>
+                                <li><a href="Paruluniversity.html">Jain University</a></li>
+                                <li><a href="Paruluniversity.html">Royal Global University</a></li>
+                                <li><a href="Paruluniversity.html">Symboisis University</a></li>
+                                <li><a href="Paruluniversity.html">Galgocia University</a></li>
+                                <li><a href="Paruluniversity.html">Noida University</a></li>
+                                <li><a href="Paruluniversity.html">Khalsa College</a></li>
+                                <li><a href="Paruluniversity.htmlLovey Professional University"></a></li>
                                 <li class="has-children">
                                     <a href="#">GEDU GLOBAL</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">GBS Dubai</a></li>
-                                        <li><a href="#">St Julians</a></li>
-                                        <li><a href="#">Plymouth, MLA College</a></li>
-                                        <li><a href="#">Schiller International University</a></li>
-                                        <li><a href="#">Ecole de Management EMA</a></li>
-                                        <li><a href="#">Austrtian Perfoming Arts Conservatory</a></li>
-                                        <li><a href="#">Cyprus International University</a></li>
-                                        <li><a href="#">Cyprus West University</a></li>
+                                        <li><a href="Paruluniversity.html">GBS Dubai</a></li>
+                                        <li><a href="Paruluniversity.html">St Julians</a></li>
+                                        <li><a href="Paruluniversity.html">Plymouth, MLA College</a></li>
+                                        <li><a href="Paruluniversity.html">Schiller International University</a></li>
+                                        <li><a href="Paruluniversity.html">Ecole de Management EMA</a></li>
+                                        <li><a href="Paruluniversity.html">Austrtian Perfoming Arts Conservatory</a>
+                                        </li>
+                                        <li><a href="Paruluniversity.html">Cyprus International University</a></li>
+                                        <li><a href="Paruluniversity.html">Cyprus West University</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">
                                     <a href="#">MSM UNIFY</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">University of Niagara Faals</a></li>
-                                        <li><a href="#">University of Victoria</a></li>
-                                        <li><a href="#">Kwantlen</a></li>
-                                        <li><a href="#">University of Wolverhampton</a></li>
-                                        <li><a href="#">Webster University</a></li>
-                                        <li><a href="#">Dublin College</a></li>
-                                        <li><a href="#">Seatle Central College</a></li>
-                                        <li><a href="#">Thompson Rivers University</a></li>
-                                        <li><a href="#">University of Greenwish</a></li>
+                                        <li><a href="Paruluniversity.html">University of Niagara Faals</a></li>
+                                        <li><a href="Paruluniversity.html">University of Victoria</a></li>
+                                        <li><a href="Paruluniversity.html">Kwantlen</a></li>
+                                        <li><a href="Paruluniversity.html">University of Wolverhampton</a></li>
+                                        <li><a href="Paruluniversity.html">Webster University</a></li>
+                                        <li><a href="Paruluniversity.html">Dublin College</a></li>
+                                        <li><a href="Paruluniversity.html">Seatle Central College</a></li>
+                                        <li><a href="Paruluniversity.html">Thompson Rivers University</a></li>
+                                        <li><a href="Paruluniversity.html">University of Greenwish</a></li>
                                     </ul>
                                 </li>
-
                             </ul>
                         </li>
                         <li><a href="team.html">Our Staff</a></li>
@@ -122,21 +123,17 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-
-                    <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
-
+                    <a href="#" class="btn-book btn btn-secondary btn-sm" data-target="#formModal">Enroll Now</a>
                     <a href="#"
                         class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
                         data-toggle="collapse" data-target="#main-navbar">
                         <span></span>
                     </a>
-
                 </div>
             </div>
         </div>
     </nav>
-
-
+    
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
