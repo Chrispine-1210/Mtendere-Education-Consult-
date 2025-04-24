@@ -492,51 +492,251 @@
     </div>
     <!-- Courses End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- University Cards -->
+    <section class="py-5">
         <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Students Say!</h1>
+            <div id="universityList" class="row g-4">
+                <!-- Cards will be populated by JS -->
             </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+        </div>
+    </section>
+
+    <!-- COURSE TABLE SECTION -->
+    <section id="courses" class="container my-5">
+        <h2 class="text-center mb-4">Available Courses</h2>
+        <div class="mb-3">
+            <input type="text" id="courseSearch" class="form-control"
+                placeholder="Search courses by name or category...">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="courseTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Course Name</th>
+                        <th>University</th>
+                        <th>Level</th>
+                        <th>Duration</th>
+                        <th>Tuition</th>
+                        <th>Apply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelor of Computer Science</td>
+                        <td>Chandigarh University</td>
+                        <td>Undergraduate</td>
+                        <td>3 Years</td>
+                        <td>$3,500/yr</td>
+                        <td><a href="#application" class="btn btn-primary btn-sm">Apply Now</a></td>
+                    </tr>
+                    <tr>
+                        <td>Master in Business Admin</td>
+                        <td>Parul University</td>
+                        <td>Postgraduate</td>
+                        <td>2 Years</td>
+                        <td>$4,800/yr</td>
+                        <td><a href="#application" class="btn btn-primary btn-sm">Apply Now</a></td>
+                    </tr>
+                    <!-- Add more rows dynamically or manually -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CATALOG TABLE SECTION -->
+    <section id="catalog" class="container my-5">
+        <h2 class="text-center mb-4">Course Catalog & Fee Breakdown</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Course</th>
+                        <th>University</th>
+                        <th>Semester</th>
+                        <th>Modules</th>
+                        <th>Credits</th>
+                        <th>Fees (USD)</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelor of Computer Science</td>
+                        <td>Chandigarh University</td>
+                        <td>Semester 1</td>
+                        <td>Intro to CS, Logic, Discrete Math</td>
+                        <td>18</td>
+                        <td>$1,750</td>
+                        <td>Includes lab access</td>
+                    </tr>
+                    <tr>
+                        <td>Bachelor of Computer Science</td>
+                        <td>Chandigarh University</td>
+                        <td>Semester 2</td>
+                        <td>Data Structures, Programming II, OS Basics</td>
+                        <td>20</td>
+                        <td>$1,750</td>
+                        <td>Optional AI workshop available</td>
+                    </tr>
+                    <tr>
+                        <td>MBA (International)</td>
+                        <td>Parul University</td>
+                        <td>Semester 1</td>
+                        <td>Management Theories, Economics, Finance</td>
+                        <td>22</td>
+                        <td>$2,400</td>
+                        <td>Includes internship placement</td>
+                    </tr>
+                    <tr>
+                        <td>MBA (International)</td>
+                        <td>Parul University</td>
+                        <td>Semester 2</td>
+                        <td>Strategy, Leadership, Global Trade</td>
+                        <td>24</td>
+                        <td>$2,400</td>
+                        <td>Optional international exchange</td>
+                    </tr>
+                    <!-- Add more rows here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section id="testimonials" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Students Say</h2>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <img src="assets/images/testimonial1.jpg" alt="Elena Todorova"
+                                    class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+                                <blockquote class="blockquote">
+                                    <p class="mb-3">"The campus is very new and comfortable. I like it because I can
+                                        study, work, and still be with my family. Studying here helps me teach my child
+                                        new words at home."</p>
+                                </blockquote>
+                                <footer class="blockquote-footer">
+                                    Elena Todorova <br>
+                                    <small>BSc (Hons) Business and Tourism Management, GBS UK</small>
+                                </footer>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <img src="assets/images/testimonial2.jpg" alt="Egor Yantsov" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px;">
+                                <blockquote class="blockquote">
+                                    <p class="mb-3">"When I arrived, I had a lot of support from the academic office.
+                                        Enjoy your time here – it's one of the most amazing years of your life."</p>
+                                </blockquote>
+                                <footer class="blockquote-footer">
+                                    Egor Yantsov <br>
+                                    <small>BA(Hons) Business and Management, GBS Malta</small>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <img src="assets/images/testimonial3.jpg" alt="Diksha Jain" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px;">
+                                <blockquote class="blockquote">
+                                    <p class="mb-3">"GBS's guidance on employability was invaluable. I now manage social
+                                        media and branding for a leading gourmet brand."</p>
+                                </blockquote>
+                                <footer class="blockquote-footer">
+                                    Diksha Jain <br>
+                                    <small>HND in Business, GBS Dubai</small>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIVERSITY STATS & ACCREDITATIONS -->
+    <section id="stats-accreditations" class="py-5 bg-white border-top">
+        <div class="container">
+            <!-- STATS -->
+            <div class="row text-center mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h2 class="fw-bold display-5 text-primary">60,000+</h2>
+                    <p class="text-muted">Students Worldwide</p>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h2 class="fw-bold display-5 text-primary">12</h2>
+                    <p class="text-muted">Countries Represented</p>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h2 class="fw-bold display-5 text-primary">100+</h2>
+                    <p class="text-muted">University & College Partners</p>
+                </div>
+            </div>
+
+            <!-- ACCREDITATIONS -->
+            <div class="text-center mb-4">
+                <h3 class="fw-semibold">Accreditations & Associations</h3>
+                <p class="text-muted">Trusted by renowned education bodies across the globe</p>
+            </div>
+
+            <div class="row justify-content-center align-items-center g-4">
+                <div class="col-4 col-sm-2">
+                    <img src="assets/images/accreditation1.png" alt="Accreditation 1" class="img-fluid grayscale-hover">
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="assets/images/accreditation2.png" alt="Accreditation 2" class="img-fluid grayscale-hover">
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="assets/images/accreditation3.png" alt="Accreditation 3" class="img-fluid grayscale-hover">
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="assets/images/accreditation4.png" alt="Accreditation 4" class="img-fluid grayscale-hover">
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="assets/images/accreditation5.png" alt="Accreditation 5" class="img-fluid grayscale-hover">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
+    </section>
+
+    <!-- APPLY CTA SECTION -->
+    <section id="apply-cta" class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="display-4 mb-3 fw-bold">Ready to Start Your Journey?</h2>
+            <p class="lead mb-4">Take the first step toward an exciting future. Apply now to join one of our university
+                partners and study abroad in your dream destination.</p>
+            <a href="application-form-link.html" class="btn btn-light btn-lg px-4 py-2">
+                Apply Now
+            </a>
+        </div>
+    </section>
 
     <!-- Footer Start -->
     <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
