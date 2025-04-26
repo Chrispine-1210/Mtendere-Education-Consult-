@@ -472,44 +472,35 @@ h4,
 }
 
 .logo img {
-  display: inline-block;
-  max-width: 100%;
-  position: relative;
-  height: 180px;
-  left: 4px;
-  transition: left 0.3s ease;
-  z-index: 9999;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-
-}
-
-@media (max-width: 991.98px) {
-  .logo img {
-    height: 120px;
     max-width: 100%;
-    position: absolute;
-    left: 8px;
-  }
-}
+      height: auto;
+        width: auto;
+          max-height: 12vw;
+            position: relative;
+              transition: all 0.3s ease;
+                z-index: 9999;
+                }
 
-@media screen and (max-width: 767.98px) {
-  .logo img {
-    height: 80px;
-    max-width: 100%;
-    position: absolute;
-    left: 4px;
-  }
+                @media (max-width: 991.98px) {
+                  .logo img {
+                      max-height: 15vw;
+                          position: absolute;
+                              left: 8px;
+                                }
+                                }
 
-}
+                                @media (max-width: 767.98px) {
+                                  .logo img {
+                                      max-height: 18vw;
+                                          left: 4px;
+                                            }
+                                            }
 
-@media screen and (max-width: 575.98px) {
-  .logo img {
-    height: 60px;
-    max-width: 100%;
-    position: absolute;
-    left: 4px;
-  }
+                                            @media (max-width: 575.98px) {
+                                              .logo img {
+                                                  max-height: 20vw;
+                                                      left: 4px;
+                                                        }
 }
 
 .logo img a:hover {
