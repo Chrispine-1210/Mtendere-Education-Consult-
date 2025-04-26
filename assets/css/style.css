@@ -472,35 +472,52 @@ h4,
 }
 
 .logo img {
-    max-width: 100%;
-      height: auto;
-        width: auto;
-          max-height: 12vw;
-            position: relative;
-              transition: all 0.3s ease;
-                z-index: 9999;
-                }
+  background-color: #00aeff;
+  top: 4px;
+  margin-top: 4px;
+  left: 8px;
+  object-position: left;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: #136ad5;
+  margin-left: 8px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  max-height: 45vw;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
 
-                @media (max-width: 991.98px) {
-                  .logo img {
-                      max-height: 15vw;
-                          position: absolute;
-                              left: 8px;
-                                }
-                                }
+@media (max-width: 991.98px) {
+  .logo img {
+    top: 4px;
+    margin-top: 4px;
+    max-height: 35vw;
+    position: absolute;
+    left: 8px;
+    margin-left: 8px;
+  }
+}
 
-                                @media (max-width: 767.98px) {
-                                  .logo img {
-                                      max-height: 18vw;
-                                          left: 4px;
-                                            }
-                                            }
+@media (max-width: 767.98px) {
+  .logo img {
+    top: 4px;
+    margin-top: 4px;
+    max-height: 30vw;
+    left: 4px;
+    margin-left: 8px;
+  } 
+}
 
-                                            @media (max-width: 575.98px) {
-                                              .logo img {
-                                                  max-height: 20vw;
-                                                      left: 4px;
-                                                        }
+@media (max-width: 575.98px) {
+  .logo img {
+    top: 4px;
+    margin-top: 4px;
+    max-height: 20vw;
+    left: 4px;
+  }
 }
 
 .logo img a:hover {
