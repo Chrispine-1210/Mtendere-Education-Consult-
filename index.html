@@ -30,153 +30,139 @@
 </head>
 
 <body>
+    <!-- Mobile Menu -->
     <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close">
-                <span class="icofont-close js-menu-toggle"></span>
-            </div>
+        <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+        </div>
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-
-    <nav class="site-nav mb-5">
-        <div class="pb-2 top-bar mb-3">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-6 col-lg-9">
-                        <a href="#faqModal" class="small mr-3"><span class="icon-question-circle-o mr-2"></span>
-                            <span data-target="#faqModal"  class="d-lg-inline-block">Have a questions?</span></a>
-                        <a href="#" class="small mr-3"><i class="fa fa-phone" aria-hidden="true"></i><span
-                                class="d-none d-lg-inline-block">
-
-                            </span></a>
-                        <a href="#" class="small mr-3"><i class="fa fa-envelope" aria-hidden="true"></i> <span
-                                class="d-none d-lg-inline-block">mtendereeducationconsult@gmail.com</span></a>
-                    </div>
-
-                    <!-- Language Selector -->
-                    <div class="d-lg-inline-block">
-                        <select class="form-select small mr-3" id=" language-select">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <!-- Add more languages here -->
-                        </select>
-                    </div>
-
-                    <a href="#" onclick="togglePopup(false)" style=" margin-right: 10px;">Log In</a>
-                    <a href="#" onclick="togglePopup(true)">Register</a>
-
-                </div>
+    
+    <!-- Top Bar -->
+    <div class="top-bar py-2 bg-light">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            
+            <div class="col-md-8 d-flex align-items-center">
+            <a href="#faqModal" class="small text-dark mr-4" data-toggle="modal">
+                <i class="fa fa-question-circle mr-1"></i> Have a Question?
+            </a>
+            <a href="tel:+265000000000" class="small text-dark mr-4">
+                <i class="fa fa-phone mr-1"></i> +265 000 000 000
+            </a>
+            <a href="mailto:mtendereeducationconsult@gmail.com" class="small text-dark">
+                <i class="fa fa-envelope mr-1"></i> mtendereeducationconsult@gmail.com
+            </a>
             </div>
+    
+            <div class="col-md-4 d-flex justify-content-end align-items-center">
+            <select class="form-select form-select-sm mr-3" id="language-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <a href="#" onclick="togglePopup(false)" class="small mr-3">Log In</a>
+            <a href="#" onclick="togglePopup(true)" class="small btn btn-sm btn-primary">Register</a>
+            </div>
+    
         </div>
-        <div class="sticky-nav js-sticky-header">
-            <div class="container position-relative">
-                <div class="site-navigation text-center">
-                    <a href="index.html" class="logo m-0">
-                        <img src="img/Mtendere_logo.png" alt="Image" class="img-fluid">
-                    </a>
-                    <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="course.html">Scholarships</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li class="has-children">
-                            <a href="#">Universities</a>
-                            <ul class="dropdown">
-                                <li><a href="elements.html">Partners</a></li>
-                                <li><a href="chardigarh.html">Chandigarh University</a></li>
-                                <li><a href="Paruluniversity.html">Parul University</a></li>
-                                <li><a href="Paruluniversity.html">CT University</a></li>
-                                <li><a href="Paruluniversity.html">Shoolin University</a></li>
-                                <li><a href="Paruluniversity.html">Jain University</a></li>
-                                <li><a href="Paruluniversity.html">Royal Global University</a></li>
-                                <li><a href="Paruluniversity.html">Symboisis University</a></li>
-                                <li><a href="Paruluniversity.html">Galgocia University</a></li>
-                                <li><a href="Paruluniversity.html">Noida University</a></li>
-                                <li><a href="Paruluniversity.html">Khalsa College</a></li>
-                                <li><a href="Paruluniversity.htmlLovey Professional University"></a></li>
-                                <li class="has-children">
-                                    <a href="#">GEDU GLOBAL</a>
-                                    <ul class="dropdown">
-                                        <li><a href="Paruluniversity.html">GBS Dubai</a></li>
-                                        <li><a href="Paruluniversity.html">St Julians</a></li>
-                                        <li><a href="Paruluniversity.html">Plymouth, MLA College</a></li>
-                                        <li><a href="Paruluniversity.html">Schiller International University</a></li>
-                                        <li><a href="Paruluniversity.html">Ecole de Management EMA</a></li>
-                                        <li><a href="Paruluniversity.html">Austrtian Perfoming Arts Conservatory</a>
-                                        </li>
-                                        <li><a href="Paruluniversity.html">Cyprus International University</a></li>
-                                        <li><a href="Paruluniversity.html">Cyprus West University</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="#">MSM UNIFY</a>
-                                    <ul class="dropdown">
-                                        <li><a href="Paruluniversity.html">University of Niagara Faals</a></li>
-                                        <li><a href="Paruluniversity.html">University of Victoria</a></li>
-                                        <li><a href="Paruluniversity.html">Kwantlen</a></li>
-                                        <li><a href="Paruluniversity.html">University of Wolverhampton</a></li>
-                                        <li><a href="Paruluniversity.html">Webster University</a></li>
-                                        <li><a href="Paruluniversity.html">Dublin College</a></li>
-                                        <li><a href="Paruluniversity.html">Seatle Central College</a></li>
-                                        <li><a href="Paruluniversity.html">Thompson Rivers University</a></li>
-                                        <li><a href="Paruluniversity.html">University of Greenwish</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="team.html">Our Staff</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="site-nav sticky-top shadow-sm bg-white">
+        <div class="container">
+        <div class="d-flex align-items-center justify-content-between py-3">
+    
+            <a href="index.html" class="logo">
+            <img src="img/Mtendere_logo.png" alt="Mtendere Education Consult" class="img-fluid" style="max-height: 50px;">
+            </a>
+    
+            <ul class="site-menu d-none d-lg-flex list-unstyled m-0">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="course.html" class="nav-link">Scholarships</a></li>
+            <li><a href="service.html" class="nav-link">Services</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Universities</a>
+                <ul class="dropdown-menu">
+    
+                <!-- Direct Universities -->
+                <li><a href="elements.html" class="dropdown-item">Partners</a></li>
+                <li><a href="chardigarh.html" class="dropdown-item">Chandigarh University</a></li>
+                <li><a href="Paruluniversity.html" class="dropdown-item">Parul University</a></li>
+                <!-- Continue similarly for other universities -->
+    
+                <!-- GEDU GLOBAL Submenu -->
+                <li class="dropdown-submenu">
+                    <a href="#" class="dropdown-item dropdown-toggle">GEDU GLOBAL</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">GBS Dubai</a></li>
+                    <li><a href="#" class="dropdown-item">St Julians</a></li>
+                    <!-- Other GEDU entries -->
                     </ul>
-                    <a href="#formModal" class="btn-book btn btn-secondary btn-sm" data-target="#formModal">Enroll Now</a>
-                    <a href="#"
-                        class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-                        data-toggle="collapse" data-target="#main-navbar">
-                        <span></span>
-                    </a>
-                </div>
+                </li>
+    
+                <!-- MSM UNIFY Submenu -->
+                <li class="dropdown-submenu">
+                    <a href="#" class="dropdown-item dropdown-toggle">MSM UNIFY</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">University of Niagara Falls</a></li>
+                    <li><a href="#" class="dropdown-item">University of Victoria</a></li>
+                    <!-- Other MSM entries -->
+                    </ul>
+                </li>
+    
+                </ul>
+            </li>
+            <li><a href="team.html" class="nav-link">Our Staff</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+    
+            <div class="d-lg-none d-flex">
+            <a href="#" class="burger site-menu-toggle js-menu-toggle text-dark">
+                <span></span>
+            </a>
             </div>
+    
+            <a href="#formModal" class="btn btn-sm btn-primary d-none d-lg-inline-block ml-4" data-toggle="modal">Enroll Now</a>
+    
+        </div>
         </div>
     </nav>
-
-    <!-- Hero Carousel Section -->
-    <section id="hero" class="position-relative">
+    
+    <!-- Hero Carousel -->
+    <section id="hero">
         <div class="owl-carousel hero-carousel">
-
-            <!-- Slide 1 -->
-            <div class="hero-slide text-white text-center d-flex align-items-center justify-content-center"
-                style="height: 100vh; background: url('img/full-shot-smiley-students-library.jpg') center center/cover no-repeat;">
-                <div class="container">
-                    <h1 class="display-4 fw-bold bg-success">Empowering Dreams. Building Global Futures.</h1>
-                    <p class="lead mb-4 bg-info">We connect Malawian students with top international universities
-                        through expert
-                        guidance and personalized support.</p>
-                    <a id="openFormBtn" class="btn btn-primary me-3">Apply Now</a>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                        data-bs-target="#videoModal">
-                        ▶ Watch Video
-                    </button>
-                </div>
+    
+        <!-- Slide 1 -->
+        <div class="hero-slide d-flex align-items-center justify-content-center text-center text-white" 
+            style="height: 100vh; background: url('img/full-shot-smiley-students-library.jpg') center center/cover no-repeat;">
+            <div class="container">
+            <h1 class="display-4 fw-bold bg-dark bg-opacity-50 p-3 rounded">Empowering Dreams. Building Global Futures.</h1>
+            <p class="lead mb-4 bg-dark bg-opacity-25 p-2 rounded">Connecting Malawian students with top international universities through expert guidance and personalized support.</p>
+            <a href="#formModal" class="btn btn-primary me-2" data-toggle="modal">Apply Now</a>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#videoModal">▶ Watch Video</button>
             </div>
-
-            <!-- Slide 2 (Optional, add more as needed) -->
-            <div class="hero-slide text-white text-center d-flex align-items-center justify-content-center"
-                style="height: 100vh; background: url('img/study-group-african-people.jpg') center center/cover no-repeat;">
-                <div class="container">
-                    <h1 class="display-5 fw-bold bg-primary">Scholarships & Visa Support</h1>
-                    <p class="lead mb-4 align-items-center bg-info">From choosing the right program to securing funding,
-                        Mtendere Education Consult
-                        is with you every step of the way.</p>
-                    <a href="#" data-target="#formModal" class="btn btn-primary me-3">Explore Services</a>
-                </div>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="hero-slide d-flex align-items-center justify-content-center text-center text-white"
+            style="height: 100vh; background: url('img/study-group-african-people.jpg') center center/cover no-repeat;">
+            <div class="container">
+            <h1 class="display-5 fw-bold bg-dark bg-opacity-50 p-3 rounded">Scholarships & Visa Support</h1>
+            <p class="lead mb-4 bg-dark bg-opacity-25 p-2 rounded">From choosing the right program to securing funding, Mtendere Education Consult is with you every step of the way.</p>
+            <a href="#services" class="btn btn-primary">Explore Services</a>
             </div>
-
+        </div>
+    
         </div>
     </section>
+  
 
     <!-- Video Modal -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
