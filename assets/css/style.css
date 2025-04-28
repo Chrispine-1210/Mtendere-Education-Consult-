@@ -629,7 +629,7 @@ h4,
   box-shadow: #136ad5;
   margin-left: 8px;
   max-width: 100%;
-  height: 60%;
+  height: 200vh;
   width: auto;
   max-height: 45vw;
   position: relative;
@@ -859,6 +859,7 @@ a:hover {
   background: #fff;
   min-width: 250px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: none;
   flex-direction: column;
   padding: 1rem 0;
   z-index: 1000;
@@ -920,8 +921,11 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+  .site-menu {
+    display: none;
+  }
   .burger {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -949,11 +953,13 @@ a:hover {
 }
 
 .hero-slide > .container {
+  opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
 }
 
 .hero-slide.show > .container {
+  opacity: 1;
   transform: translateY(0);
 }
 
@@ -986,6 +992,8 @@ a:hover {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+
 
 .burger {
   width: 30px;
