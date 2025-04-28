@@ -572,7 +572,7 @@ h4,
 }
 
 .site-nav {
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 9;
   top: 0;
@@ -587,7 +587,6 @@ h4,
   border-radius: 8px;
   background-color: #083c5f;
   color: #ffffff;
-  
 }
 
 .site-nav {
@@ -595,13 +594,8 @@ h4,
   padding-bottom: 20px;
 }
 
-.site-nav h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
-}
-
 .site-nav .site-navigation .site-menu {
+  right: 0;
   margin-bottom: 0;
 }
 
