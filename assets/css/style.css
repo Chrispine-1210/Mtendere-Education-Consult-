@@ -150,51 +150,234 @@ h4,
   color: #ffffff;
 }
 
-.form-control,
-.custom-select {
+/* Corporate Modal Background */
+#formModal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 34, 77, 0.8); /* Semi-transparent dark blue */
+  padding-top: 60px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: #ffffff;
+  margin: auto;
+  padding: 30px 40px;
+  border: 1px solid #ddd;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Close Button */
+#closeFormBtn {
+  color: #00224D;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#closeFormBtn:hover {
+  color: #FFB800; /* Gold color on hover */
+}
+
+/* Form Title */
+.modal-content h1 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #00224D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Structure */
+#applicationForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+#applicationForm label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #333333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Inputs, Selects, Textareas */
+#applicationForm input[type="text"],
+#applicationForm input[type="email"],
+#applicationForm input[type="date"],
+#applicationForm input[type="file"],
+#applicationForm select,
+#applicationForm textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Input Focus */
+#applicationForm input:focus,
+#applicationForm select:focus,
+#applicationForm textarea:focus {
+  outline: none;
+  border-color: #00224D;
+  background-color: #ffffff;
+}
+
+/* Textareas */
+#applicationForm textarea {
+  resize: vertical;
+}
+
+/* File Inputs Styling */
+.file-input {
+  margin-top: 10px;
+}
+
+/* Submit Button */
+#applicationForm button[type="submit"] {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #00224D;
+  color: white;
   border: none;
+  border-radius: 8px;
   font-size: 16px;
-  height: 55px;
-  background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 7px;
-  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.form-control:active,
-.form-control:focus,
-.custom-select:active,
-.custom-select:focus {
-  color: #000000;
-  border-color: #00779B;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: transparent;
+/* Button Hover */
+#applicationForm button[type="submit"]:hover {
+  background-color: #FFB800; /* Gold */
+  color: #00224D;
+  transform: translateY(-2px);
 }
 
-.form-control::-webkit-input-placeholder,
-.custom-select::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: rgba(0, 0, 0, 0.5);
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-.form-control::-moz-placeholder,
-.custom-select::-moz-placeholder {
-  /* Firefox 19+ */
-  color: rgba(0, 0, 0, 0.5);
+/* Responsive (Mobile Friendly) */
+@media (max-width: 600px) {
+  .modal-content {
+      padding: 20px;
+  }
+  #applicationForm label {
+      font-size: 13px;
+  }
+  #applicationForm input, 
+  #applicationForm select,
+  #applicationForm textarea {
+      font-size: 13px;
+  }
 }
 
-.form-control:-ms-input-placeholder,
-.custom-select:-ms-input-placeholder {
-  /* IE 10+ */
-  color: rgba(0, 0, 0, 0.5);
+/* Loading Spinner Background */
+#loadingSpinner {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 34, 77, 0.7); /* Same corporate dark blue transparency */
+  align-items: center;
+  justify-content: center;
 }
 
-.form-control:-moz-placeholder,
-.custom-select:-moz-placeholder {
-  /* Firefox 18- */
-  color: rgba(0, 0, 0, 0.5);
+/* Spinner Circle */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #FFB800; /* Gold accent */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
 }
+
+/* Spin Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Modal Background */
+#successModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 34, 77, 0.85); /* Semi-transparent background */
+  padding-top: 60px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Success Modal Content */
+.success-content {
+  background: #ffffff;
+  margin: auto;
+  padding: 30px 40px;
+  border: 1px solid #ddd;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: popUp 0.5s ease;
+}
+
+/* Close Button */
+#closeSuccessBtn {
+  color: #00224D;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#closeSuccessBtn:hover {
+  color: #FFB800;
+}
+
+/* Success Text */
+.success-content h1 {
+  color: #00224D;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.success-content p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Pop Up Animation */
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 
 #backToTop {
   position: fixed;
@@ -209,25 +392,6 @@ h4,
   cursor: pointer;
   display: none;
   z-index: 1000;
-}
-
-#chatbot-icon {
-  float: left;
-  display: block;
-  position: fixed;
-  bottom: 45px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  padding: 15px;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-#chatbot-icon .btn{
-  width: 30px;
-  height: 30px;
 }
 
 .whatsapp-float {
@@ -334,23 +498,6 @@ h4,
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-#formModal {
-  display: none; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%;
-  height: 100%; 
-  background-color: rgba(0,0,0,0.6);
-  z-index: 9999;
-}
-#formModal .modal-content {
-  background: white; max-width: 800px; margin: 5% auto; padding: 30px;
-  border-radius: 10px; position: relative;
-}
-#closeFormBtn {
-  position: absolute; top: 10px; right: 20px; cursor: pointer; font-size: 24px;
-}
 
 .accordion:hover {
   background-color: #e0e0e0;

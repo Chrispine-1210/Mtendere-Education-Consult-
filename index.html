@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="stylesheet" href="https://icons.iconscout.com">
+
 
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
@@ -30,6 +32,10 @@
 </head>
 
 <body>
+    <div id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+    
     <!-- Mobile Menu -->
     <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
@@ -331,26 +337,6 @@
         </div>
     </div>
 
-    <!-- Enquire Form (Popup) -->
-    <div class="enquire-form" id="enquireForm">
-        <h5>Enquire Now</h5>
-        <form action="form-handler.php" method="POST">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label>Program of Interest</label>
-                <input type="text" name="program" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-warning btn-block">Submit Enquiry</button>
-        </form>
-    </div>
-
     <!-- Course Finder Section -->
     <div class="container my-4">
         <h4>Find Your Course</h4>
@@ -403,9 +389,12 @@
                     </ul>
 
                     <p data-aos="fade-up" id="openFormBtn" data-aos-delay="300"><a href="#" class="btn btn-primary">Get
-                            Started</a></p>
-
+                        Started</a>
+                    </p>
                 </div>
+
+                <br>
+                <br>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                     <figure class="img-wrap-2">
                         <img src="images/teacher-min.jpg" alt="Image" class="img-fluid">
@@ -468,11 +457,14 @@
         </div>
     </div>
 
+
     <!-- Popup Overlay -->
+         <!----
     <div id="popupContainer" class="popup-overlay" onclick="popup">
         <div class="popup-box">
             <div class="flip-card" id="flipCard">
-                <!-- LOGIN FORM -->
+                 LOGIN FORM 
+                 
                 <div class="flip-face front">
                     <h2>Login</h2>
                     <form action="login.php" method="POST">
@@ -488,7 +480,7 @@
                         <p onclick="flipCard()" class="switch-text">Don’t have an account? Register</p>
                     </form>
                 </div>
-                <!-- REGISTER FORM -->
+                 REGISTER FORM
                 <div class="flip-face back">
                     <h2>Register</h2>
                     <form action="register.php" method="POST">
@@ -509,6 +501,7 @@
             <span class="popup-close" onclick="closePopup()">×</span>
         </div>
     </div>
+    ---->
 
     <div id="faqModal" class="faq-modal">
         <div class="faq-content">
@@ -552,7 +545,6 @@
             </div>
 
         </div>
-    </div>
     </div>
 
     <div class="untree_co-section bg-light">
@@ -638,8 +630,6 @@
         </div>
     </div> <!-- /.untree_co-section -->
 
-
-
     <div id="formModal">
         <div class="modal-content">
             <span id="closeFormBtn">&times;</span>
@@ -722,6 +712,15 @@
         </div>
     </div>
 
+    <div id="successModal">
+        <div class="success-content">
+            <span id="closeSuccessBtn">&times;</span>
+            <h1>Application Submitted Successfully!</h1>
+            <p>Thank you for applying to Mtendere Education Consult. We will review your application and contact you shortly.</p>
+        </div>
+    </div>
+    
+
     <div class="untree_co-section bg-light py-12">
         <div class="container">
             <div class="row">
@@ -797,61 +796,6 @@
         </div>
     </div>
 
-    <div class="untree_co-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="line-bottom text-center mb-4">Pricing</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="00">
-                    <div class="pricing">
-                        <!-- <div class="pricing-img mb-4"><img src="images/1x/asset-1.png" alt="Image" class="img-fluid"></div> -->
-                        <div class="pricing-body">
-
-                            <h3 class="pricing-plan-title">Starter</h3>
-                            <div class="price"><span class="fig">$50.99</span><span>/month</span></div>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts.</p>
-
-                            <p><a href="#" class="btn btn-outline-primary">Get Started</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing">
-                        <!-- <div class="pricing-img mb-4"><img src="images/1x/asset-2.png" alt="Image" class="img-fluid"></div> -->
-                        <div class="pricing-body">
-
-                            <h3 class="pricing-plan-title">Business</h3>
-                            <div class="price"><span class="fig">$99.99</span><span>/month</span></div>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts.</p>
-
-                            <p><a href="#" class="btn btn-primary">Get Started</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing">
-                        <!-- <div class="pricing-img mb-4"><img src="images/1x/asset-3.png" alt="Image" class="img-fluid"></div> -->
-                        <div class="pricing-body">
-
-                            <h3 class="pricing-plan-title">Premium</h3>
-                            <div class="price"><span class="fig">$199.99</span><span>/month</span></div>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts.</p>
-
-                            <p><a href="#" class="btn btn-outline-primary">Get Started</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- /.untree_co-section -->
     <div class="untree_co-section bg-light">
         <div class="container">
             <div class="row">
@@ -1028,20 +972,7 @@
             <p>&copy; Copyrights 2025 @Mtendere. All rights reserved.</<p>
         </div>
     </div>
-
-    <div class="modal" id="applyModal">
-        <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <h2>Apply Now</h2>
-          <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-    </div>
       
-
     <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 

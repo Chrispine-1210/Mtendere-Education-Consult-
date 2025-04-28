@@ -709,6 +709,32 @@ window.addEventListener('scroll', function () {
 	}
   });
   
+  const form = document.getElementById('applicationForm');
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  const successModal = document.getElementById('successModal');
+  const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+  const formModal = document.getElementById('formModal');
+  
+  form.addEventListener('submit', function(e) {
+	  e.preventDefault();
+  
+	  // Show Spinner
+	  loadingSpinner.style.display = 'flex';
+  
+	  // Simulate a form processing delay
+	  setTimeout(function() {
+		  loadingSpinner.style.display = 'none';
+		  formModal.style.display = 'none';
+		  successModal.style.display = 'block';
+		  form.reset(); // Reset the form
+	  }, 2000); // 2 seconds
+  });
+  
+  // Close success modal
+  closeSuccessBtn.addEventListener('click', function() {
+	  successModal.style.display = 'none';
+  });
+  
 
 // Like button functionality
 document.querySelectorAll('.btn-like').forEach(button => {
