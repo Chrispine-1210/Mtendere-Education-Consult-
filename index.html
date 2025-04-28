@@ -145,7 +145,7 @@
             <div class="container">
             <h1 class="display-4 fw-bold bg-dark bg-opacity-50 p-3 rounded">Empowering Dreams. Building Global Futures.</h1>
             <p class="lead mb-4 bg-dark bg-opacity-25 p-2 rounded">Connecting Malawian students with top international universities through expert guidance and personalized support.</p>
-            <a href="#formModal" class="btn btn-primary me-2" data-toggle="modal">Apply Now</a>
+            <button class="btn btn-primary open-modal">Apply Now</button>
             <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#videoModal">▶ Watch Video</button>
             </div>
         </div>
@@ -1028,6 +1028,19 @@
             <p>&copy; Copyrights 2025 @Mtendere. All rights reserved.</<p>
         </div>
     </div>
+
+    <div class="modal" id="applyModal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Apply Now</h2>
+          <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    </div>
+      
 
     <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>

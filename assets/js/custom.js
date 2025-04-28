@@ -688,6 +688,28 @@ toggleButton.addEventListener('click', () => {
   }
 });
 
+// Mobile Navigation Menu Toggle
+document.addEventListener('DOMContentLoaded', function () {
+	const burger = document.querySelector('.burger');
+	const menu = document.querySelector('.site-menu');
+  
+	burger.addEventListener('click', function () {
+	  menu.classList.toggle('active');
+	  burger.classList.toggle('is-active');
+	});
+  });
+  
+// Shrink Header on Scroll
+window.addEventListener('scroll', function () {
+	const nav = document.querySelector('.site-nav');
+	if (window.scrollY > 50) {
+	  nav.classList.add('shrink');
+	} else {
+	  nav.classList.remove('shrink');
+	}
+  });
+  
+
 // Like button functionality
 document.querySelectorAll('.btn-like').forEach(button => {
   button.addEventListener('click', (event) => {
@@ -697,6 +719,32 @@ document.querySelectorAll('.btn-like').forEach(button => {
     animateLike(event.target.closest('.gallery-item'));
   });
 });
+
+const modal = document.getElementById('applyModal');
+const openModalBtn = document.querySelector('.open-modal');
+const closeModalBtn = document.querySelector('.close-button');
+
+openModalBtn.addEventListener('click', function () {
+  modal.style.display = 'flex';
+});
+
+closeModalBtn.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function (e) {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+
+// Animate Hero Text on Load
+window.addEventListener('load', function () {
+	const hero = document.querySelector('.hero-slide');
+	hero.classList.add('show');
+  });
+  
 
 // Initialize the slideshow on page load
 startSlideshow();
