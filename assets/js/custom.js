@@ -729,6 +729,105 @@ window.addEventListener('scroll', function () {
 		  form.reset(); // Reset the form
 	  }, 2000); // 2 seconds
   });
+
+// Event Data Array
+const events = [
+    {
+        title: "Global Education Summit 2025",
+        description: "Join top scholars for an international discussion on education opportunities.",
+        speaker: "Dr. Grace Banda",
+        location: "Mount Soche Hotel, Blantyre",
+        date: "2025-07-22",
+        media: "video/event-sample.mp4",
+        type: "video"
+    },
+    {
+        title: "Scholarship Bootcamp",
+        description: "Exclusive training on how to secure scholarships abroad and excel.",
+        speaker: "Mr. Kelvin Mwale",
+        location: "Lilongwe BICC",
+        date: "2024-05-15",
+        media: "img/scholarship.jpg",
+        type: "image"
+    },
+    {
+        title: "Youth Tech Innovation Day",
+        description: "Empowering the next generation in digital transformation and AI.",
+        speaker: "Prof. Sarah Mponda",
+        location: "Mzuzu Tech Park",
+        date: "2025-01-10",
+        media: "img/techday.jpg",
+        type: "image"
+    }
+];
+
+// Current Date
+const today = new Date();
+
+// Create Event Card Function
+function createEventCard(event) {
+    let mediaContent = '';
+
+    if (event.type === 'video') {
+        mediaContent = `
+            <video class="img-fluid rounded-top" autoplay muted loop>
+                <source src="${event.media}" type="video/mp4">
+            </video>`;
+    } else if (event.type === 'image') {
+        mediaContent = `
+            <img src="${event.media}" class="img-fluid rounded-top" alt="${event.title}">`;
+    }
+
+    return `
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="card event-card shadow border-0">
+            <div class="event-media">
+                ${mediaContent}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">${event.title}</h5>
+                <p class="card-text">${event.description}</p>
+                <ul class="list-unstyled mb-3">
+                    <li><i class="fa fa-user text-primary me-2"></i>${event.speaker}</li>
+                    <li><i class="fa fa-map-marker-alt text-primary me-2"></i>${event.location}</li>
+                    <li><i class="fa fa-calendar-alt text-primary me-2"></i>${new Date(event.date).toDateString()}</li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#attendModal">Attend</button>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailsModal">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
+// Inject Events into Respective Sections
+function displayEvents() {
+    const upcomingContainer = document.getElementById('upcomingEvents');
+    const pastContainer = document.getElementById('pastEvents');
+    const allContainer = document.getElementById('allEvents');
+
+    events.forEach(event => {
+        const eventDate = new Date(event.date);
+        const cardHTML = createEventCard(event);
+
+        // Upcoming
+        if (eventDate >= today) {
+            upcomingContainer.innerHTML += cardHTML;
+        }
+
+        // Past
+        if (eventDate < today) {
+            pastContainer.innerHTML += cardHTML;
+        }
+
+        // All
+        allContainer.innerHTML += cardHTML;
+    });
+}
+
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', displayEvents);
   
   // Close success modal
   closeSuccessBtn.addEventListener('click', function() {
