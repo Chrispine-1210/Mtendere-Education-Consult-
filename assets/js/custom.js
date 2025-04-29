@@ -729,6 +729,12 @@ window.addEventListener('scroll', function () {
 		  form.reset(); // Reset the form
 	  }, 2000); // 2 seconds
   });
+  
+  AOS.init({
+	duration: 1200,
+	once: true,
+	offset: 200
+  });
 
 // Event Data Array
 const events = [
