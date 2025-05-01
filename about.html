@@ -169,6 +169,7 @@
   </div> <!-- /.container -->
   <!-- Header End -->
 
+  <!-- Our about Section -->
   <div class="untree_co-section">
     <div class="container">
       <div class="row justify-content-between">
@@ -533,130 +534,63 @@
       </div>
   </div>
 
-  <div class="untree_co-section">
+  <!-- UNIVERSITY STATS & ACCREDITATIONS -->
+  <section id="stats-accreditations" class="py-5 bg-white border-top">
       <div class="container">
-
-          <div class="row mb-5">
-              <div class="col-lg-4 mb-5 order-2 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-                  <div class="contact-info">
-
-                      <div class="address mt-4">
-                          <i class="icon-room"></i>
-                          <h4 class="mb-2">Location:</h4>
-                          <p>43 Raymouth Rd. Baltemoer, London 3910</p>
-                      </div>
-
-                      <div class="open-hours mt-4">
-                          <i class="icon-clock-o"></i>
-                          <h4 class="mb-2">Open Hours:</h4>
-                          <p>
-                              Sunday-Friday:<br>
-                              11:00 AM - 2300 PM
-                          </p>
-                      </div>
-
-                      <div class="email mt-4">
-                          <i class="icon-envelope"></i>
-                          <h4 class="mb-2">Email:</h4>
-                          <p>info@Untree.co</p>
-                      </div>
-
-                      <div class="phone mt-4">
-                          <i class="icon-phone"></i>
-                          <h4 class="mb-2">Call:</h4>
-                          <p>+1 1234 55488 55</p>
-                      </div>
-
-                  </div>
+          <!-- STATS -->
+          <div class="row text-center mb-5">
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <h2 class="fw-bold display-5 text-primary">60,000+</h2>
+                  <p class="text-muted">Students Worldwide</p>
               </div>
-              <div class="col-lg-7 mr-auto order-1" data-aos="fade-up" data-aos-delay="200">
-                  <form action="#">
-                      <div class="row">
-                          <div class="col-6 mb-3">
-                              <input type="text" class="form-control" placeholder="Your Name">
-                          </div>
-                          <div class="col-6 mb-3">
-                              <input type="email" class="form-control" placeholder="Your Email">
-                          </div>
-                          <div class="col-12 mb-3">
-                              <input type="text" class="form-control" placeholder="Subject">
-                          </div>
-                          <div class="col-12 mb-3">
-                              <textarea name="" id="" cols="30" rows="7" class="form-control"
-                                  placeholder="Message"></textarea>
-                          </div>
-
-                          <div class="col-12">
-                              <input type="submit" value="Send Message" class="btn btn-primary">
-                          </div>
-                      </div>
-                  </form>
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <h2 class="fw-bold display-5 text-primary">12</h2>
+                  <p class="text-muted">Countries Represented</p>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <h2 class="fw-bold display-5 text-primary">100+</h2>
+                  <p class="text-muted">University & College Partners</p>
               </div>
           </div>
-          <!--- Map Section--->
-          <div class="row justify-content-center">
-              <div class="col-md-6">
-                  <div id="untree_map">
-                      <div id="untree_map_canvas">
-                          <div id="untree_map_info">
-                              <h4 class="text-white">Location</h4>
-                              <p class="text-white">43 Raymouth Rd. Baltemoer, London 3910</p>
-                          </div>
-                          <div id="untree_map_controls">
-                              <button class="btn btn-primary btn-sm" id="untree_map_zoom_in">
-                                  <i class="icon-plus"></i>
-                              </button>
-                              <button class="btn btn-primary btn-sm" id="untree_map_zoom_out">
-                                  <i class="icon-minus"></i>
-                              </button>
-                          </div>
-                          <div id="untree_map_legend">
-                              <p class="mb-1">
-                                  <i class="icon-circle-o text-primary mr-2"></i> Primary Location
-                              </p>
-                              <p class="mb-1">
-                                  <i class="icon-circle-o text-secondary mr-2"></i> Secondary Location
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-                  <script>
-                      var map;
-                      var markers = [];
-                      var mapOptions = {
-                          center: new google.maps.LatLng(51.5074, -0.1278),
-                          zoom: 8
-                      };
-                      map = new google.maps.Map(document.getElementById('untree_map_canvas'), mapOptions);
-                      var infoWindow = new google.maps.InfoWindow();
-                      var locations = [
-                          ['Primary Location', 51.5074, -0.1278, 1],
-                          ['Secondary Location', 51.5044, -0.1257, 2]
-                      ];
-                      for (var i = 0; i < locations.length; i++) {
-                          var marker = new google.maps.Marker({
-                              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                              map: map,
-                              icon: 'img/map-marker-' + locations[i][3] + '.png'
-                          });
-                          markers.push(marker);
-                          marker.addListener('click', (function(marker, i) {
-                              return function() {
-                                  infoWindow.setContent(locations[i][0]);
-                                  infoWindow.open(map, marker);
-                              }
-                          })(marker, i));
-                      }
-                      var bounds = new google.maps.LatLngBounds();
-                      for (var i = 0; i < markers.length; i++) {
-                          bounds.extend(markers[i].getPosition());
-                      }
-                      map.fitBounds(bounds);
-                  </script>
+
+          <!-- ACCREDITATIONS -->
+          <div class="text-center mb-4">
+              <h3 class="fw-semibold">Accreditations & Associations</h3>
+              <p class="text-muted">Trusted by renowned education bodies across the globe</p>
+          </div>
+
+          <div class="row justify-content-center align-items-center g-4">
+              <div class="col-4 col-sm-2">
+                  <img src="assets/images/accreditation1.png" alt="Accreditation 1" class="img-fluid grayscale-hover">
+              </div>
+              <div class="col-4 col-sm-2">
+                  <img src="assets/images/accreditation2.png" alt="Accreditation 2" class="img-fluid grayscale-hover">
+              </div>
+              <div class="col-4 col-sm-2">
+                  <img src="assets/images/accreditation3.png" alt="Accreditation 3" class="img-fluid grayscale-hover">
+              </div>
+              <div class="col-4 col-sm-2">
+                  <img src="assets/images/accreditation4.png" alt="Accreditation 4" class="img-fluid grayscale-hover">
+              </div>
+              <div class="col-4 col-sm-2">
+                  <img src="assets/images/accreditation5.png" alt="Accreditation 5" class="img-fluid grayscale-hover">
               </div>
           </div>
       </div>
-  </div> <!-- /.untree_co-section -->
+  </section>
+
+  <!-- APPLY CTA SECTION -->
+  <section id="apply-cta" class="py-5 bg-primary text-white text-center">
+      <div class="container">
+          <h2 class="display-4 mb-3 fw-bold">Ready to Start Your Journey?</h2>
+          <p class="lead mb-4">Take the first step toward an exciting future. Apply now to join one of our university
+              partners and study abroad in your dream destination.</p>
+          <a href="#" class="btn btn-light btn-lg px-4 py-2">
+              Apply Now
+          </a>
+      </div>
+  </section>
+  <!-- Apply CTA Section End -->
 
   <!-- Footer Start -->
   <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">

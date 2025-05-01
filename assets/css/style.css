@@ -306,7 +306,7 @@ h4,
 
 /* Spinner Circle */
 .spinner {
-  border: 8px solid #f3f3f3; /* Light grey */
+  border: 8px solid #2701d4; /* Light grey */
   border-top: 8px solid #FFB800; /* Gold accent */
   border-radius: 50%;
   width: 60px;
@@ -337,7 +337,7 @@ h4,
 
 /* Success Modal Content */
 .success-content {
-  background: #ffffff;
+  background: #033c5ea2;
   margin: auto;
   padding: 30px 40px;
   border: 1px solid #ddd;
@@ -377,7 +377,6 @@ h4,
   0% { transform: scale(0.8); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
-
 
 #backToTop {
   position: fixed;
@@ -833,13 +832,14 @@ h4,
 }
 
 .student-card {
+  display: inline-block;
   position: relative;
   text-align: center;
   padding: 20px;
 }
 
 .student-card img {
-  width: 100%;
+  width: 69%;
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
@@ -1082,17 +1082,6 @@ h4,
   margin-right: 5px;
 }
 
-:root {
-  --primary-color: #0066cc;
-  --secondary-color: #00aaff;
-  --accent-color: #f1c40f;
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --heading-font: 'Poppins', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
-  --transition-speed: 0.3s;
-}
-
 /* Reset and Base Setup */
 *,
 *::before,
@@ -1100,22 +1089,6 @@ h4,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 a {
