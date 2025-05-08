@@ -197,9 +197,6 @@
                         <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Our Events</h4>
                         <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Upcoming Educational Activities</h1>
                     </div>
-                    <div class="col-xl-4 text-xl-end pb-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">View All Events</a>
-                    </div>
                 </div>
             </div>
             <div class="row g-4 justify-content-center">
@@ -485,15 +482,74 @@
     </div>
     <!-- Blog Section End -->
 
-    <!-- APPLY CTA SECTION -->
-    <section id="apply-cta" class="py-5 bg-primary text-white text-center">
+    <!-- Comment Section -->
+    <div class="comment-section">
+        <h5>Comments</h5>
+        <div id="comment-list" class="mb-3"></div>
+        <div id="comment-form">
+            <input id="username" class="form-control mb-2" type="text" placeholder="Username" required />
+            <textarea id="comment" class="form-control mb-2" placeholder="Write your comment here..."
+                required></textarea>
+            <button onclick="submitComment()" class="btn btn-info">Post Comment</button>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action text-center">
+        <h3>Ready to join Mtendere?</h3>
+        <p>Start your application today and shape your global future.</p>
+        <a href="#apply" class="btn cta-btn">Apply Now</a>
+    </div>
+
+    <!-- UNIVERSITY STATS & ACCREDITATIONS -->
+    <section id="stats-accreditations" class="py-5 bg-white border-top">
         <div class="container">
-            <h2 class="display-4 mb-3 fw-bold">Ready to Start Your Journey?</h2>
-            <p class="lead mb-4">Take the first step toward an exciting future. Apply now to join one of our university
-                partners and study abroad in your dream destination.</p>
-            <a href="application-form-link.html" class="btn btn-light btn-lg px-4 py-2">
-                Apply Now
-            </a>
+        <!-- STATS -->
+        <div class="row text-center mb-5">
+            <div class="col-md-6 col-lg-4 mb-4">
+            <h2 class="fw-bold display-5 text-primary">60,000+</h2>
+            <p class="text-muted">Students Worldwide</p>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+            <h2 class="fw-bold display-5 text-primary">12</h2>
+            <p class="text-muted">Countries Represented</p>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+            <h2 class="fw-bold display-5 text-primary">100+</h2>
+            <p class="text-muted">University & College Partners</p>
+            </div>
+        </div>
+
+        <!-- ACCREDITATIONS -->
+        <div class="text-center mb-4">
+            <h3 class="fw-semibold">Accreditations & Associations</h3>
+            <p class="text-muted">Trusted by renowned education bodies across the globe</p>
+        </div>
+
+        <div class="row justify-content-center align-items-center g-4">
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/gedu-logo.png" alt="Accreditation 3" class="img-fluid grayscale-hover">
+            </div>
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/cu-logo-white.webp" alt="Accreditation 1" class="img-fluid grayscale-hover">
+            </div>
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/ct-logo.png" alt="Accreditation 2" class="img-fluid grayscale-hover">
+            </div>
+
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/logoblackn.webp" alt="Accreditation 4" class="img-fluid grayscale-hover">
+            </div>
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/gbs-dubai-1.webp" alt="Accreditation 5" class="img-fluid grayscale-hover">
+            </div>
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/msm-unify-logo.png" alt="Accreditation 6" class="img-fluid grayscale-hover">
+            </div>
+            <div class="col-4 col-sm-2">
+            <img src="assets/imgs/au-logo.png" alt="Accreditation 7" class="img-fluid grayscale-hover">
+            </div>
+
         </div>
     </section>
 
