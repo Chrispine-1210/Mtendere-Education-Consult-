@@ -431,10 +431,7 @@ h4,
 .faq-modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
+  width: 45%;
   height: 100%;
   overflow-y: auto;
   background-color: rgba(0,0,0,0.6);
