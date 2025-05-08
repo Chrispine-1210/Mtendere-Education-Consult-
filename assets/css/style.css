@@ -1,94 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.7;
-  background-color: #F6821C;
-  overflow-x: hidden;
-  font-size: 16px;
-  font-weight: 100;
+  font-family: "Inter", sans-serif;  
+  line-height: 1.6;  
+  background-color: #ffffff;  
+  overflow-x: hidden;  
+  font-size: 16px;  
   color: #666;
+}  
+
+body:before {    
+  content: "";    
+  position: fixed;    
+  top: 0;    
+  left: 0;    
+  z-index: 99;    
+  right: 0;    
+  bottom: 0;    
+  background: rgba(0, 0, 0, 0.2);    
+  opacity: 0;    
+  visibility: hidden;    
+  -webkit-transition: .3s all ease;    
+  -o-transition: .3s all ease;    
+  transition: .3s all ease; 
+}  
+body.offcanvas-menu:before {    
+  opacity: 1;    
+  visibility: visible; 
 }
 
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
+.text-black {  
+  color: #000000 !important; 
 }
 
-.text-black {
-  color: #AE160E !important;
+.text-secondary {  
+  color: #00aeff !important; 
 }
 
-.text-secondary {
-  color: #00aeff !important;
+.bg-primary-light {  
+  background-color: rgba(19, 106, 213, 0.05); 
 }
 
-.bg-primary-light {
-  background-color: rgba(19, 106, 213, 0.05);
+.bg-secondary-light {  
+  background-color: rgba(0, 174, 255, 0.05); 
 }
 
-.bg-secondary-light {
-  background-color: rgba(0, 174, 255, 0.05);
+a {  
+  color: #136ad5;  
+  -webkit-transition: .3s all ease;  
+  -o-transition: .3s all ease;  
+  transition: .3s all ease; 
+}  
+
+a:hover {    
+  color: #136ad5;    
+  text-decoration: none; 
 }
 
-a {
-  color: #00779B;
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
+::-moz-selection {  
+  background: #000000;  
+  color: #ffffff; 
 }
 
-a:hover {
-  color: #00779B;
-  text-decoration: none;
+::selection {  
+  background: #000000;  
+  color: #ffffff; 
 }
 
-::-moz-selection {
-  background: #000000;
-  color: #ffffff;
+.text-primary {  
+  color: #136ad5 !important; 
 }
 
-::selection {
-  background: #000000;
-  color: #ffffff;
+a.text-primary {  
+  color: #136ad5 !important; 
+}  
+
+a.text-primary:hover {    
+  color: #136ad5 !important; 
 }
 
-.text-primary {
-  color: #00779B !important;
-}
-
-a.text-primary {
-  color: #00779B !important;
-}
-
-a.text-primary:hover {
-  color: #00779B !important;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-  font-family: "Display Playfair", serif;
-  color: #AE160E;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {  
+  font-family: "Display Playfair", serif;  
+  color: #black; 
 }
 
 .btn {
