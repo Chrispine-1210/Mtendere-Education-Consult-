@@ -22,6 +22,7 @@ body:before {
   -o-transition: .3s all ease;    
   transition: .3s all ease; 
 }  
+
 body.offcanvas-menu:before {    
   opacity: 1;    
   visibility: visible; 
@@ -79,7 +80,6 @@ a.text-primary:hover {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {  
   font-family: "Display Playfair", serif;  
-  color: #black; 
 }
 
 .btn {
@@ -1452,6 +1452,7 @@ a:hover {
 
 .modal-content {
   background: #fff;
+  display: fixed;
   padding: 2rem;
   border-radius: 12px;
   width: 90%;
@@ -1491,53 +1492,6 @@ a:hover {
   right: 0;
   width: 200px;
   padding: 1rem;
-}
-
-
-/* Gallery item hover animation */
-.gallery-item { position: relative; }
-.gallery-img { 
-  width: 100%; 
-  transition: transform 0.3s ease; 
-  border-radius: 8px; 
-}
-.gallery-img:hover { 
-  transform: scale(1.1); 
-}
-
-/* Like status style */
-.like-status {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.like-animation { 
-  display: none; 
-  font-size: 40px; 
-  color: #ff4d4d; 
-  position: absolute; 
-  top: 10px; 
-  right: 10px; 
-}
-
-.gallery-item.active .like-animation {
-  display: block;
-  animation: likeAnim 1s ease-in-out;
-}
-
-@keyframes likeAnim {
-  0% { opacity: 0; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.5); }
-  100% { opacity: 0; transform: scale(1); }
 }
 
 .card-hover {
