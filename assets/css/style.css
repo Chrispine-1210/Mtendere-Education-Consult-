@@ -325,6 +325,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 /* Success Modal Content */
 .success-content {
+  display: flex;
   background: #033c5ea2;
   margin: auto;
   padding: 30px 40px;
@@ -379,23 +380,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   cursor: pointer;
   display: none;
   z-index: 1000;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  padding: 15px;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.whatsapp-float img {
-  width: 25px;
-  height: 25px;
 }
 
 .story-card {
@@ -798,6 +782,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 /* Modal Styles */
 .modal-content {
+  display: fixed;
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
   border-radius: 20px;
   padding: 30px;
   background: #f9f9f9;
@@ -1003,35 +992,6 @@ a:hover {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  transition: all var(--transition-speed) ease;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-}
-
-.btn-secondary {
-  background-color: var(--accent-color);
-  color: #000;
-}
-
-.btn-secondary:hover {
-  background-color: darken(var(--accent-color), 10%);
 }
 
 .section {
