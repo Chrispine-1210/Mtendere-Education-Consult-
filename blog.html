@@ -161,46 +161,9 @@
                         <p class="m-0 text-uppercase">Courses</p>
                     </div>
                 </div>
-                <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                    <div class="input-group">
-                        <select id="courseType" class="btn btn-outline-light bg-white text-body px-4">
-                            <option value="All">All</option>
-                            <option value="Undergraduate Degree">Undergraduate Degree</option>
-                            <option value="Post-graduate Degree">Post-graduate Degree</option>
-                            <option value="Masters Degree">Masters Degree</option>
-                            <option value="Doctoral Degree">Doctoral Degree</option>
-                            <option value="PhD Degree">PhD Degree</option>
-                        </select>
-                        <input type="text" id="keyword" class="form-control border-light" placeholder="Keyword"
-                            style="padding: 30px 25px;">
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary px-4 px-lg-5" onclick="searchCourses()">Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Results -->
-            <div class="row justify-content-center" id="searchResults">
-                <!-- Results Display -->
-                <section id="search-results" class="py-5 bg-light">
-                    <div class="container">
-                        <h2 class="text-center mb-4">Matching Programs</h2>
-                        <div id="resultsContainer" class="row justify-content-center">
-                            <!-- Results will appear here -->
-
-                        </div>
-                    </div>
-                </section>
             </div>
         </div>
     </div>
-    <!-- Header End -->
-
-    <div class="untree_co-section bg-light">
-        <div class="container">
-            
-    </div> <!-- /.untree_co-section -->
 
     <div id="faqModal" class="faq-modal">
         <div class="faq-content">
@@ -263,8 +226,9 @@
                 <!-- First Dynamic Entry: Caroline Tembo -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Carloline.jpg" alt="Caroline Tembo Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/Caroline.jpg alt="Admission Deadlines">    
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Caroline Tembo - Commerce Graduate from PCTE India</a></h2>
                             <div class="meta">
@@ -279,8 +243,9 @@
                 <!-- Second Dynamic Entry: Janet Kandulu -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Janet Kandulu.jpg" alt="Janet Kandulu Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/Janet Kandulu.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Janet Kandulu - Bs in Nutrition and Dietetics</a></h2>
                             <div class="meta">
@@ -295,8 +260,9 @@
                 <!-- Third Dynamic Entry: Chikondi Mangani -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Trust Chikondi Mangani.jpg" alt="Chikondi Mangani Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/Trust Chikondi Mangani.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Chikondi Mangani - BSc in Cybersecurity</a></h2>
                             <div class="meta">
@@ -311,8 +277,9 @@
                 <!-- Fourth Dynamic Entry: Edna Karonga -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Edna Kalonga.jpg" alt="Edna Karonga Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/Edna Kalonga.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Edna Karonga - MBA Graduate from Chandigarh University</a></h2>
                             <div class="meta">
@@ -327,8 +294,9 @@
                 <!-- Fifth Dynamic Entry: Ian Ndola -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Ian Ndola.jpg" alt="Ian Ndola Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/Ian Ndola.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Ian Ndola - MBA Graduate from University of Alabama</a></h2>
                             <div class="meta">
@@ -343,8 +311,9 @@
                 <!-- Sixth Dynamic Entry: Mirabel Lopote -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Mirabel lopote.jpg" alt="Mirabel Lopote Graduation Image">
-                        
+                        <figure>
+                            <img src="assets/imgs/students/IMG-20230913-WA0056.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Mirabel Lopote - Masters in Fashion Design Graduate</a></h2>
                             <div class="meta">
@@ -358,9 +327,10 @@
     
                 <!-- Seventh Dynamic Entry: Lexina Kumwenda -->
                 <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="media-h d-flex h-100">
-                        <img src="assets/imgs/students/Lexina Kumwenda.jpg" alt="Lexina Kumwenda Graduation Image">
-                        
+                    <div class="media-h h-100">
+                        <figure>
+                            <img src="assets/imgs/students/Lexina Kumwenda.jpg" alt="Admission Deadlines">
+                        </figure>
                         <div class="media-h-body">
                             <h2 class="mb-3"><a href="#">Lexina Kumwenda - BSc Interior Design Graduate</a></h2>
                             <div class="meta">
