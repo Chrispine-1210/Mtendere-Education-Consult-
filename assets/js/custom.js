@@ -3,87 +3,71 @@ AOS.init({
 	easing: 'slide',
 	once: true
 });
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
-  const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.site-mobile-menu');
-  const overlay = document.createElement('div');
-  overlay.className = 'mobile-menu-overlay';
-  document.body.appendChild(overlay);
-  
-  burger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-  });
-  
-  // Close mobile menu when clicking overlay or close button
-  overlay.addEventListener('click', closeMobileMenu);
-  document.querySelector('.site-mobile-menu-close').addEventListener('click', closeMobileMenu);
-  
-  function closeMobileMenu() {
-    burger.classList.remove('active');
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.classList.remove('no-scroll');
-  }
-  
-  // Loading spinner simulation
-  const loadingSpinner = document.getElementById('loadingSpinner');
-  loadingSpinner.classList.add('active');
-  setTimeout(() => {
-    loadingSpinner.classList.remove('active');
-  }, 1500);
-  
-  // Add shadow to navbar on scroll
-  window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.site-nav');
-    if (window.scrollY > 10) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
+
+$(function () {
+
+	'use strict';
+
+	$(".loader").delay(200).fadeOut("slow");
+	$("#overlayer").delay(200).fadeOut("slow");
+
+	var siteMenuClone = function () {
+
+		$('.js-clone-nav').each(function () {
+			var $this = $(this);
+			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+		});
+
+		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
+
+		$('body').on('click', '.arrow-collapse', function (e) {
+			var $this = $(this);
+			if ($this.closest('li').find('.collapse').hasClass('show')) {
+				$this.removeClass('active');
+			} else {
+				$this.addClass('active');
+			}
+			e.preventDefault();
+
+		});
+
+		$(window).resize(function () {
+			var $this = $(this),
+				w = $this.width();
+
+			if (w > 768) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+				}
+			}
+		})
+
+		$('body').on('click', '.js-menu-toggle', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			if ($('body').hasClass('offcanvas-menu')) {
+				$('body').removeClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').removeClass('active');
+			} else {
+				$('body').addClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').addClass('active');
+			}
+		})
+
+		// click outisde offcanvas
+		$(document).mouseup(function (e) {
+			var container = $(".site-mobile-menu");
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+					$('body').find('.js-menu-toggle').removeClass('active');
+				}
+			}
+		});
+	};
+	siteMenuClone();
 });
-
-// Add touch support
-burger.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    this.click();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const burger = document.querySelector('.burger');
-    const mobileMenu = document.querySelector('.site-mobile-menu');
-    const overlay = document.querySelector('.mobile-menu-overlay');
-    
-    burger.addEventListener('click', function(e) {
-        e.preventDefault();
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-    });
-
-    // Close Menu Handlers
-    overlay.addEventListener('click', closeMobileMenu);
-    document.querySelector('.site-mobile-menu-close').addEventListener('click', closeMobileMenu);
-
-    function closeMobileMenu() {
-        burger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    }
-
-    // Handle Mobile Menu Links
-    document.querySelectorAll('.mobile-menu-list a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
-});
-
 
 var owlPlugin = function () {
 	if ($('.owl-3-slider').length > 0) {
@@ -312,75 +296,6 @@ backToTopButton.addEventListener("click", function () {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-const universityData = {
-	chandigarh: {
-		intakes: ["January", "July"],
-		programs: ["Engineering", "Business", "IT", "Hospitality"],
-		documents: "Passport, Academic Transcript, English Proficiency (IELTS 6.0+)",
-		requirements: "Minimum 60% aggregate in high school, IELTS 6.0 or equivalent"
-	},
-	parul: {
-		intakes: ["February", "September"],
-		programs: ["Medicine", "Physiotherapy", "Engineering", "Design"],
-		documents: "Transcript, Passport, Medical Certificate",
-		requirements: "High school diploma with science subjects, minimum 55%, valid ID"
-	},
-	ct: {
-		intakes: ["January", "July", "November"],
-		programs: ["Applied Sciences", "Agriculture", "Media"],
-		documents: "Transcript, Passport, Proof of English",
-		requirements: "Pass in relevant subjects, English proficiency certificate"
-	},
-	shoolini: {
-		intakes: ["March", "August"],
-		programs: ["Pharmacy", "Biotech", "Liberal Arts"],
-		documents: "60%+ in core subjects, English Proof, ID",
-		requirements: "Minimum 60% in science stream, English proficiency"
-	},
-	jain: {
-		intakes: ["January", "June", "October"],
-		programs: ["Sports Science", "Aviation", "Engineering"],
-		documents: "GPA ≥ 2.5, English Test, Passport Copy",
-		requirements: "Minimum GPA of 2.5, strong academic background in chosen program"
-	}
-};
-
-const universitySelect = document.getElementById("university");
-const intakeSelect = document.getElementById("intakeMonth");
-const programSelect = document.getElementById("program");
-const documentsField = document.getElementById("documents");
-const requirementsField = document.getElementById("requirements");
-
-universitySelect.addEventListener("change", function () {
-	const selected = this.value;
-	const data = universityData[selected];
-
-	intakeSelect.innerHTML = "";
-	programSelect.innerHTML = "";
-
-	if (data) {
-		data.intakes.forEach(month => {
-			const option = document.createElement("option");
-			option.value = month;
-			option.textContent = month;
-			intakeSelect.appendChild(option);
-		});
-
-		data.programs.forEach(program => {
-			const option = document.createElement("option");
-			option.value = program;
-			option.textContent = program;
-			programSelect.appendChild(option);
-		});
-
-		documentsField.value = data.documents;
-		requirementsField.value = data.requirements;
-	} else {
-		documentsField.value = "";
-		requirementsField.value = "";
-	}
-});
-
 document.getElementById("applicationForm").addEventListener("submit", function (e) {
 	e.preventDefault();
 	alert("Your application has been submitted!");
@@ -501,115 +416,6 @@ const universityDatabase = [
 	// Add more universities and programs
 ];
 
-function filterPrograms(keyword, level) {
-	const results = [];
-
-	universityDatabase.forEach(univ => {
-		univ.programs.forEach(program => {
-			const nameMatch = program.name.toLowerCase().includes(keyword.toLowerCase());
-			const levelMatch = level ? program.level === level : true;
-
-			if (nameMatch && levelMatch) {
-				results.push({
-					university: univ.university,
-					program: program.name,
-					level: program.level,
-					country: program.country
-				});
-			}
-		});
-	});
-
-	return results;
-};
-
-function displayResults(results) {
-	const container = document.getElementById('searchResults');
-	container.innerHTML = '';
-
-	if (results.length === 0) {
-		container.innerHTML = '<p class="text-danger">No matching programs found.</p>';
-		return;
-	}
-
-	results.forEach(res => {
-		const card = document.createElement('div');
-		card.className = 'mb-3 p-3 bg-white border rounded';
-		card.innerHTML = `
-			<h5>${res.program} (${res.level})</h5>
-			<p><strong>University:</strong> ${res.university}<br>
-			<strong>Country:</strong> ${res.country}</p>`
-			;
-		container.appendChild(card);
-	});
-}
-
-document.getElementById('searchBtn').addEventListener('click', () => {
-	const keyword = document.getElementById('searchInput').value;
-	const level = document.getElementById('courseLevelSelect').value;
-	const results = filterPrograms(keyword, level);
-	displayResults(results);
-});
-
-const courseData = [
-	{ title: "Bachelor of Science in Engineering", type: "Undergraduate Degree", university: "Chandigarh University" },
-	{ title: "Master of Business Administration", type: "Masters Degree", university: "Parul University" },
-	{ title: "PhD in Biotechnology", type: "PhD Degree", university: "Shoolini University" },
-	{ title: "Doctor of Philosophy in Education", type: "Doctoral Degree", university: "Jain University" },
-	{ title: "Postgraduate Diploma in Computer Science", type: "Post-graduate Degree", university: "CT University" },
-	{ title: "Master of Science in Data Analytics", type: "Masters Degree", university: "Parul University" },
-];
-
-let selectedType = "";
-
-// Handle dropdown type selection
-document.querySelectorAll(".dropdown-item").forEach(item => {
-	item.addEventListener("click", function () {
-		selectedType = this.textContent.trim();
-		document.querySelector(".dropdown-toggle").textContent = selectedType;
-	});
-});
-
-// Handle Search
-document.querySelector(".btn-secondary").addEventListener("click", function () {
-	const keyword = document.querySelector("input.form-control").value.toLowerCase().trim();
-	const resultsContainer = document.getElementById("resultsContainer");
-	resultsContainer.innerHTML = ""; // Clear old results
-
-	// Filter data
-	const filtered = courseData.filter(course =>
-		course.type === selectedType &&
-		course.title.toLowerCase().includes(keyword)
-	);
-
-	if (filtered.length === 0) {
-		resultsContainer.innerHTML = `<p class="text-center">No matching results found.</p>`;
-		return;
-	}
-}); // End of Search functionality
-
-// Display filtered results
-filtered.forEach(course => {
-	const col = document.createElement("div");
-	col.className = "col-md-6 col-lg-4 mb-4";
-	col.innerHTML = `
-		<div class="card shadow-sm border-0">
-			<div class="card-body">
-				<h5 class="card-title">${course.title}</h5>
-				<p class="card-text"><strong>Type:</strong> ${course.type}</p>
-				<p class="card-text"><strong>University:</strong> ${course.university}</p>
-			</div>
-		</div>`;
-	resultsContainer.appendChild(col);
-});
-
-const courseList = [
-	{ name: "Bachelor of Computer Science", level: "Undergraduate Degree", university: "Chandigarh University" },
-	{ name: "MBA in Finance", level: "Post-graduate Degree", university: "Parul University" },
-	{ name: "MSc in Data Science", level: "Masters Degree", university: "CT University" },
-	{ name: "PhD in Robotics", level: "PhD Degree", university: "Jain University" }
-];
-
 function togglePopup(register = false) {
 	const popup = document.getElementById("popupContainer");
 	const card = document.getElementById("flipCard");
@@ -644,29 +450,6 @@ const startSlideshow = () => {
 // Function to stop the slideshow
 const stopSlideshow = () => {
   clearInterval(galleryInterval);
-};
-
-// Function for like animation
-const animateLike = (item) => {
-  const likeAnim = item.querySelector('.like-animation');
-  anime({
-    targets: likeAnim,
-    scale: [1, 1.5],
-    opacity: [0, 1],
-    easing: 'easeInOutQuad',
-    duration: 600,
-    complete: () => {
-      setTimeout(() => {
-        anime({
-          targets: likeAnim,
-          scale: [1.5, 1],
-          opacity: [1, 0],
-          easing: 'easeInOutQuad',
-          duration: 600
-        });
-      }, 1000);
-    }
-  });
 };
 
 // Toggle button functionality
@@ -762,86 +545,14 @@ const events = [
 // Current Date
 const today = new Date();
 
-// Create Event Card Function
-function createEventCard(event) {
-    let mediaContent = '';
-
-    if (event.type === 'video') {
-        mediaContent = `
-            <video class="img-fluid rounded-top" autoplay muted loop>
-                <source src="${event.media}" type="video/mp4">
-            </video>`;
-    } else if (event.type === 'image') {
-        mediaContent = `
-            <img src="${event.media}" class="img-fluid rounded-top" alt="${event.title}">`;
-    }
-
-    return `
-    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="card event-card shadow border-0">
-            <div class="event-media">
-                ${mediaContent}
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${event.title}</h5>
-                <p class="card-text">${event.description}</p>
-                <ul class="list-unstyled mb-3">
-                    <li><i class="fa fa-user text-primary me-2"></i>${event.speaker}</li>
-                    <li><i class="fa fa-map-marker-alt text-primary me-2"></i>${event.location}</li>
-                    <li><i class="fa fa-calendar-alt text-primary me-2"></i>${new Date(event.date).toDateString()}</li>
-                </ul>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#attendModal">Attend</button>
-                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailsModal">View More</button>
-                </div>
-            </div>
-        </div>
-    </div>`;
-}
-
-// Inject Events into Respective Sections
-function displayEvents() {
-    const upcomingContainer = document.getElementById('upcomingEvents');
-    const pastContainer = document.getElementById('pastEvents');
-    const allContainer = document.getElementById('allEvents');
-
-    events.forEach(event => {
-        const eventDate = new Date(event.date);
-        const cardHTML = createEventCard(event);
-
-        // Upcoming
-        if (eventDate >= today) {
-            upcomingContainer.innerHTML += cardHTML;
-        }
-
-        // Past
-        if (eventDate < today) {
-            pastContainer.innerHTML += cardHTML;
-        }
-
-        // All
-        allContainer.innerHTML += cardHTML;
-    });
-}
-
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', displayEvents);
   
-  // Close success modal
+// Close success modal
   closeSuccessBtn.addEventListener('click', function() {
 	  successModal.style.display = 'none';
-  });
-  
-
-// Like button functionality
-document.querySelectorAll('.btn-like').forEach(button => {
-  button.addEventListener('click', (event) => {
-    const likeStatus = event.target.closest('.gallery-item').querySelector('.like-status');
-    const currentLikes = parseInt(likeStatus.querySelector('span').textContent.split(' ')[1]);
-    likeStatus.querySelector('span').textContent = `👍 ${currentLikes + 1} Likes`;
-    animateLike(event.target.closest('.gallery-item'));
-  });
 });
+  
 
 const modal = document.getElementById('applyModal');
 const openModalBtn = document.querySelector('.open-modal');
@@ -897,4 +608,3 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 		});
 	});
 });
-
