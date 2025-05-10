@@ -39,131 +39,100 @@
         <div class="spinner"></div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close">
-                <span class="icofont-close js-menu-toggle"></span>
+    <!-- ✅ Top Contact Bar -->
+    <div class="bg-light border-bottom small py-1 text-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-envelope-fill me-1 text-primary"></i> info@mtendereconsult.com
+                <span class="mx-2">|</span>
+                <i class="bi bi-telephone-fill me-1 text-primary"></i> +265 991 234 567
             </div>
-        </div>
-        <div class="site-mobile-menu-body">
-            <!-- Add mobile menu content matching desktop navigation -->
-            <ul class="mobile-menu-list">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="course.html" class="nav-link">Scholarships</a></li>
-                <li><a href="service.html" class="nav-link">Services</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="event.html" class="nav-link">Events</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Add this overlay element -->
-    <div class="mobile-menu-overlay"></div>
-
-    <!-- Top Bar -->
-    <div class="top-bar py-2 bg-light">
-        <div class="container">
-            <div class="row justify-content-between">
-
-                <div class="col-md-8 d-flex">
-                    <a href="#faqModal" class="small mr-4" data-toggle="modal">
-                        <i class="fa fa-question-circle mr-1"></i> Have a Question?
-                    </a>
-                    <a href="tel:" class="small text-dark mr-4">
-                        <i class="fa fa-phone mr-1"></i>
-                    </a>
-                    <a href="mailto:mtendereeducationconsult@gmail.com" class="small text-dark">
-                        <i class="fa fa-envelope mr-1"></i> mtendereeducationconsult@gmail.com
-                    </a>
-                </div>
-
-                <div class="col-md-4 d-flex justify-content-end align-items-center">
-                    <select class="form-select form-select-sm mr-3" id="language-select">
-                        <option value="en">English</option>
-                        <option value="es">Español</option>
-                        <option value="fr">Français</option>
-                    </select>
-                </div>
-
+            <div>
+                <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="site-nav sticky-top shadow-sm" id="main-navbar">
+    <!-- ✅ Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm py-3">
         <div class="container">
-            
-            <a href="index.html" class="logo">
-                <img src="assets/imgs/Mtendere_Logo.jpeg" alt="Mtendere Education Consult" class="img-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Mtendere_logo.png" alt="Mtendere Logo" height="45" class="me-2" style="margin-left: -10px;">
+                <span class="fw-bold text-primary">Mtendere Education Consult</span>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="d-flex justify-content-between py-3">
-                <ul class="site-menu js-clone-nav list-unstyled m-0">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="course.html" class="nav-link active">Scholarships</a></li>
-                    <li><a href="service.html" class="nav-link active">Services</a></li>
-                    <li><a href="team.html" class="nav-link active">Team</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                    <li><a href="event.html" class="nav-link active">Events</a></li>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Universities</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Contact</a></li>
                 </ul>
-
-                <a class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse">
-                    <span></span>
-                </a>
-                <a href="#formModal" class="btn btn-sm btn-primary d-none d-lg-inline-block ml-4"
-                    data-toggle="modal" style="box-sizing: border-box; border-radius: 4px;">Enroll now
-                </a>
+                <a href="#apply" class="btn btn-primary rounded-pill shadow-sm ms-lg-3 px-4">Apply Now</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Carousel -->
-    <section id="hero">
-        <div class="owl-carousel hero-carousel">
-            <div class="hero-item"
-                style="background-image: url('assets/imgs/Background/IMG-20250321-WA0304.jpg'); background-size: cover; background-position: center; height: 65vh; width: 100%; position: relative;">
-                <div class="hero-content"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                    <h1 class="display-4">Welcome to Mtendere Education Consult</h1>
-                    <p class="lead">Empowering Students to Achieve Their Dreams</p>
-                    <a href="#videoModal" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#videoModal">Watch
-                        Video</a>
+    <!-- ✅ Hero Section With Carousel -->
+    <section class="hero-section position-relative">
+        <!-- Optional Background Video -->
+        <video class="video-bg position-absolute top-0 start-0" autoplay muted loop playsinline
+            style="object-fit: cover; height: 100%;">
+            <source src="assets/videos/hero-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="container py-5 position-relative" style="z-index: 2;">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow-lg overflow-hidden">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="assets/img/hero1.jpg" class="d-block w-100" alt="Slide 1">
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                            <h1 class="display-4 fw-bold text-white">Unlock Your Global Future</h1>
+                            <p class="lead">Mtendere connects you to world-class institutions, with full support &
+                                scholarships.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="assets/img/hero2.jpg" class="d-block w-100" alt="Slide 2">
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                            <h1 class="display-4 fw-bold text-white">Scholarships Tailored for You</h1>
+                            <p class="lead">We simplify your journey to quality international education.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="assets/img/hero3.jpg" class="d-block w-100" alt="Slide 3">
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                            <h1 class="display-4 fw-bold text-white">Trusted Consultation & Mentorship</h1>
+                            <p class="lead">Join hundreds of successful students achieving their goals with Mtendere.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-item"
-                style="background-image: url('assets/imgs/Background/IMG-20250321-WA0304.jpg'); background-size: cover; background-position: center; height: 65vh; width: 100%; position: relative;">
-                <div class="hero-content"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                    <h1 class="display-4">Welcome to Mtendere Education Consult</h1>
-                    <p class="lead">Empowering Students to Achieve Their Dreams</p>
-                    <a href="#videoModal" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#videoModal">Watch
-                        Video</a>
-                </div>
-            </div>
-            <div class="hero-item"
-                style="background-image: url('assets/imgs/Background/IMG-20250321-WA0304.jpg'); background-size: cover; background-position: center; height: 65vh; width: 100%; position: relative;">
-                <div class="hero-content"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                    <h1 class="display-4">Welcome to Mtendere Education Consult</h1>
-                    <p class="lead">Empowering Students to Achieve Their Dreams</p>
-                    <a href="#videoModal" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#videoModal">Watch
-                        Video</a>
-                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
-
 
     <!-- Video Modal -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
@@ -1480,7 +1449,7 @@
     <script src="assets/js/core/mobileMenu.js"></script>
     <script src="assets/js/core/owlCarousels.js"></script>
     <!-- Copy similar modal structures for Janet, Trust, Edna, Ian, Mirabel, Lexina -->
-     <div class="modal fade" id="story1" tabindex="-1" aria-labelledby="story1Label" aria-hidden="true">
+    <div class="modal fade" id="story1" tabindex="-1" aria-labelledby="story1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1488,7 +1457,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Janet, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh University.
+                    Janet, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh
+                    University.
                     Her journey is a testament to the power of education and the support of Mtendere Education
                     Consult.
                     <p>She has been working with Mtendere Education Consult for over a decade, guiding students towards
@@ -1510,7 +1480,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Trust, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh University.
+                    Trust, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh
+                    University.
                     Her journey is a testament to the power of education and the support of Mtendere Education
                     Consult.
                     <p>She has been working with Mtendere Education Consult for over a decade, guiding students towards
@@ -1532,7 +1503,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Edna, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh University.
+                    Edna, a determined student from Malawi, pursued her BSc in Computer Science at Chandigarh
+                    University.
                     Her journey is a testament to the power of education and the support of Mtendere Education
                     Consult.
                     <p>She has been working with Mtendere Education Consult for over a decade, guiding students towards
