@@ -1066,11 +1066,17 @@ a:hover {
 
 /* Hero Section */
 #hero {
+  height: fit-content;
+  max-height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  overflow: hidden;
+  background: linear-gradient(to bottom right, #FF6F61, #3498DB);
 }
 
-/* === Loading Spinner === 
+/* === Loading Spinner === */ 
 #loadingSpinner {
     position: fixed;
     top: 0;
@@ -1095,7 +1101,7 @@ a:hover {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-}*/
+}
 
 /* === Mobile Menu === */
 .site-mobile-menu {
