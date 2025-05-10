@@ -999,25 +999,17 @@ a:hover {
   padding: 6rem 0;
 }
 
-/* ====== GLOBAL ENHANCEMENTS ====== */
-:root {
-  --brand-blue: #0056b3;
-  --brand-gold: #daa520;
-  --brand-dark: #1a365d;
-  --brand-light: #f8f9fa;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* ====== NAVIGATION PERFECTION ====== */
 .site-nav .container {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
-  align-items: center;
   position: relative;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 .logo {
-  margin-left: 2px;
+  margin-left: 4px;
   z-index: 1020;
 }
 
@@ -1028,8 +1020,10 @@ a:hover {
 }
 
 .site-menu {
+  display: inline-block;
   gap: 1.2rem;
   margin: 0 2rem;
+  padding: 0.5rem 0;
 }
 
 .btn-primary {
@@ -1047,8 +1041,12 @@ a:hover {
 
 /* ====== HERO SECTION ENHANCEMENTS ====== */
 #hero {
-  margin-top: -82px; /* Compensate for fixed header */
-  padding-top: 82px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-item {
