@@ -3,72 +3,49 @@ AOS.init({
 	easing: 'slide',
 	once: true
 });
-
-$(function () {
-
-	'use strict';
-
-	$(".loader").delay(200).fadeOut("slow");
-	$("#overlayer").delay(200).fadeOut("slow");
-
-	var siteMenuClone = function () {
-
-		$('.js-clone-nav').each(function () {
-			var $this = $(this);
-			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-		});
-
-		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
-
-		$('body').on('click', '.arrow-collapse', function (e) {
-			var $this = $(this);
-			if ($this.closest('li').find('.collapse').hasClass('show')) {
-				$this.removeClass('active');
-			} else {
-				$this.addClass('active');
-			}
-			e.preventDefault();
-
-		});
-
-		$(window).resize(function () {
-			var $this = $(this),
-				w = $this.width();
-
-			if (w > 768) {
-				if ($('body').hasClass('offcanvas-menu')) {
-					$('body').removeClass('offcanvas-menu');
-				}
-			}
-		})
-
-		$('body').on('click', '.js-menu-toggle', function (e) {
-			var $this = $(this);
-			e.preventDefault();
-
-			if ($('body').hasClass('offcanvas-menu')) {
-				$('body').removeClass('offcanvas-menu');
-				$('body').find('.js-menu-toggle').removeClass('active');
-			} else {
-				$('body').addClass('offcanvas-menu');
-				$('body').find('.js-menu-toggle').addClass('active');
-			}
-		})
-
-		// click outisde offcanvas
-		$(document).mouseup(function (e) {
-			var container = $(".site-mobile-menu");
-			if (!container.is(e.target) && container.has(e.target).length === 0) {
-				if ($('body').hasClass('offcanvas-menu')) {
-					$('body').removeClass('offcanvas-menu');
-					$('body').find('.js-menu-toggle').removeClass('active');
-				}
-			}
-		});
-	};
-	siteMenuClone();
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.site-mobile-menu');
+  const overlay = document.createElement('div');
+  overlay.className = 'mobile-menu-overlay';
+  document.body.appendChild(overlay);
+  
+  burger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+  
+  // Close mobile menu when clicking overlay or close button
+  overlay.addEventListener('click', closeMobileMenu);
+  document.querySelector('.site-mobile-menu-close').addEventListener('click', closeMobileMenu);
+  
+  function closeMobileMenu() {
+    burger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  }
+  
+  // Loading spinner simulation
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  loadingSpinner.classList.add('active');
+  setTimeout(() => {
+    loadingSpinner.classList.remove('active');
+  }, 1500);
+  
+  // Add shadow to navbar on scroll
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.site-nav');
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
 });
-
 var owlPlugin = function () {
 	if ($('.owl-3-slider').length > 0) {
 		var owl3 = $('.owl-3-slider').owlCarousel({
