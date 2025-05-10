@@ -989,6 +989,7 @@ a:hover {
 
 /* Utility Classes */
 .container {
+  top: 0;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
