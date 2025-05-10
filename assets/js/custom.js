@@ -4,17 +4,71 @@ AOS.init({
 	once: true
 });
 
-// Initialize WOW.js
-new WOW().init();
-// Initialize Bootstrap tooltips
 $(function () {
-	$('[data-toggle="tooltip"]').tooltip();
 
-	$('[data-toggle="popover"]').popover();
-	$('.popover-dismiss').popover({
-		trigger: 'focus'
-	});
+	'use strict';
+
+	$(".loader").delay(200).fadeOut("slow");
+	$("#overlayer").delay(200).fadeOut("slow");
+
+	var siteMenuClone = function () {
+
+		$('.js-clone-nav').each(function () {
+			var $this = $(this);
+			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+		});
+
+		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
+
+		$('body').on('click', '.arrow-collapse', function (e) {
+			var $this = $(this);
+			if ($this.closest('li').find('.collapse').hasClass('show')) {
+				$this.removeClass('active');
+			} else {
+				$this.addClass('active');
+			}
+			e.preventDefault();
+
+		});
+
+		$(window).resize(function () {
+			var $this = $(this),
+				w = $this.width();
+
+			if (w > 768) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+				}
+			}
+		})
+
+		$('body').on('click', '.js-menu-toggle', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			if ($('body').hasClass('offcanvas-menu')) {
+				$('body').removeClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').removeClass('active');
+			} else {
+				$('body').addClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').addClass('active');
+			}
+		})
+
+		// click outisde offcanvas
+		$(document).mouseup(function (e) {
+			var container = $(".site-mobile-menu");
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+					$('body').find('.js-menu-toggle').removeClass('active');
+				}
+			}
+		});
+	};
+	siteMenuClone();
 });
+
 var owlPlugin = function () {
 	if ($('.owl-3-slider').length > 0) {
 		var owl3 = $('.owl-3-slider').owlCarousel({
@@ -344,23 +398,13 @@ var siteSticky = function () {
 };
 siteSticky();
 
-const universityDatabase = [
-	{
-		university: 'Chandigarh University',
-		programs: [
-			{ name: 'Engineering', level: 'Undergraduate', country: 'India' },
-			{ name: 'MBA', level: 'Postgraduate', country: 'India' }
-		]
-	},
-	{
-		university: 'Jain University',
-		programs: [
-			{ name: 'Sports Science', level: 'Masters', country: 'India' },
-			{ name: 'Aviation Management', level: 'Undergraduate', country: 'India' }
-		]
-	}
-	// Add more universities and programs
-];
+// Handle dropdown type selection
+document.querySelectorAll(".dropdown-item").forEach(item => {
+	item.addEventListener("click", function () {
+		selectedType = this.textContent.trim();
+		document.querySelector(".dropdown-toggle").textContent = selectedType;
+	});
+});
 
 function togglePopup(register = false) {
 	const popup = document.getElementById("popupContainer");
@@ -408,17 +452,6 @@ toggleButton.addEventListener('click', () => {
     toggleButton.textContent = 'Pause Slideshow';
   }
 });
-
-// Mobile Navigation Menu Toggle
-document.addEventListener('DOMContentLoaded', function () {
-	const burger = document.querySelector('.burger');
-	const menu = document.querySelector('.site-menu');
-  
-	burger.addEventListener('click', function () {
-	  menu.classList.toggle('active');
-	  burger.classList.toggle('is-active');
-	});
-  });
   
 // Shrink Header on Scroll
 window.addEventListener('scroll', function () {
@@ -491,14 +524,21 @@ const events = [
 // Current Date
 const today = new Date();
 
-// Call the function on page load
-document.addEventListener('DOMContentLoaded', displayEvents);
-  
 // Close success modal
-  closeSuccessBtn.addEventListener('click', function() {
+closeSuccessBtn.addEventListener('click', function() {
 	  successModal.style.display = 'none';
 });
   
+
+// Like button functionality
+document.querySelectorAll('.btn-like').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const likeStatus = event.target.closest('.gallery-item').querySelector('.like-status');
+    const currentLikes = parseInt(likeStatus.querySelector('span').textContent.split(' ')[1]);
+    likeStatus.querySelector('span').textContent = `👍 ${currentLikes + 1} Likes`;
+    animateLike(event.target.closest('.gallery-item'));
+  });
+});
 
 const modal = document.getElementById('applyModal');
 const openModalBtn = document.querySelector('.open-modal');
@@ -537,20 +577,4 @@ $('#videoModal').on('show.bs.modal', function (e) {
 });
 $('#videoModal').on('hide.bs.modal', function (e) {
 	$("#video").attr('src', '');
-});
-
-document.querySelectorAll('.filter-btn').forEach(btn => {
-	btn.addEventListener('click', () => {
-		document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-		btn.classList.add('active');
-		const filter = btn.getAttribute('data-filter');
-
-		document.querySelectorAll('.category-card').forEach(card => {
-			if (filter === 'all' || card.getAttribute('data-category') === filter) {
-				card.style.display = 'block';
-			} else {
-				card.style.display = 'none';
-			}
-		});
-	});
 });
