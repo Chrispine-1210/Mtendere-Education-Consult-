@@ -84,15 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Header height compensation
-function adjustHeroMargin() {
-  const headerHeight = document.querySelector('.site-nav').offsetHeight;
-  document.getElementById('hero').style.marginTop = `-${headerHeight}px`;
-  document.getElementById('hero').style.paddingTop = `${headerHeight}px`;
-}
-
-window.addEventListener('resize', adjustHeroMargin);
-adjustHeroMargin();
 
 var owlPlugin = function () {
 	if ($('.owl-3-slider').length > 0) {
