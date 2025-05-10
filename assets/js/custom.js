@@ -46,6 +46,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Add touch support
+burger.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    this.click();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.site-mobile-menu');
+    const overlay = document.querySelector('.mobile-menu-overlay');
+    
+    burger.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    // Close Menu Handlers
+    overlay.addEventListener('click', closeMobileMenu);
+    document.querySelector('.site-mobile-menu-close').addEventListener('click', closeMobileMenu);
+
+    function closeMobileMenu() {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+
+    // Handle Mobile Menu Links
+    document.querySelectorAll('.mobile-menu-list a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+});
+
 var owlPlugin = function () {
 	if ($('.owl-3-slider').length > 0) {
 		var owl3 = $('.owl-3-slider').owlCarousel({

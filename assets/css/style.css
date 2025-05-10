@@ -1384,6 +1384,69 @@ body {
   }
 }
 
+/* Ensure Mobile Menu Visibility */
+.site-mobile-menu {
+    display: block !important; /* Override any framework hiding */
+    visibility: visible !important;
+}
+
+/* Burger Menu Visibility */
+@media (max-width: 992px) {
+    .burger {
+        display: block !important;
+        position: relative;
+        z-index: 1050;
+    }
+}
+
+/* Prevent Body Scroll */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Menu List Styling */
+.mobile-menu-list {
+    padding: 20px;
+}
+
+.mobile-menu-list li {
+    margin-bottom: 15px;
+}
+
+.mobile-menu-list a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-list a:hover,
+.mobile-menu-list a.active {
+    background: rgba(0, 86, 179, 0.1);
+    color: var(--primary);
+}
+
 /* ====== OVERLAY FOR MOBILE MENU ====== */
 .mobile-menu-overlay {
   position: fixed;
