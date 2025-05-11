@@ -5,36 +5,68 @@ AOS.init({
 });
 
 $(function () {
-    'use strict';
 
-    // Off-canvas menu toggle for mobile
-    $('body').on('click', '.js-menu-toggle', function (e) {
-        e.preventDefault();
-        $('body').toggleClass('offcanvas-menu');
-        $(this).toggleClass('active');
-    });
+	'use strict';
 
-    // Initialize owl carousel
-    $('.owl-3-slider').owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        margin: 10,
-        items: 1,
-        nav: false,
-        dots: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-    });
+	$(".loader").delay(200).fadeOut("slow");
+	$("#overlayer").delay(200).fadeOut("slow");
 
-    // Next and Previous buttons for carousel
-    $('.hero-controls .next-btn').click(function () {
-        $('.owl-3-slider').trigger('next.owl.carousel');
-    });
+	var siteMenuClone = function () {
 
-    $('.hero-controls .prev-btn').click(function () {
-        $('.owl-3-slider').trigger('prev.owl.carousel');
-    });
+		$('.js-clone-nav').each(function () {
+			var $this = $(this);
+			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+		});
+
+		$('body').toggleClass('no-scroll', $('body').hasClass('offcanvas-menu'));
+
+		$('body').on('click', '.arrow-collapse', function (e) {
+			var $this = $(this);
+			if ($this.closest('li').find('.collapse').hasClass('show')) {
+				$this.removeClass('active');
+			} else {
+				$this.addClass('active');
+			}
+			e.preventDefault();
+
+		});
+
+		$(window).resize(function () {
+			var $this = $(this),
+				w = $this.width();
+
+			if (w > 768) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+				}
+			}
+		})
+
+		$('body').on('click', '.js-menu-toggle', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			if ($('body').hasClass('offcanvas-menu')) {
+				$('body').removeClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').removeClass('active');
+			} else {
+				$('body').addClass('offcanvas-menu');
+				$('body').find('.js-menu-toggle').addClass('active');
+			}
+		})
+
+		// click outisde offcanvas
+		$(document).mouseup(function (e) {
+			var container = $(".site-mobile-menu");
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				if ($('body').hasClass('offcanvas-menu')) {
+					$('body').removeClass('offcanvas-menu');
+					$('body').find('.js-menu-toggle').removeClass('active');
+				}
+			}
+		});
+	};
+	siteMenuClone();
 });
 
 var owlPlugin = function () {
