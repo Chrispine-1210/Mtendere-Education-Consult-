@@ -1063,23 +1063,70 @@ a:hover {
 }
 
 .navbar-brand img {
-  height: 55px;
+  height: 55rem;
   margin-left: 1rem;
 }
 
 .nav-link {
-  color: #fff;
   box-sizing: border-box;
-  border-radius: 8px;
   display: inline-block;
-  font-size: 1rem;
-  margin-right: 1rem;
-  color: #343a40;
+  font-size: 2rem;
   font-weight: 600;
   transition: color 0.3s;
 }
 
+.nav-link li {
+  margin: 0 1rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  color: #fff;
+  transition: color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 1.2rem;
+}
 
+.nav-link li:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-link navbar li{
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;
+  padding: 0.75rem 1rem;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #020d6ba1;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
 
 .nav-link.active {
   color: #007bff;
