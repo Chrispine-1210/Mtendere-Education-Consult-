@@ -1055,6 +1055,10 @@ a:hover {
 }
 
 .navbar {
+  background: #343a40;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
   padding: 0.75rem 1rem;
 }
 
@@ -1064,10 +1068,23 @@ a:hover {
 }
 
 .nav-link {
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 1rem;
+  margin-right: 1rem;
   color: #343a40;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s;
 }
+
+
+
+.nav-link.active {
+  color: #007bff;
+}
+
 
 .nav-link:hover {
   color: #007bff;
