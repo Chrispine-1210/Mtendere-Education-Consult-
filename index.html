@@ -55,30 +55,38 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #043544dc; " id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/imgs/Mtendere_Logo.jpeg" alt="Mtendere Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon">
-
-                </span>
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="testimonial.html">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galllery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#formModal" data-toggle="modal">Apply Now</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="course.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Events</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
                 </ul>
+                <div class="d-flex">
+                    <a href="#formModal" class="btn btn-primary" data-toggle="modal">Get Started</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -94,52 +102,37 @@
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
             </div>
-
-            <!-- Slides -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/imgs/Background/Events 2.jpg" type="video/mp4">
-                    </video>
-                    <div class="carousel-caption text-center">
-                        <h1 class="text-white display-5 fw-bold">Unlock Your Future with Mtendere</h1>
-                        <p class="lead text-white">Connecting you to world-class universities and opportunities.</p>
-                        <a href="#apply" class="btn btn-apply">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/imgs/Background/IMG-20250321-WA0352.jpg">
-                    </video>
-                    <div class="carousel-caption text-center">
-                        <h1 class="text-white display-5 fw-bold">Explore Global Education Opportunities</h1>
-                        <p class="lead text-white">Get personalized guidance for your academic journey.</p>
-                        <a href="#apply" class="btn btn-apply">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/imgs/Breadcrumbs/Events.jpg">
-                    </video>
-                    <div class="carousel-caption text-center">
-                        <h1 class="text-white display-5 fw-bold">Achieve Your Dreams with Expert Consultation</h1>
-                        <p class="lead text-white">We provide the tools and support you need for success.</p>
-                        <a href="#apply" class="btn btn-apply">Apply Now</a>
+                    <img src="assets/imgs/hero_1.jpg" class="d-block w-100" alt="Hero 1">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="container">
+                            <h2 class="text-white display-5">Discover Your Dreams</h2>
+                            <p class="lead text-white">Join us on a journey to study abroad in Malawi</p>
+                            <a href="#formModal" class="btn btn-primary btn-lg mt-4" data-toggle="modal">Apply Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <img src="assets/imgs/hero_2.jpg" class="d-block w-100" alt="Hero 2">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <h2 class="text-white display-5">Your Future Awaits</h2>
+                        <p class="lead text-white">Explore top universities and scholarship opportunities</p>
+                        <a href="#formModal" class="btn btn-primary btn-lg mt-4" data-toggle="modal">Apply Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/imgs/hero_3.jpg" class="d-block w-100" alt="Hero 3">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <h2 class="text-white display-5">Empower Your Education</h2>
+                        <p class="lead text-white">Get personalized support for your study abroad journey</p>
+                        <a href="#formModal" class="btn btn-primary btn-lg mt-4" data-toggle="modal">Apply Now</a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -706,41 +699,6 @@
     </div>
     <!-- /.untree_co-section -->
 
-    <!-- Testimonial Video Carousel -->
-    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/examplevideo1" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Student Testimonial: Study in UK</h5>
-                    <p>Watch how this student found success studying in the UK!</p>
-                </div>
-            </div>
-            <!-- Repeat for more video items -->
-            <div class="carousel-item">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/examplevideo2" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Student Testimonial: Study in Canada</h5>
-                    <p>Discover how this student achieved their dreams in Canada!</p>
-                </div>
-            </div>
-            <!-- Repeat for more video items -->
-            <div class="carousel-item">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/examplevideo3" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Student Testimonial: Study in France</h5>
-                    <p>See how this student overcame their fears and achieved their goals!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Success Stories Section -->
     <section id="success-section" class="success py-5 bg-light">
         <div class="container py-5">
@@ -790,10 +748,11 @@
                         </div>
                     </div>
                 </div>
-                <!---- Learn More ---->
-                <div class="text-center mt-4">
-                    <a href="#" class="btn btn-primary btn-lg">View All Success Stories</a>
-                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary"
+                    style="background-color: #ffcc00; color: #003366; padding: 12px 30px; font-size: 18px; font-weight: bold; border-radius: 50px;">See
+                    More Success Stories</a>
             </div>
         </div>
     </section>
