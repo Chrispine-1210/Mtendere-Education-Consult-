@@ -1045,6 +1045,7 @@ h4,
 }
 
 .nav-link {
+  text-transform: capitalize;
   box-sizing: border-box;
   display: inline-block;
   font-size: 2rem;
@@ -1053,6 +1054,7 @@ h4,
 }
 
 .nav-link li {
+  display: inline-block;
   margin: 0 1rem;
   position: relative;
   padding: 0.5rem 1rem;
@@ -1064,6 +1066,19 @@ h4,
   text-transform: uppercase;
   line-height: 1;
   font-size: 1.2rem;
+}
+
+.nav-link li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;      
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  box-shadow: #ff6f61;
 }
 
 .nav-link li:hover {
