@@ -1130,12 +1130,11 @@ h4,
 /* Utility Classes */
 .container {
   margin-top: 0;
-  padding: 0 15px;
-  max-width: 100%;
-  top: 0;
-  width: 90%;
+  margin-bottom: auto;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
+
 }
 
 .section {
@@ -1156,8 +1155,8 @@ h4,
 }
 
 .modal-content {
-  background: #fff;
-  display: fixed;
+  background: #484d02e0;
+  display: block;
   padding: 2rem;
   border-radius: 12px;
   width: 90%;
