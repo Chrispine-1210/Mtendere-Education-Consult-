@@ -264,25 +264,17 @@ $(document).ready(function () {
 		autoplay: true, // Auto-play testimonials
 		autoplayTimeout: 5000, // Scroll every 5 seconds
 		autoplayHoverPause: true, // Pause on hover
-		nav: true, // Show next/prev buttons
-		dots: true, // Show dots
+	});
+	$(".owl-carousel").on("changed.owl.carousel", function (event) {
+		// Add animation class to the current item
+		var currentItem = event.item.index;
+		$(".owl-item").removeClass("animated fadeIn");
+		$(".owl-item").eq(currentItem).addClass("animated fadeIn");
 	});
 });
 
 // Back to Top functionality
 const backToTopButton = document.getElementById("backToTop");
-
-$('#universitySelect').on('change', function () {
-	const selectedUni = $(this).val();
-	const data = universityData[selectedUni];
-
-	if (data) {
-		$('#intakesList').text(data.intakes.join(', '));
-		$('#programsList').text(data.programs.join(', '));
-		$('#documentsList').text(data.documents);
-		$('#requirementsText').text(data.requirements);
-	}
-});
 
 window.onscroll = function () {
 	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -463,63 +455,24 @@ window.addEventListener('scroll', function () {
 	}
   });
   
-  const form = document.getElementById('applicationForm');
-  const loadingSpinner = document.getElementById('loadingSpinner');
-  const successModal = document.getElementById('successModal');
-  const closeSuccessBtn = document.getElementById('closeSuccessBtn');
-  const formModal = document.getElementById('formModal');
-  
-  form.addEventListener('submit', function(e) {
-	  e.preventDefault();
-  
-	  // Show Spinner
-	  loadingSpinner.style.display = 'flex';
-  
-	  // Simulate a form processing delay
-	  setTimeout(function() {
-		  loadingSpinner.style.display = 'none';
-		  formModal.style.display = 'none';
-		  successModal.style.display = 'block';
-		  form.reset(); // Reset the form
-	  }, 2000); // 2 seconds
-  });
-  
-  AOS.init({
-	duration: 1200,
-	once: true,
-	offset: 200
-  });
+// Success Modal
+const successModal = document.getElementById('successModal');
+const closeSuccessBtn = document.querySelector('.close-success-button');
+const applyBtn = document.getElementById('applyBtn');
+applyBtn.addEventListener('click', function() {
+	  successModal.style.display = 'block';
+});
+successModal.addEventListener('click', function(event) {
+	  if (event.target === successModal) {
+		successModal.style.display = 'block';
+	  }
+}
+);
 
-// Event Data Array
-const events = [
-    {
-        title: "Global Education Summit 2025",
-        description: "Join top scholars for an international discussion on education opportunities.",
-        speaker: "Dr. Grace Banda",
-        location: "Mount Soche Hotel, Blantyre",
-        date: "2025-07-22",
-        media: "video/event-sample.mp4",
-        type: "video"
-    },
-    {
-        title: "Scholarship Bootcamp",
-        description: "Exclusive training on how to secure scholarships abroad and excel.",
-        speaker: "Mr. Kelvin Mwale",
-        location: "Lilongwe BICC",
-        date: "2024-05-15",
-        media: "img/scholarship.jpg",
-        type: "image"
-    },
-    {
-        title: "Youth Tech Innovation Day",
-        description: "Empowering the next generation in digital transformation and AI.",
-        speaker: "Prof. Sarah Mponda",
-        location: "Mzuzu Tech Park",
-        date: "2025-01-10",
-        media: "img/techday.jpg",
-        type: "image"
-    }
-];
+closeSuccessBtn.addEventListener('click', function() {
+      successModal.style.display = 'none';
+});
+// Close success modal when clicking outside of it
 
 // Current Date
 const today = new Date();
@@ -546,9 +499,6 @@ window.addEventListener('click', function (e) {
     modal.style.display = 'none';
   }
 });
-
-// Initialize the slideshow on page load
-startSlideshow();
 
 // Modal Video Handling
 var videoSrc;
