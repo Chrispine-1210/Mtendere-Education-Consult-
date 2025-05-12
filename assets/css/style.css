@@ -619,6 +619,24 @@ form button[type="submit"]:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+.accordion:hover {
+  background-color: #e0e0e0;
+}
+
+.panel {
+  padding: 0 15px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-left: 2px solid #007bff;
+}
+
+.panel p {
+  margin: 10px 0;
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
