@@ -16,8 +16,8 @@
 body {
   font-family: var(--font-family-primary);
   line-height: 1.6;
-  background-color: var(--white);
-  color: #666;
+  background-color: var(--dark-blue);
+  color: var(--white);
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -617,24 +617,6 @@ form button[type="submit"]:hover {
 #apply-cta .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-
-.accordion:hover {
-  background-color: #e0e0e0;
-}
-
-.panel {
-  padding: 0 15px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  border-left: 2px solid #007bff;
-}
-
-.panel p {
-  margin: 10px 0;
 }
 
 .whatsapp-float {
