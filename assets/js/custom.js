@@ -9,7 +9,7 @@ $(function () {
 	'use strict';
 
 	$(".loader").delay(200).fadeOut("slow");
-	$("#overlayer").delay(200).fadeOut("slow");
+	$("#overlay").delay(200).fadeOut("slow");
 
 	var siteMenuClone = function () {
 
@@ -55,7 +55,7 @@ $(function () {
 			}
 		})
 
-		// click outisde offcanvas
+		// click outside offcanvas
 		$(document).mouseup(function (e) {
 			var container = $(".site-mobile-menu");
 			if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -224,7 +224,7 @@ var owlPlugin = function () {
 			items: 1,
 			smartSpeed: 1000,
 			autoHeight: true,
-			navText: ["<span class='ion-android-arrow-dropleft'></span>", "<span class='ion-android-arrow-dropright'></span>"],
+			navText: ["<span class='ion-android-arrow-left'></span>", "<span class='ion-android-arrow-right'></span>"],
 			responsive: {
 				0: {
 					items: 1,
