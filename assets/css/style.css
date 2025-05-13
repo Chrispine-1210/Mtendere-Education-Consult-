@@ -1294,6 +1294,33 @@ form button[type="submit"]:hover {
   transform: rotateY(180deg);
 }
 
+/* Service Card Hover Effect */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Scholarship Card Hover Effect */
+.custom-media {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Burger */
 .burger {
   width: 28px;
@@ -2949,13 +2976,37 @@ form button[type="submit"]:hover {
 .team-item:hover .team-overlay {
   opacity: 1;
 }
-.btn:focus-visible,
-/* Burger Menu Styles */
-.burger {n:focus-visible {
-  ...line: 2px solid var(--primary-color);
-} outline-offset: 2px;
+
+/* Sticky Background Section */
+.sticky-section {
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
 }
-/* Burger Menu Styles */
-.burger {
-  ...
+
+.sticky-section h1,
+.sticky-section h6,
+.sticky-section p {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient Overlay */
+.gradient-overlay {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(0, 34, 77, 0.8), rgba(19, 106, 213, 0.8));
+  color: white;
+  padding: 60px 20px;
+}
+
+.gradient-overlay h1,
+.gradient-overlay h5,
+.gradient-overlay p {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
