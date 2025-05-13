@@ -673,103 +673,169 @@ form button[type="submit"]:hover {
   }
 }
 
+/* Reset margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------
+   Top Bar Styling
+-------------------------------------- */
 .top-bar {
-  display: inline-block;
-  background-color: #17586456;
-  color: white;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #f8f9fa;
+  font-size: 0.85rem;
+  color: #333;
 }
 
 .top-bar a {
-  display: inline;
   text-decoration: none;
-  text-align: justify;
-  justify-content: space-between;
-  padding: 1rem 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+  color: #0056b3;
 }
 
 .top-bar .social-icons {
   display: flex;
-  gap: 10px;
-  padding: 0 1rem;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  gap: 10px;
 }
 
-.top-bar .social-icons a {
-  display: inline-block;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+@media (max-width: 767px) {
+  .top-bar .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar .col-md-8 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
 
-.top-bar .social-icons a:hover {
-  color: #0056b3;
-}
 
-/* Navigation Bar */
+/* --------------------------------------
+   Navbar Styling
+-------------------------------------- */
 .navbar {
-  position: sticky;
-  display: inline-block;
-  background-color: #060f8ab6;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(107, 73, 1, 0.459);
+  background-color: #060f8a;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.navbar .nav-brand{
-  position: absolute;
-  margin-left: 1rem;
+.navbar-brand {
+  font-weight: 700;
+  color: white !important;
   display: flex;
-  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 10px;
 }
 
-.navbar .nav-brand img {
-  width: 50px;
-  height: 50px;
+.navbar-brand img {
+  height: 35px;
 }
 
-.navbar .navbar-nav {
-  font-size: 14px;
-  float: right;
-  display: inline;
-  margin-right: auto;
-  list-style: none;
-  text-decoration: none;
-  justify-content: right;
-  gap: 1rem;
+.navbar-nav {
+  gap: 0.5rem;
 }
 
-.navbar .navbar-nav li {
-  box-sizing: border-box;
-  border-radius: 5px;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  margin: 0 1rem;
-  margin-right: 0;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
   text-transform: uppercase;
-  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.3s;
+  border-radius: 4px;
 }
 
-.navbar .navbar-nav li:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
   background-color: #0056b3;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
+  color: white !important;
 }
 
-.navbar .navbar-nav li.active {
-  background-color: #0056b3;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
+/* Enroll button */
+.navbar .btn-outline-primary {
+  color: #fff;
+  border-color: #fff;
+  margin-left: 1rem;
+  transition: all 0.3s;
 }
+
+.navbar .btn-outline-primary:hover {
+  background-color: #fff;
+  color: #060f8a;
+}
+
+/* Mobile Navbar */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    background-color: #060f8a;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .navbar-collapse {
+    background-color: #060f8a;
+  }
+
+  .navbar .btn-outline-primary {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+/* --------------------------------------
+   Hero Section Carousel Styling
+-------------------------------------- */
+.carousel-item img {
+  object-fit: cover;
+  height: 80vh;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Mobile carousel */
+@media (max-width: 767px) {
+  .carousel-caption h5 {
+    font-size: 1.25rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+
+  .carousel-item img {
+    height: 60vh;
+  }
+}
+
 
 /* Events Section */
 #events {
