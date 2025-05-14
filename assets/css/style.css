@@ -752,19 +752,18 @@ form button[type="submit"]:hover {
   border-radius: 4px;
 }
 
+.nav-link a{
+  margin-right: 0.5rem;
+  right: 1rem;
+  justify-content: right;
+  position: relative;
+}
+
 .navbar-nav{
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
   float: right;
-}
-
-.navbar-nav .nav-link{
-  left: 1rem;
-  position: relative;
-  z-index: 1;
-  transition: left 0.3s;
-
 }
 
 .navbar-nav .nav-link:hover,
