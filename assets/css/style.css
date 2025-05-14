@@ -2092,7 +2092,8 @@ form button[type="submit"]:hover {
 }
 
 .category {
-  display: inline-block;
+  justify-content: center;
+  display: flex;
   padding: 20px;
   background: rgba(19, 106, 213, 0.05);
   border-radius: 4px;
