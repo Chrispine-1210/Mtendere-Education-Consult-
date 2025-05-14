@@ -13,6 +13,10 @@
   --font-family-secondary: "Display Playfair", serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -772,6 +776,80 @@ form button[type="submit"]:hover {
   color: white !important;
 }
 
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: 0.4s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(to right, #2a5298, #1e3c72);
+}
+
+/* Navbar Glass Effect */
+.navbar {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.navbar-toggler {
+  margin-left: auto; /* Push to right */
+  border: none;
+}
+
+  /* Navbar button spacing for mobile */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: right;
+    }
+  }
+
+  /* Center controls vertically */
+  .carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+  }
+
+  /* Optional: Smaller arrows on mobile */
+  @media (max-width: 576px) {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  /* Style indicators */
+  .carousel-indicators li {
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+  }
+
+  .carousel-indicators .active {
+    background-color: #0056b3;
+  }
+
 /* Enroll button */
 .navbar .btn-outline-primary {
   color: #fff;
@@ -808,6 +886,8 @@ form button[type="submit"]:hover {
 /* --------------------------------------
    Hero Section Carousel Styling
 -------------------------------------- */
+
+
 .carousel-item img {
   object-fit: cover;
   height: 80vh;
