@@ -548,7 +548,6 @@ form button[type="submit"]:hover {
   color: #0056b3;
 }
 
-
 .accordion {
   background-color: #f1f1f1;
   color: #333;
@@ -701,7 +700,7 @@ form button[type="submit"]:hover {
    Top Bar Styling
 -------------------------------------- */
 .top-bar {
-  background-color: #f8f9fa;
+  background-color: var(--dark-blue);
   font-size: 0.85rem;
   color: #333;
 }
@@ -739,7 +738,6 @@ form button[type="submit"]:hover {
   }
 }
 
-
 /* --------------------------------------
    Navbar Styling
 -------------------------------------- */
@@ -751,7 +749,7 @@ form button[type="submit"]:hover {
 
 .navbar-brand {
   font-weight: 700;
-  color: white !important;
+  color: vas(--font-family-secondary) !important;
   display: flex;
   gap: 10px;
 }
@@ -821,6 +819,12 @@ form button[type="submit"]:hover {
 
 .navbar-toggler {
   border: none;
+}
+
+.navbar-toggler::before{
+  display: block;
+  width: auto;
+  position: absolute ;
 }
 
 .navbar-toggler-icon {
@@ -946,7 +950,6 @@ form button[type="submit"]:hover {
     height: 60vh;
   }
 }
-
 
 /* Events Section */
 #events {
@@ -1080,7 +1083,7 @@ form button[type="submit"]:hover {
 
 .success-section {
   padding: 60px 0;
-  background: #ffffff;
+  background: #ddd;
 }
 
 .success-title {
@@ -1089,15 +1092,6 @@ form button[type="submit"]:hover {
   font-weight: 700;
   color: #0056b3;
   margin-bottom: 40px;
-}
-
-.swiper-slide {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
 }
 
 .student-card {
@@ -1189,7 +1183,7 @@ form button[type="submit"]:hover {
 
 .news-card-body {
   padding: 20px;
-  background-color: white;
+  background-color: vas(--dark-blue);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1314,8 +1308,6 @@ form button[type="submit"]:hover {
   margin-right: 5px;
 }
 
-
-
 .burger {
   width: 30px;
   height: 25px;
@@ -1356,7 +1348,6 @@ form button[type="submit"]:hover {
   background-color: #0d6efd;
   color: #fff;
 }
-
 
 .service-card {
   perspective: 1000px;
@@ -1521,7 +1512,6 @@ form button[type="submit"]:hover {
 
 .content {
   padding: 3rem 1rem;
-  background: #fff;
 }
 
 .headline-1 {
@@ -1654,7 +1644,6 @@ form button[type="submit"]:hover {
 .feature {
   margin-bottom: 40px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  background: #ffffff;
   padding: 30px;
   border-radius: 4px;
   text-align: center;
