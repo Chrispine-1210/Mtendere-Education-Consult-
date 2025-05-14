@@ -192,6 +192,42 @@ if (successModal && closeSuccessBtn && applyBtn) {
         });
     });
 
+    $(document).ready(function () {
+        $(".testimonial-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000, // 5 seconds
+            autoplayHoverPause: true,
+            dots: true,
+            nav: false,
+            animateOut: 'fadeOut',
+            smartSpeed: 600,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 1 }
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('.blog-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            smartSpeed: 600,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                992: { items: 3 }
+            }
+        });
+    });
+
+
     // Application Form Submission Handling
     const applicationForm = document.getElementById('applicationForm');
     if (applicationForm) {

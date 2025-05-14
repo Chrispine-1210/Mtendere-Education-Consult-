@@ -11,7 +11,7 @@
 
     <!-- Bootstrap 5 & Custom Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -25,6 +25,17 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </head>
 
 <body>
@@ -737,7 +748,7 @@
     <!-- /.untree_co-section -->
 
     <!-- Success Stories Section -->
-    <section id="success-section" class="success py-5 bg-light">
+    <section id="success-section" class="success py-5">
         <div class="container py-5">
             <div class="section-header text-center mb-5">
                 <h6 class="text-primary fw-bold">Success Stories</h6>
@@ -1274,27 +1285,24 @@
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h6 class="text-primary fw-bold">Testimonial</h6>
-                <h1 class="display-5"><span class="text-primary">
-                        What Our Students Say?</span>
-                </h1>
-                <p class="lead">
-                    <span>Our students have come to rely on us for their international education needs.</span>
-                </p>
+                <h1 class="display-5"><span class="text-primary">What Our Students Say?</span></h1>
+                <p class="lead">Our students have come to rely on us for their international education needs.</p>
             </div>
-            <div class="row">
-                <div class="carousel-container col-lg-7 text-center mx-auto">
-                    <div class="carousel-inner wide-slider-testimonial">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Owl Carousel Container -->
+                    <div class="owl-carousel testimonial-carousel">
+
                         <!-- Testimonial 1 -->
-                        <div class="carousel-item">
-                            <blockquote class="block-testimonial">
+                        <div class="item">
+                            <blockquote class="block-testimonial text-center">
                                 <p class="text-lg font-medium text-gray-600">
-                                    &ldquo;Mtendere Education Consult’s personalized approach made all the difference. I
-                                    found the right scholarship, and I’m now studying abroad in a field I’m passionate
-                                    about.&rdquo;
+                                    &ldquo;Mtendere Education Consult’s personalized approach made all the
+                                    difference...&rdquo;
                                 </p>
                                 <div class="author mt-4">
                                     <img src="assets/imgs/students/Edina.jpg" alt="Student 1"
-                                        class="rounded-full w-16 h-16">
+                                        class="rounded-full w-16 h-16 mx-auto">
                                     <h3 class="text-xl font-semibold text-blue-700">Thoko M.</h3>
                                     <p class="position text-gray-500">Engineering Student, University of Toronto</p>
                                 </div>
@@ -1302,15 +1310,14 @@
                         </div>
 
                         <!-- Testimonial 2 -->
-                        <div class="carousel-item">
-                            <blockquote class="block-testimonial">
+                        <div class="item">
+                            <blockquote class="block-testimonial text-center">
                                 <p class="text-lg font-medium text-gray-600">
-                                    &ldquo;The guidance from Mtendere helped me get my scholarship in the UK! I now feel
-                                    confident about my academic future, and I couldn't be more grateful.&rdquo;
+                                    &ldquo;The guidance from Mtendere helped me get my scholarship in the UK!...&rdquo;
                                 </p>
                                 <div class="author mt-4">
                                     <img src="assets/imgs/students/IMG-20230910-WA0108.jpg" alt="Student 2"
-                                        class="rounded-full w-16 h-16">
+                                        class="rounded-full w-16 h-16 mx-auto">
                                     <h3 class="text-xl font-semibold text-blue-700">Amanda S.</h3>
                                     <p class="position text-gray-500">Law Student, University of Manchester</p>
                                 </div>
@@ -1318,111 +1325,65 @@
                         </div>
 
                         <!-- Testimonial 3 -->
-                        <div class="carousel-item">
-                            <blockquote class="block-testimonial">
+                        <div class="item">
+                            <blockquote class="block-testimonial text-center">
                                 <p class="text-lg font-medium text-gray-600">
-                                    &ldquo;Thanks to Mtendere, I could pursue my dream of studying abroad, and it feels
-                                    incredible to see my hard work finally paying off. Highly recommend their
-                                    services!&rdquo;
+                                    &ldquo;Thanks to Mtendere, I could pursue my dream of studying abroad...&rdquo;
                                 </p>
                                 <div class="author mt-4">
                                     <img src="assets/imgs/students/JanetKandulu.jpg" alt="Student 3"
-                                        class="rounded-full w-16 h-16">
+                                        class="rounded-full w-16 h-16 mx-auto">
                                     <h3 class="text-xl font-semibold text-blue-700">Rob Smith</h3>
                                     <p class="position text-gray-500">Product Designer, University of California</p>
                                 </div>
                             </blockquote>
                         </div>
 
-                        <!-- Testimonial 4 -->
-                        <div class="carousel-item">
-                            <blockquote class="block-testimonial">
-                                <p class="text-lg font-medium text-gray-600">
-                                    &ldquo;Mtendere made the entire process of studying abroad so seamless. From
-                                    application to scholarship, everything was handled with care. I’m now living my
-                                    dream in the US!&rdquo;
-                                </p>
-                                <div class="author mt-4">
-                                    <img src="assets/imgs/students/Trust Chikondi Mangani.jpg" alt="Student 4"
-                                        class="rounded-full w-16 h-16">
-                                    <h3 class="text-xl font-semibold text-blue-700">Grace M.</h3>
-                                    <p class="position text-gray-500">Computer Science Student, Stanford University</p>
-                                </div>
-                            </blockquote>
-                        </div>
+                        <!-- Add more testimonials as needed -->
+
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="text-center">
-                        <a href="#" class="btn btn-primary btn-lg mt-5">
-                            <span class="icon-arrow-right"></span>
-                            <span>View All Testimonials</span>
-                        </a>
-                    </div>
+                    <!-- End Owl Carousel -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Blog Section Start -->
-    <div class="blog-section py-12">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h6 class="text-primary fw-bold">Latest Blogs</h6>
-                <h1 class="display-5"><span class="text-primary">
+    <div class="col-lg-12">
+        <div class="owl-carousel blog-carousel owl-theme">
 
-                        Stay Updated with Our Latest Insights
-                    </span>
-                </h1>
-                <p class="lead">
-                    Our blog section features articles, news, and updates related to international studies and Mtendere.
-                </p>
-            </div>
-            <div class="row">
-                <div class="carousel-container col-lg-7 text-center mx-auto">
-                    <div class="carousel-inner wide-slider-blog">
-                        <!-- Blog Post 1 -->
-                        <div class="carousel-item">
-                            <div class="blog-post">
-                                <img src="" alt="Blog Post 1" class="img-fluid">
-                                <h4 class="mt-3"><a href="#">How to Secure Scholarships for International Studies</a>
-                                </h4>
-                                <p>Learn the best strategies to secure scholarships for your international studies.</p>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post 2 -->
-                        <div class="carousel-item">
-                            <div class="blog-post">
-                                <img src="assets/imgs/Abroad students Malawi flag.jpg" alt="Blog Post 2"
-                                    class="img-fluid">
-                                <h4 class="mt-3"><a href="#">Top Universities for International Students</a></h4>
-                                <p>Discover the top universities that welcome international students with open arms.</p>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post 3 -->
-                        <div class="carousel-item">
-                            <div class="blog-post">
-                                <img src="assets/imgs/doctors pose.jpg" alt="Blog Post 3" class="img-fluid">
-                                <h4 class="mt-3"><a href="#">Tips for Successful University Applications</a></h4>
-                                <p>Get tips and tricks for making your university application stand out.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="text-center">
-                        <a href="#" class="btn btn-primary btn-lg mt-5">
-                            <span class="icon-arrow-right"></span>
-                            <span>View All Blogs</span>
-                        </a>
-                    </div>
+            <!-- Blog Post 1 -->
+            <div class="item">
+                <div class="blog-post text-center px-3">
+                    <img src="assets/imgs/blog-1.jpg" alt="Blog Post 1" class="img-fluid rounded shadow">
+                    <h4 class="mt-3"><a href="#">How to Secure Scholarships for International Studies</a></h4>
+                    <p>Learn the best strategies to secure scholarships for your international studies.</p>
                 </div>
             </div>
+
+            <!-- Blog Post 2 -->
+            <div class="item">
+                <div class="blog-post text-center px-3">
+                    <img src="assets/imgs/Abroad students Malawi flag.jpg" alt="Blog Post 2"
+                        class="img-fluid rounded shadow">
+                    <h4 class="mt-3"><a href="#">Top Universities for International Students</a></h4>
+                    <p>Discover the top universities that welcome international students with open arms.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="item">
+                <div class="blog-post text-center px-3">
+                    <img src="assets/imgs/doctors pose.jpg" alt="Blog Post 3" class="img-fluid rounded shadow">
+                    <h4 class="mt-3"><a href="#">Tips for Successful University Applications</a></h4>
+                    <p>Get tips and tricks for making your university application stand out.</p>
+                </div>
+            </div>
+
+            <!-- Add more if needed -->
+
         </div>
     </div>
-    <!-- Blog Section End -->
+
 
     <!-- Call to Action -->
     <div class="call-to-action text-center">

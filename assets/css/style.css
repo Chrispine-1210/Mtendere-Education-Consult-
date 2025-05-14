@@ -2923,3 +2923,14 @@ form button[type="submit"]:hover {
   color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
+.blog-post h4 a {
+  color: #004aad;
+  text-decoration: none;
+}
+.blog-post h4 a:hover {
+  text-decoration: underline;
+}
+.owl-carousel .item {
+  transition: all 0.3s ease-in-out;
+}
