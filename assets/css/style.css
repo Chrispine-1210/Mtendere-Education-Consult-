@@ -676,13 +676,6 @@ form button[type="submit"]:hover {
   }
 }
 
-/* Reset margins/paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* --------------------------------------
    Top Bar Styling
 -------------------------------------- */
@@ -739,12 +732,11 @@ form button[type="submit"]:hover {
   font-weight: 700;
   color: white !important;
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 
 .navbar-brand img {
-  height: 35px;
+  height: 120px;
 }
 
 .navbar-nav {
@@ -758,6 +750,21 @@ form button[type="submit"]:hover {
   padding: 0.5rem 0.75rem;
   transition: background 0.3s;
   border-radius: 4px;
+}
+
+.navbar-nav{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  float: right;
+}
+
+.navbar-nav .nav-link{
+  left: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: left 0.3s;
+
 }
 
 .navbar-nav .nav-link:hover,
@@ -1386,20 +1393,24 @@ form button[type="submit"]:hover {
   top: 40%;
 }
 
+/* Corrected Burger Active Styles */
 .burger.active:before {
+  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
-  /*for IE*/
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /* For older IE */
 }
 
 .burger.active:after {
+  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5);
-  /*for IE*/
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5); /* For older IE */
 }
-
 .burger:focus {
   outline: none;
 }
