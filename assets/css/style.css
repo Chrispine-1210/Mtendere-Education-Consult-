@@ -13,7 +13,7 @@
   --font-family-secondary: "Display Playfair", serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -28,7 +28,8 @@ body {
   line-height: 1.6;
   background-color: var(--gold);
   color: var(--white);
-  font-size: 1rem; /* Instead of 16px */
+  font-size: 1rem;
+  /* Instead of 16px */
   overflow-x: hidden;
 }
 
@@ -42,7 +43,10 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-family-secondary);
 }
 
@@ -73,7 +77,8 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-  background: var(--primary-color, #136ad5); /* Fallback to #136ad5 */
+  background: var(--primary-color, #136ad5);
+  /* Fallback to #136ad5 */
   border-color: var(--primary-color);
   color: var(--white);
 }
@@ -144,7 +149,8 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
-#closeFormBtn, .close-btn {
+#closeFormBtn,
+.close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -153,7 +159,8 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 
-#closeFormBtn:hover, .close-btn:hover {
+#closeFormBtn:hover,
+.close-btn:hover {
   color: var(--gold);
 }
 
@@ -207,7 +214,9 @@ form label {
   font-size: 14px;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -216,7 +225,9 @@ form input, form select, form textarea {
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-form input:focus, form select:focus, form textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
   outline: none;
   border-color: var(--dark-blue);
   background-color: var(--white);
@@ -253,6 +264,7 @@ form button[type="submit"]:hover {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -271,7 +283,9 @@ form button[type="submit"]:hover {
     font-size: 13px;
   }
 
-  form input, form select, form textarea {
+  form input,
+  form select,
+  form textarea {
     font-size: 13px;
   }
 }
@@ -604,9 +618,12 @@ form button[type="submit"]:hover {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -729,7 +746,7 @@ form button[type="submit"]:hover {
 .navbar {
   background-color: #060f8a;
   padding: 0.5rem 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
@@ -756,14 +773,14 @@ form button[type="submit"]:hover {
   border-radius: 4px;
 }
 
-.nav-link a{
+.nav-link a {
   margin-right: 0.5rem;
   right: 1rem;
   justify-content: right;
   position: relative;
 }
 
-.navbar-nav{
+.navbar-nav {
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
@@ -785,6 +802,7 @@ form button[type="submit"]:hover {
   border-radius: 30px;
   transition: 0.4s ease;
 }
+
 .btn-gradient:hover {
   background: linear-gradient(to right, #2a5298, #1e3c72);
 }
@@ -804,51 +822,55 @@ form button[type="submit"]:hover {
 .navbar-toggler {
   border: none;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
 .navbar-toggler {
-  margin-left: auto; /* Push to right */
+  margin-left: auto;
+  /* Push to right */
   border: none;
 }
 
-  /* Navbar button spacing for mobile */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      text-align: right;
-    }
+/* Navbar button spacing for mobile */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: right;
   }
+}
 
-  /* Center controls vertically */
-  .carousel-control-prev, .carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5%;
-  }
+/* Center controls vertically */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+}
 
-  /* Optional: Smaller arrows on mobile */
-  @media (max-width: 576px) {
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      width: 20px;
-      height: 20px;
-    }
-  }
+/* Optional: Smaller arrows on mobile */
+@media (max-width: 576px) {
 
-  /* Style indicators */
-  .carousel-indicators li {
-    background-color: #007bff;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    margin: 5px;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
   }
+}
 
-  .carousel-indicators .active {
-    background-color: #0056b3;
-  }
+/* Style indicators */
+.carousel-indicators li {
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3;
+}
 
 /* Enroll button */
 .navbar .btn-outline-primary {
@@ -1479,7 +1501,8 @@ form button[type="submit"]:hover {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /* For older IE */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
+  /* For older IE */
 }
 
 .burger.active:after {
@@ -1488,8 +1511,10 @@ form button[type="submit"]:hover {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5); /* For older IE */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5);
+  /* For older IE */
 }
+
 .burger:focus {
   outline: none;
 }

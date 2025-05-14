@@ -10,7 +10,10 @@
     <meta name="author" content="Mtendere Education Consult">
 
     <!-- Bootstrap 5 & Custom Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/assets/owl.carousel.min.css" rel="stylesheet">
@@ -737,64 +740,64 @@
     <section id="success-section" class="success py-5 bg-light">
         <div class="container py-5">
             <div class="section-header text-center mb-5">
-                <h6 class="text-primary fw-bold">Success Story's</h6>
-                <h1 class="display-5"><span class="text-primary">
-                        Inspiring Journeys of Our Students</span>
-                </h1>
-                <p class="lead">
-                    Transforming Lives Through Education
-                </p>
+                <h6 class="text-primary fw-bold">Success Stories</h6>
+                <h1 class="display-5"><span class="text-primary">Inspiring Journeys of Our Students</span></h1>
+                <p class="lead">Transforming Lives Through Education</p>
             </div>
-            <div class="row">
-                <div class="carousel-container col-lg-4">
-                    <div class="carousel-inner" data-aos="fade-up" data-aos-delay="200">
-                        <div class="swiper-wrapper">
-                            <!-- Student 1 -->
-                            <div class="carousel-item">
-                                <div class="student-card">
-                                    <img src="assets/imgs/students/Carloline.jpg" alt="Caroline Tembo">
-                                    <h3 class="student-name">Caroline Tembo</h3>
-                                    <p class="student-course">Hons Degree in Commerce - PCTE India</p>
-                                    <a href="#" class="read-story-btn" data-bs-toggle="modal"
-                                        data-bs-target="#story1">Read
-                                        Story</a>
-                                </div>
-                            </div>
+
+            <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Student 1 -->
+                    <div class="carousel-item active">
+                        <div class="student-card text-center">
+                            <img src="assets/imgs/students/Carloline.jpg" class="img-fluid mb-3" alt="Caroline Tembo">
+                            <h3 class="student-name">Caroline Tembo</h3>
+                            <p class="student-course">Hons Degree in Commerce - PCTE India</p>
+                            <a href="#" class="read-story-btn btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#story1">Read Story</a>
                         </div>
-                        <div class="swiper-wrapper">
-                            <!-- Student 2 -->
-                            <div class="carousel-item">
-                                <div class="student-card">
-                                    <img src="assets/imgs/students/Janet Kandulu.jpg" alt="Janet Kandulu">
-                                    <h3 class="student-name">Janet Kandulu</h3>
-                                    <p class="student-course">BSc Nutrition and Dietetics - Chandigarh</p>
-                                    <a href="#" class="read-story-btn" data-bs-toggle="modal"
-                                        data-bs-target="#story2">Read
-                                        Story</a>
-                                </div>
-                            </div>
+                    </div>
+
+                    <!-- Student 2 -->
+                    <div class="carousel-item">
+                        <div class="student-card text-center">
+                            <img src="assets/imgs/students/Janet Kandulu.jpg" class="img-fluid mb-3"
+                                alt="Janet Kandulu">
+                            <h3 class="student-name">Janet Kandulu</h3>
+                            <p class="student-course">BSc Nutrition and Dietetics - Chandigarh</p>
+                            <a href="#" class="read-story-btn btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#story2">Read Story</a>
                         </div>
-                        <div class="swiper-wrapper">
-                            <!-- Student 3 -->
-                            <div class="carousel-item">
-                                <div class="student-card">
-                                    <img src="assets/imgs/students/Trust Chikondi Mangani.jpg"
-                                        alt="Trust Chikondi Mangani">
-                                    <h3 class="student-name">Trust Chikondi Mangani</h3>
-                                    <p class="student-course">BSc Cybersecurity - 2023</p>
-                                    <a href="#" class="read-story-btn" data-bs-toggle="modal"
-                                        data-bs-target="#story3">Read
-                                        Story</a>
-                                </div>
-                            </div>
+                    </div>
+
+                    <!-- Student 3 -->
+                    <div class="carousel-item">
+                        <div class="student-card text-center">
+                            <img src="assets/imgs/students/Trust Chikondi Mangani.jpg" class="img-fluid mb-3"
+                                alt="Trust Chikondi Mangani">
+                            <h3 class="student-name">Trust Chikondi Mangani</h3>
+                            <p class="student-course">BSc Cybersecurity - 2023</p>
+                            <a href="#" class="read-story-btn btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#story3">Read Story</a>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-5">
-                    <a href="#" class="btn btn-primary">See
-                        More Success Stories
-                    </a>
-                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#successStoriesCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#successStoriesCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary">See More Success Stories</a>
             </div>
         </div>
     </section>
