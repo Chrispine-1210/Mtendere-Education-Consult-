@@ -537,6 +537,7 @@ form button[type="submit"]:hover {
 .faq-content {
   background-color: #082f4694;
   margin: 5% auto;
+  height: 8rem;
   padding: 20px 30px;
   border-radius: 10px;
   max-width: 700px;
@@ -617,12 +618,10 @@ form button[type="submit"]:hover {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
@@ -700,14 +699,12 @@ form button[type="submit"]:hover {
    Top Bar Styling
 -------------------------------------- */
 .top-bar {
-  background-color: var(--dark-blue);
+  background-color: var(--gold);
   font-size: 0.85rem;
-  color: #333;
 }
 
 .top-bar a {
   text-decoration: none;
-  color: #333;
   transition: color 0.3s ease;
 }
 
@@ -922,6 +919,7 @@ form button[type="submit"]:hover {
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
+  top: 50%;
   border-radius: 10px;
 }
 
@@ -960,7 +958,6 @@ form button[type="submit"]:hover {
   transition: all 0.4s ease;
   border-radius: 1rem;
   overflow: hidden;
-  background: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -1605,7 +1602,6 @@ form button[type="submit"]:hover {
 
 .block-v1 [class^="icon-"] {
   font-size: 35px;
-  color: #ffffff;
   margin-bottom: 30px;
   display: block;
   width: 75px;
@@ -1652,6 +1648,7 @@ form button[type="submit"]:hover {
 /* Main Styling */
 .untree_co-section {
   padding: 4rem 0;
+  margin-top: 0.5rem;
   width: auto;
   margin: 0 auto;
 }
@@ -2061,7 +2058,6 @@ form button[type="submit"]:hover {
 
 .custom-pagination li.active>a {
   background: #00779B;
-  color: #ffffff;
   border-radius: 50%;
 }
 
@@ -2152,7 +2148,7 @@ form button[type="submit"]:hover {
   -webkit-transform: translate(-50%, -50%) scale(0);
   -ms-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
-  color: #ffffff;
+  color: #00779B;
   font-size: 1.7rem;
   opacity: 0;
   visibility: hidden;
@@ -2396,7 +2392,7 @@ form button[type="submit"]:hover {
 }
 
 .form-box {
-  background: #ffffff;
+  background: #00779B;
   padding: 40px;
   margin-top: -200px;
   border-radius: 7px;
@@ -2749,12 +2745,16 @@ form button[type="submit"]:hover {
 }
 
 .site-footer {
+  text-decoration: none;
+  list-style: none;
   font-size: 14px;
   color: #ffffff;
   padding: 70px 0;
 }
 
 .site-footer a {
+  text-decoration: none;
+   list-style: none;
   color: #ffffff;
   position: relative;
   display: inline-block;
@@ -2794,6 +2794,7 @@ form button[type="submit"]:hover {
 }
 
 .site-footer .social li {
+  padding: 8px 0;
   display: inline-block;
 }
 
@@ -2805,6 +2806,8 @@ form button[type="submit"]:hover {
   position: relative;
   border-radius: 50%;
   color: #000000;
+  padding: 1rem;
+  justify-content: space-between;
 }
 
 .site-footer .social li a:before {
