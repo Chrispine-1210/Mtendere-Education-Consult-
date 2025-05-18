@@ -471,6 +471,73 @@
     <!-- Events Section End -->
 
     <!-- Modals -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Register for Career Pathways Expo</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" id="fullName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Apply to Attend</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <p>Please note that you will need to register for the event first.</p>
+                    <p>We will send you a confirmation email once you've registered.</p>
+                    <p>We will send you a confirmation email once you've applied.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Contact Us</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <p>For any questions or inquiries, please contact us at:</p>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +1 123-456-7890</p>
+                    <p>Address: 123 Main St, City, State, Zip</p>
+    
+                    <div class="modal-footer border-0">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Event Detail Modal -->
     <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-hidden="true">
@@ -521,6 +588,49 @@
         </div>
     </div>
 
+    <!-- Video Gallery Start -->
+    <section id="videoGallery" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Video Gallery</h2>
+                    <p>Discover our collection of inspiring videos</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal"
+                        class="play-btn play-btn-circle"><i class="fas fa-play"></i></a>
+                    <img src="assets/imgs/video1.jpg" class="img-fluid" alt="Video 1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal"
+                        class="play-btn play-btn-circle"><i class="fas fa-play"></i></a>
+                    <img src="assets/imgs/video2.jpg" class="img-fluid" alt="Video 2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        04:30
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal"
+                        class="play-btn play-btn-circle"><i class="fas fa-play"></i></a>
+                    <img src="assets/imgs/video3.jpg" class="img-fluid" alt="Video 3">
+    
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        05:45
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Modal Video -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
