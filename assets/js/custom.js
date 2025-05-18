@@ -241,6 +241,39 @@ if (successModal && closeSuccessBtn && applyBtn) {
     }
 })();
 
+//Counter
+var deadline = new Date("july 25 2022 12:37:25").getTime();
+//console.log(deadline)
+var x = setInterval(function () {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    //console.log(t)
+
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var Hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var Minute = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+
+    var Seconds = Math.floor((t % (1000 * 60)) / 1000);
+    document.getElementById("counter").innerHTML = days + "d-" + Hours + "h-" + Minute + "M-" + Seconds + "s";
+
+    //
+    document.getElementById("counter1").innerHTML = days + "d-" + Hours + "h-" + Minute + "M-" + Seconds + "s";
+
+
+    if (t < 0) {
+        clearInterval(x);
+        document.getElementById("counter").innerHTML = "EXPIRED"
+    }
+
+    if (t < 0) {
+        clearInterval(x);
+        document.getElementById("counter1").innerHTML = "EXPIRED"
+    }
+
+
+
+})
+
 const showToast = (message) => {
     const toast = document.createElement('div');
     toast.className = 'toast';
