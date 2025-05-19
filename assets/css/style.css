@@ -533,17 +533,6 @@ form button[type="submit"]:hover {
   padding-top: 60px;
 }
 
-/* Modal content */
-.faq-content {
-  background-color: #082f4694;
-  margin: 5% auto;
-  height: 8rem;
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  position: relative;
-}
-
 .faq-content h2 {
   margin-bottom: 20px;
   color: #0056b3;
