@@ -59,7 +59,7 @@ h4 {
 }
 
 /* ===========================
-   Buttons
+  Buttons
 =========================== */
 .btn {
   padding: 15px 30px;
@@ -199,7 +199,7 @@ h4 {
 }
 
 /* ===========================
-   Forms
+  Forms
 =========================== */
 form {
   display: flex;
@@ -950,10 +950,6 @@ form button[type="submit"]:hover {
 }
 
 /* Events Section */
-#events {
-  background-color: #f8f9fa;
-}
-
 .event-card {
   transition: all 0.4s ease;
   border-radius: 1rem;
