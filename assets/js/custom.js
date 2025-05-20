@@ -274,20 +274,6 @@ var x = setInterval(function () {
 
 })
 
-$(document).ready(function () {
-    $('.courses-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: true,
-        dots: true,
-        responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 3 }
-        }
-    });
-});
-
 const showToast = (message) => {
     const toast = document.createElement('div');
     toast.className = 'toast';
@@ -309,4 +295,33 @@ document.querySelectorAll('[data-modal]').forEach((trigger) => {
             modal.style.display = 'none';
         });
     }
+});
+$(document).ready(function(){
+    $('.courses-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+
+    $('.team-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 4 }
+        }
+    });
 });

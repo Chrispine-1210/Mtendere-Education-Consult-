@@ -3235,3 +3235,12 @@ form button[type="submit"]:hover {
   color: var(--main) !important;
   font-size: 25px;
 }
+
+.custom-media img {
+  height: 220px;
+  object-fit: cover;
+}
+.team-item img {
+  height: 300px;
+  object-fit: cover;
+}
