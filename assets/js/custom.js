@@ -15,7 +15,7 @@ if (backToTopButton) {
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-}
+};
 
 // Modal Video Handling
 const videoModal = document.getElementById('videoModal');
@@ -26,7 +26,7 @@ if (videoModal) {
             iframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         }
     });
-}
+};
 
 // Accordion Functionality
 const accordions = document.querySelectorAll('.accordion');
@@ -50,7 +50,7 @@ if (siteNav) {
             siteNav.classList.remove('shrink');
         }
     });
-}
+};
 
 // Success Modal
 const successModal = document.getElementById('successModal');
@@ -71,7 +71,7 @@ if (successModal && closeSuccessBtn && applyBtn) {
             successModal.style.display = 'none';
         }
     });
-}
+};
 
 const togglePopup = (register = false) => {
     const popup = document.getElementById('popupContainer');
@@ -115,7 +115,7 @@ if (toggleButton) {
             toggleButton.textContent = 'Pause Slideshow';
         }
     });
-}
+};
 
 // Date Picker Initialization
 const initializeDatePicker = () => {
@@ -138,7 +138,7 @@ try {
     initializeStickyHeader();
 } catch (error) {
     console.error('Initialization failed:', error);
-}
+};
 
 // Utility Function to Initialize Modals
 const initializeModal = (modalId, triggerSelector, closeSelector) => {
@@ -237,7 +237,7 @@ if (applicationForm) {
         const applicationModal = document.getElementById('formModal');
         if (applicationModal) applicationModal.style.display = 'none';
     });
-}
+};
 
 //Counter
 var deadline = new Date("july 25 2022 12:37:25").getTime();
@@ -267,7 +267,7 @@ var x = setInterval(function () {
         clearInterval(x);
         document.getElementById("counter1").innerHTML = "EXPIRED"
     }
-})
+});
 
 const showToast = (message) => {
     const toast = document.createElement('div');
