@@ -73,173 +73,171 @@ if (successModal && closeSuccessBtn && applyBtn) {
     });
 }
 
-(() => {
-    const togglePopup = (register = false) => {
-        const popup = document.getElementById('popupContainer');
-        const card = document.getElementById('flipCard');
-        if (popup && card) {
-            popup.style.display = 'flex';
-            card.classList.toggle('flipped', register);
-        }
-    };
-
-    const closePopup = () => {
-        const popup = document.getElementById('popupContainer');
-        if (popup) popup.style.display = 'none';
-    };
-
-    // Slideshow Functionality
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const toggleButton = document.getElementById('toggleGallery');
-    let galleryInterval;
-    let slideIndex = 0;
-
-    const startSlideshow = () => {
-        galleryInterval = setInterval(() => {
-            galleryItems.forEach((item) => item.classList.remove('active'));
-            slideIndex = (slideIndex + 1) % galleryItems.length;
-            galleryItems[slideIndex].classList.add('active');
-        }, 5000);
-    };
-
-    const stopSlideshow = () => {
-        clearInterval(galleryInterval);
-    };
-
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            if (galleryInterval) {
-                stopSlideshow();
-                toggleButton.textContent = 'Resume Slideshow';
-            } else {
-                startSlideshow();
-                toggleButton.textContent = 'Pause Slideshow';
-            }
-        });
+const togglePopup = (register = false) => {
+    const popup = document.getElementById('popupContainer');
+    const card = document.getElementById('flipCard');
+    if (popup && card) {
+        popup.style.display = 'flex';
+        card.classList.toggle('flipped', register);
     }
+};
 
-    // Date Picker Initialization
-    const initializeDatePicker = () => {
-        if ($('.datepicker').length > 0) {
-            $('.datepicker').datepicker();
+const closePopup = () => {
+    const popup = document.getElementById('popupContainer');
+    if (popup) popup.style.display = 'none';
+};
+
+// Slideshow Functionality
+const galleryItems = document.querySelectorAll('.gallery-item');
+const toggleButton = document.getElementById('toggleGallery');
+let galleryInterval;
+let slideIndex = 0;
+
+const startSlideshow = () => {
+    galleryInterval = setInterval(() => {
+        galleryItems.forEach((item) => item.classList.remove('active'));
+        slideIndex = (slideIndex + 1) % galleryItems.length;
+        galleryItems[slideIndex].classList.add('active');
+    }, 5000);
+};
+
+const stopSlideshow = () => {
+    clearInterval(galleryInterval);
+};
+
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        if (galleryInterval) {
+            stopSlideshow();
+            toggleButton.textContent = 'Resume Slideshow';
+        } else {
+            startSlideshow();
+            toggleButton.textContent = 'Pause Slideshow';
         }
-    };
+    });
+}
+
+// Date Picker Initialization
+const initializeDatePicker = () => {
+    if ($('.datepicker').length > 0) {
+        $('.datepicker').datepicker();
+    }
+};
+initializeDatePicker();
+
+// Sticky Header Initialization
+const initializeStickyHeader = () => {
+    if ($('.js-sticky-header').length > 0) {
+        $('.js-sticky-header').sticky({ topSpacing: 0 });
+    }
+};
+initializeStickyHeader();
+
+try {
     initializeDatePicker();
-
-    // Sticky Header Initialization
-    const initializeStickyHeader = () => {
-        if ($('.js-sticky-header').length > 0) {
-            $('.js-sticky-header').sticky({ topSpacing: 0 });
-        }
-    };
     initializeStickyHeader();
+} catch (error) {
+    console.error('Initialization failed:', error);
+}
 
-    try {
-        initializeDatePicker();
-        initializeStickyHeader();
-    } catch (error) {
-        console.error('Initialization failed:', error);
-    }
+// Utility Function to Initialize Modals
+const initializeModal = (modalId, triggerSelector, closeSelector) => {
+    const modal = document.getElementById(modalId);
+    const triggers = document.querySelectorAll(triggerSelector);
+    const closeButton = modal?.querySelector(closeSelector);
 
-    // Utility Function to Initialize Modals
-    const initializeModal = (modalId, triggerSelector, closeSelector) => {
-        const modal = document.getElementById(modalId);
-        const triggers = document.querySelectorAll(triggerSelector);
-        const closeButton = modal?.querySelector(closeSelector);
-
-        if (modal) {
-            // Open Modal
-            triggers.forEach((trigger) => {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    modal.style.display = 'block';
-                });
+    if (modal) {
+        // Open Modal
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.style.display = 'block';
             });
+        });
 
-            // Close Modal
-            closeButton?.addEventListener('click', () => {
+        // Close Modal
+        closeButton?.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close Modal on Outside Click
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
                 modal.style.display = 'none';
-            });
-
-            // Close Modal on Outside Click
-            window.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        }
-    };
-
-    // Initialize Student Modals
-    initializeModal('story3', '.read-story-btn[data-bs-target="#story3"]', '.btn-close');
-    initializeModal('story4', '.read-story-btn[data-bs-target="#story4"]', '.btn-close');
-
-    // Initialize FAQ Modal
-    initializeModal('faqModal', 'a[href="#faqModal"]', '.close-btn');
-
-    // Initialize Application Modal
-    initializeModal('formModal', '.application-modal-trigger', '#closeFormBtn');
-
-    // FAQ Accordion Functionality
-    const faqAccordions = document.querySelectorAll('.accordion');
-    faqAccordions.forEach((accordion) => {
-        accordion.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const panel = this.nextElementSibling;
-            if (panel) {
-                panel.style.maxHeight = panel.style.maxHeight ? null : `${panel.scrollHeight}px`;
             }
-        });
-    });
-
-    $(document).ready(function () {
-        $(".testimonial-carousel").owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 5000, // 5 seconds
-            autoplayHoverPause: true,
-            dots: true,
-            nav: false,
-            animateOut: 'fadeOut',
-            smartSpeed: 600,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 1 }
-            }
-        });
-    });
-
-    $(document).ready(function () {
-        $('.blog-carousel').owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            smartSpeed: 600,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                992: { items: 3 }
-            }
-        });
-    });
-
-
-    // Application Form Submission Handling
-    const applicationForm = document.getElementById('applicationForm');
-    if (applicationForm) {
-        applicationForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            showToast('Your application has been submitted successfully!');
-            applicationForm.reset();
-            const applicationModal = document.getElementById('formModal');
-            if (applicationModal) applicationModal.style.display = 'none';
         });
     }
-})();
+};
+
+// Initialize Student Modals
+initializeModal('story3', '.read-story-btn[data-bs-target="#story3"]', '.btn-close');
+initializeModal('story4', '.read-story-btn[data-bs-target="#story4"]', '.btn-close');
+
+// Initialize FAQ Modal
+initializeModal('faqModal', 'a[href="#faqModal"]', '.close-btn');
+
+// Initialize Application Modal
+initializeModal('formModal', '.application-modal-trigger', '#closeFormBtn');
+
+// FAQ Accordion Functionality
+const faqAccordions = document.querySelectorAll('.accordion');
+faqAccordions.forEach((accordion) => {
+    accordion.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        if (panel) {
+            panel.style.maxHeight = panel.style.maxHeight ? null : `${panel.scrollHeight}px`;
+        }
+    });
+});
+
+$(document).ready(function () {
+    $(".testimonial-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000, // 5 seconds
+        autoplayHoverPause: true,
+        dots: true,
+        nav: false,
+        animateOut: 'fadeOut',
+        smartSpeed: 600,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 1 }
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('.blog-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 600,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+});
+
+
+// Application Form Submission Handling
+const applicationForm = document.getElementById('applicationForm');
+if (applicationForm) {
+    applicationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Your application has been submitted successfully!');
+        applicationForm.reset();
+        const applicationModal = document.getElementById('formModal');
+        if (applicationModal) applicationModal.style.display = 'none';
+    });
+}
 
 //Counter
 var deadline = new Date("july 25 2022 12:37:25").getTime();
@@ -269,9 +267,6 @@ var x = setInterval(function () {
         clearInterval(x);
         document.getElementById("counter1").innerHTML = "EXPIRED"
     }
-
-
-
 })
 
 const showToast = (message) => {
