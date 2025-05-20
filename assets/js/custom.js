@@ -29,7 +29,7 @@ if (videoModal) {
 };
 
 // Accordion Functionality
-const accordions = document.querySelectorAll('.accordion');
+const accordions = document.querySelectorAll('.accordion, .faq-accordion');
 accordions.forEach((accordion) => {
     accordion.addEventListener('click', function () {
         this.classList.toggle('active');
@@ -144,7 +144,7 @@ try {
 const initializeModal = (modalId, triggerSelector, closeSelector) => {
     const modal = document.getElementById(modalId);
     const triggers = document.querySelectorAll(triggerSelector);
-    const closeButton = modal?.querySelector(closeSelector);
+    const closeButton = modal ? modal.querySelector(closeSelector) : null;
 
     if (modal) {
         // Open Modal
@@ -232,7 +232,6 @@ const applicationForm = document.getElementById('applicationForm');
 if (applicationForm) {
     applicationForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        showToast('Your application has been submitted successfully!');
         applicationForm.reset();
         const applicationModal = document.getElementById('formModal');
         if (applicationModal) applicationModal.style.display = 'none';
@@ -240,12 +239,10 @@ if (applicationForm) {
 };
 
 //Counter
-var deadline = new Date("july 25 2022 12:37:25").getTime();
-//console.log(deadline)
-var x = setInterval(function () {
-    var now = new Date().getTime();
-    var t = deadline - now;
-    //console.log(t)
+const deadline = new Date("December 31, 2023 23:59:59").getTime();
+const x = setInterval(function () {
+    const now = new Date().getTime();
+    const t = deadline - now;
 
     var days = Math.floor(t / (1000 * 60 * 60 * 24));
     var Hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
