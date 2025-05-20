@@ -316,6 +316,7 @@ form button[type="submit"]:hover {
 
 /* Corporate Modal Background */
 
+
 /* Form Structure */
 #applicationForm {
   display: flex;
@@ -2870,6 +2871,7 @@ form button[type="submit"]:hover {
   position: relative;
   z-index: 1;
   background-attachment: fixed;
+  opacity: 1;
   background-size: cover;
   background-position: center;
   color: white;
