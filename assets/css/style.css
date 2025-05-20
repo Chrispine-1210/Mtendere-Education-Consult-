@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* ===========================
   Global Styles
 =========================== */
@@ -20,6 +27,7 @@ html {
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -35,6 +43,8 @@ body {
 
 a {
   color: var(--primary-color);
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -68,11 +78,16 @@ h4 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05rem;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: background-color 0.3s ease, transform 0.3s ease;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .btn:focus {
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -110,7 +125,11 @@ h4 {
   width: 100%;
   height: 100%;
   z-index: 10000;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -122,7 +141,11 @@ h4 {
   width: 100%;
   height: 100%;
   z-index: 10000;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -134,7 +157,11 @@ h4 {
   width: 100%;
   height: 100%;
   z-index: 10000;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -145,6 +172,7 @@ h4 {
   width: 90%;
   max-width: 500px;
   position: relative;
+  -webkit-animation: fadeIn 0.4s ease-out;
   animation: fadeIn 0.4s ease-out;
 }
 
@@ -164,12 +192,18 @@ h4 {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: background-color 0.3s ease, transform 0.3s ease;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .modal-content button:hover {
   background: var(--gold);
   color: var(--dark-blue);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
@@ -202,6 +236,8 @@ h4 {
   text-align: left;
   font-size: 16px;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -214,6 +250,8 @@ h4 {
   background-color: var(--white);
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out;
   transition: max-height 0.3s ease-out;
   border-left: 2px solid var(--primary-color);
 }
@@ -226,7 +264,12 @@ h4 {
   Forms
 =========================== */
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -246,6 +289,8 @@ form textarea {
   border-radius: 6px;
   background-color: var(--light-gray);
   font-size: 14px;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  -o-transition: border-color 0.3s, background-color 0.3s;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -271,32 +316,54 @@ form button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  -o-transition: background-color 0.3s, transform 0.3s;
   transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
 form button[type="submit"]:hover {
   background-color: var(--gold);
   color: var(--dark-blue);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
 /* ===========================
-   Animations
+  Animations
 =========================== */
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
 
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
 /* ===========================
-   Responsive Design
+  Responsive Design
 =========================== */
 @media (max-width: 600px) {
   .modal-content {
@@ -319,7 +386,12 @@ form button[type="submit"]:hover {
 
 /* Form Structure */
 #applicationForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -344,6 +416,8 @@ form button[type="submit"]:hover {
   border-radius: 6px;
   background-color: #f9f9f9;
   font-size: 14px;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  -o-transition: border-color 0.3s, background-color 0.3s;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -376,7 +450,11 @@ form button[type="submit"]:hover {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  -o-transition: background-color 0.3s, transform 0.3s;
   transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* Button Hover */
@@ -384,17 +462,35 @@ form button[type="submit"]:hover {
   background-color: #FFB800;
   /* Gold */
   color: #00224D;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
 /* Animations */
-@keyframes slideIn {
+@-webkit-keyframes slideIn {
   from {
+    -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
     opacity: 0;
   }
 
   to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -429,7 +525,11 @@ form button[type="submit"]:hover {
   height: 100%;
   background-color: rgba(0, 34, 77, 0.7);
   /* Same corporate dark blue transparency */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -442,16 +542,31 @@ form button[type="submit"]:hover {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
 
 /* Spin Animation */
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -484,13 +599,29 @@ form button[type="submit"]:hover {
 }
 
 /* Pop Up Animation */
-@keyframes popUp {
+@-webkit-keyframes popUp {
   0% {
+    -webkit-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
@@ -512,20 +643,29 @@ form button[type="submit"]:hover {
 }
 
 .story-card {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   border: 1px solid #eaeaea;
   padding: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .story-card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .story-card img {
   border-radius: 10px;
+  -o-object-fit: cover;
   object-fit: cover;
   max-height: 200px;
   width: 100%;
@@ -547,24 +687,37 @@ form button[type="submit"]:hover {
   text-align: left;
   font-size: 16px;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
 .grayscale-hover {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .grayscale-hover:hover {
+  -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
 
 #apply-cta .btn {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 #apply-cta .btn:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -578,6 +731,8 @@ form button[type="submit"]:hover {
   background-color: white;
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out;
   transition: max-height 0.3s ease-out;
   border-left: 2px solid #007bff;
 }
@@ -595,7 +750,9 @@ form button[type="submit"]:hover {
   border-radius: 50%;
   padding: 15px;
   z-index: 100;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 
@@ -604,14 +761,30 @@ form button[type="submit"]:hover {
   height: 25px;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
 
   0%,
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 }
@@ -684,6 +857,36 @@ form button[type="submit"]:hover {
   }
 }
 
+/* Before */
+.burger:before,
+.burger span,
+.burger:after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #000;
+  border-radius: 2px;
+  position: absolute;
+  opacity: 1;
+}
+
+/* After */
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background: var(--burger-color, #000);
+  border-radius: 2px;
+  position: absolute;
+  opacity: 1;
+}
+
+.burger:before,
+.burger span,
+.burger:after {
+  content: "";
+  @extend .burger__line;
+}
+
 /* --------------------------------------
    Top Bar Styling
 -------------------------------------- */
@@ -694,6 +897,8 @@ form button[type="submit"]:hover {
 
 .top-bar a {
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -702,19 +907,31 @@ form button[type="submit"]:hover {
 }
 
 .top-bar .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
 }
 
 @media (max-width: 767px) {
   .top-bar .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
   }
 
   .top-bar .col-md-8 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -730,12 +947,15 @@ form button[type="submit"]:hover {
 .navbar {
   background-color: #060f8a;
   padding: 0.5rem 1rem;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
   font-weight: 700;
   color: vas(--font-family-secondary) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
@@ -753,6 +973,8 @@ form button[type="submit"]:hover {
   font-weight: 500;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
   transition: background 0.3s;
   border-radius: 4px;
 }
@@ -760,12 +982,18 @@ form button[type="submit"]:hover {
 .nav-link a {
   margin-right: 0.5rem;
   right: 1rem;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
   justify-content: right;
   position: relative;
 }
 
 .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin-right: 1rem;
   float: right;
@@ -779,21 +1007,29 @@ form button[type="submit"]:hover {
 
 /* Gradient Button */
 .btn-gradient {
+  background: -webkit-gradient(linear, left top, right top, from(#1e3c72), to(#2a5298));
+  background: -o-linear-gradient(left, #1e3c72, #2a5298);
   background: linear-gradient(to right, #1e3c72, #2a5298);
   border: none;
   color: white;
   padding: 8px 20px;
   border-radius: 30px;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
 .btn-gradient:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#2a5298), to(#1e3c72));
+  background: -o-linear-gradient(left, #2a5298, #1e3c72);
   background: linear-gradient(to right, #2a5298, #1e3c72);
 }
 
 /* Navbar Glass Effect */
 .navbar {
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
+  -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
@@ -835,6 +1071,8 @@ form button[type="submit"]:hover {
 .carousel-control-prev,
 .carousel-control-next {
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 5%;
 }
@@ -867,6 +1105,8 @@ form button[type="submit"]:hover {
   color: #fff;
   border-color: #fff;
   margin-left: 1rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -878,6 +1118,9 @@ form button[type="submit"]:hover {
 /* Mobile Navbar */
 @media (max-width: 991px) {
   .navbar-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background-color: #060f8a;
     width: 100%;
@@ -901,6 +1144,7 @@ form button[type="submit"]:hover {
 
 
 .carousel-item img {
+  -o-object-fit: cover;
   object-fit: cover;
   height: 80vh;
 }
@@ -940,14 +1184,20 @@ form button[type="submit"]:hover {
 
 /* Events Section */
 .event-card {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border-radius: 1rem;
   overflow: hidden;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .event-card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -962,6 +1212,7 @@ form button[type="submit"]:hover {
 
 .event-media img,
 .event-media video {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -984,6 +1235,7 @@ form button[type="submit"]:hover {
   margin-bottom: 1rem;
   height: 60px;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 
@@ -996,7 +1248,11 @@ form button[type="submit"]:hover {
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1014,6 +1270,8 @@ form button[type="submit"]:hover {
   padding: 0.5rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -1033,6 +1291,8 @@ form button[type="submit"]:hover {
   font-weight: 500;
   font-size: 1rem;
   color: #555555;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -1085,8 +1345,11 @@ form button[type="submit"]:hover {
 .student-card img {
   width: 69%;
   height: 250px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 15px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -1112,6 +1375,8 @@ form button[type="submit"]:hover {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -1148,25 +1413,38 @@ form button[type="submit"]:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .news-card:hover {
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
 }
 
 .news-card img {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .news-card-body {
   padding: 20px;
   background-color: vas(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -1175,6 +1453,8 @@ form button[type="submit"]:hover {
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -1262,13 +1542,18 @@ form button[type="submit"]:hover {
   position: fixed;
   top: 50%;
   left: -350px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 300px;
   background: #007bff;
   color: white;
   padding: 20px;
   border-radius: 0 15px 15px 0;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
   z-index: 1000;
 }
@@ -1292,8 +1577,15 @@ form button[type="submit"]:hover {
 .burger {
   width: 30px;
   height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
 }
@@ -1306,11 +1598,18 @@ form button[type="submit"]:hover {
 }
 
 .card-hover {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
   transform: scale(1.03);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -1331,6 +1630,7 @@ form button[type="submit"]:hover {
 }
 
 .service-card {
+  -webkit-perspective: 1000px;
   perspective: 1000px;
   margin-bottom: 30px;
 }
@@ -1339,11 +1639,17 @@ form button[type="submit"]:hover {
   position: relative;
   width: 100%;
   height: 250px;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
   transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .service-card:hover .service-inner {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -1352,9 +1658,16 @@ form button[type="submit"]:hover {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
   border-radius: 15px;
@@ -1362,39 +1675,56 @@ form button[type="submit"]:hover {
 
 .service-front {
   background: rgba(1, 49, 71, 0.685);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-back {
   background: var(--primary-color);
   color: white;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 /* Service Card Hover Effect */
 .service-card {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   border: 1px solid #eaeaea;
   padding: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Scholarship Card Hover Effect */
 .custom-media {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .custom-media:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -1644,25 +1974,37 @@ form button[type="submit"]:hover {
 }
 
 .wide-slider-testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   overflow: hidden;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .block-testimonial {
   background-color: #fff;
   border-radius: 1rem;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   text-align: center;
   max-width: 400px;
   margin: 0 auto;
 }
 
 .block-testimonial:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
+  -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
@@ -1690,6 +2032,9 @@ form button[type="submit"]:hover {
 /* Responsive Design */
 @media (max-width: 767px) {
   .wide-slider-testimonial {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -2165,7 +2510,11 @@ form button[type="submit"]:hover {
 }
 
 .category {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 20px;
   background: rgba(19, 106, 213, 0.05);
@@ -2227,8 +2576,14 @@ form button[type="submit"]:hover {
   width: 100%;
   height: 100%;
   background: rgba(16, 63, 94, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 9999;
 }
@@ -2237,6 +2592,7 @@ form button[type="submit"]:hover {
   position: relative;
   width: 360px;
   height: 470px;
+  -webkit-perspective: 1000px;
   perspective: 1000px;
 }
 
@@ -2244,11 +2600,17 @@ form button[type="submit"]:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  -o-transition: transform 0.7s;
   transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
 }
 
 .flip-card.flipped {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -2257,9 +2619,11 @@ form button[type="submit"]:hover {
   width: 100%;
   height: 100%;
   padding: 30px;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: white;
   border-radius: 8px;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -2296,6 +2660,7 @@ form button[type="submit"]:hover {
 }
 
 .back {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -2791,6 +3156,8 @@ form button[type="submit"]:hover {
   border-radius: 50%;
   color: #000000;
   padding: 1rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -2831,13 +3198,21 @@ form button[type="submit"]:hover {
   width: 60px;
   height: 60px;
   margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: #222429;
   background: #FFAA17;
   border-radius: 4px;
   font-size: 22px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -2849,8 +3224,14 @@ form button[type="submit"]:hover {
 
 .team-item .team-overlay {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   top: 30px;
   right: 30px;
@@ -2858,6 +3239,8 @@ form button[type="submit"]:hover {
   left: 30px;
   border-radius: 4px;
   background: #222429;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
   opacity: 0;
 }
@@ -2889,6 +3272,7 @@ form button[type="submit"]:hover {
 .gradient-overlay {
   position: relative;
   z-index: 1;
+  background: -o-linear-gradient(315deg, rgba(0, 34, 77, 0.8), rgba(19, 106, 213, 0.8));
   background: linear-gradient(135deg, rgba(0, 34, 77, 0.8), rgba(19, 106, 213, 0.8));
   color: white;
   padding: 60px 20px;
@@ -2911,6 +3295,8 @@ form button[type="submit"]:hover {
 }
 
 .owl-carousel .item {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -2925,6 +3311,7 @@ form button[type="submit"]:hover {
 .header img {
   height: 100vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -2944,6 +3331,8 @@ form button[type="submit"]:hover {
   position: absolute;
   top: 80%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: #000;
   color: #fff;
@@ -2979,6 +3368,7 @@ form button[type="submit"]:hover {
 .about img {
   height: 60vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -3029,6 +3419,8 @@ form button[type="submit"]:hover {
 }
 
 .custom .box:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -3073,6 +3465,7 @@ form button[type="submit"]:hover {
 .second_header img {
   height: 60vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -3080,6 +3473,8 @@ form button[type="submit"]:hover {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
@@ -3121,12 +3516,15 @@ form button[type="submit"]:hover {
 }
 
 .join img {
+  -o-object-fit: cover;
   object-fit: cover;
   height: 550px;
   width: 100%;
 }
 
 .join .box:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -3170,10 +3568,13 @@ form button[type="submit"]:hover {
 .speaker .box img {
   height: 450px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .speaker .box:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -3186,6 +3587,8 @@ form button[type="submit"]:hover {
   position: absolute;
   top: 80%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
@@ -3210,6 +3613,8 @@ form button[type="submit"]:hover {
 }
 
 .news .box {
+  -webkit-box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.4),
+    inset 10px 10px 10px -10px rgba(0, 0, 0, 0.9);
   box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.4),
     inset 10px 10px 10px -10px rgba(0, 0, 0, 0.9);
 }
@@ -3238,9 +3643,12 @@ form button[type="submit"]:hover {
 
 .custom-media img {
   height: 220px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
+
 .team-item img {
   height: 300px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
