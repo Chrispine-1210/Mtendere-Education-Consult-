@@ -296,32 +296,3 @@ document.querySelectorAll('[data-modal]').forEach((trigger) => {
         });
     }
 });
-$(document).ready(function(){
-    $('.courses-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        smartSpeed: 1000,
-        responsive: {
-            0: { items: 1 },
-            576: { items: 2 },
-            992: { items: 3 }
-        }
-    });
-
-    $('.team-carousel').owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 1000,
-        responsive: {
-            0: { items: 1 },
-            576: { items: 2 },
-            992: { items: 4 }
-        }
-    });
-});
