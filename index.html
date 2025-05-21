@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
@@ -234,67 +234,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px; padding: 10px;">
-                <div class="btn-icon bg-primary" style="box-sizing: border-box; border-radius: 5px; ">
-                    <i class="fa fa-graduation-cap text-white"></i>
-                </div>
-                <div>
-                    <h4>Skilled Instructors</h4>
-                    <p>
-                        Our instructors are highly qualified and experienced in their
-                        fields.
-                        They are dedicated to providing the best possible education to our
-                        students, ensuring that they are well-prepared for their future
-                        endeavors.
-                    </p>
-                </div>
-            </div>
-            <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px; padding: 10px; border-radius: 5px; ">
-                <div class="btn-icon bg-secondary" style="box-sizing: border-box; border-radius: 5px;">
-                    <i class="fa fa-certificate text-white"></i>
-                </div>
-                <div>
-                    <h4>Career Guidance</h4>
-                    <p>
-                        Education Consult helps students make informed decisions about their
-                        educational and career paths. Our experienced advisors provide
-                        personalized
-                        support, helping students identify their strengths, interests, and
-                        goals.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px; padding: 10px; border-radius: 5px; ">
-                <div class="btn-icon bg-warning" style="box-sizing: border-box; border-radius: 5px;">
-                    <i class="fa fa-book-reader text-white"></i>
-                </div>
-                <div>
-                    <h4>Programs Of Your Choice</h4>
-                    <p class="m-0">
-                        We offer a wide range of programs to suit the diverse needs and
-                        interests of our
-                        students. Whether you're looking for undergraduate, postgraduate, or
-                        vocational
-                        courses, we have something for everyone.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px; padding: 10px; border-radius: 5px; ">
-                <div class="btn-icon bg-info" style="box-sizing: border-box; border-radius: 5px;">
-                    <i class="fa fa-handshake text-white"></i>
-                </div>
-                <div>
-                    <h4>Student Support</h4>
-                    <p class="m-0">
-                        We provide a supportive and inclusive environment for students to explore their passions,
-                        pursue their dreams, and build their careers. We also help students develop their confidence,
-                        skills, and values.</p>
-                </div>
-            </div>
         </div>
     </div>
-    </div>
+    <!--- End --->
 
     <div class="services-section">
         <div class="container">
@@ -975,8 +917,8 @@
     <div id="popupContainer" class="popup-overlay" onclick="popup">
         <div class="popup-box">
             <div class="flip-card" id="flipCard">
-                LOGIN FORM 
-                
+                 LOGIN FORM 
+                 
                 <div class="flip-face front">
                     <h2>Login</h2>
                     <form action="login.php" method="POST">
@@ -992,7 +934,7 @@
                         <p onclick="flipCard()" class="switch-text">Don’t have an account? Register</p>
                     </form>
                 </div>
-                REGISTER FORM
+                 REGISTER FORM
                 <div class="flip-face back">
                     <h2>Register</h2>
                     <form action="register.php" method="POST">
@@ -1016,44 +958,77 @@
     ---->
 
     <div id="faqModal" class="faq-modal">
-        <div class="modal-content">
-            <h1>Frequently Asked Questions</h1>
-            <button class="accordion">What is Mtendere Education Consult?</button>
+        <div class="faq-content">
+            <span class="close-btn">&times;</span>
+            <h2>Frequently Asked Questions</h2>
+
+            <button class="accordion" aria-expanded="false" aria-controls="panel1">Question</button>
+            <div id="panel1" role="region" aria-hidden="true">Answer</div>
+
+            <button class="accordion">What services does Mtendere Education Consult provide?</button>
             <div class="panel">
-                <p>Mtendere Education Consult is a leading provider of online education solutions for Malawi.
-                    Our mission is to help students achieve their dreams and achieve success in their education journey.</p>
-                <p>Our team of dedicated professionals and students work together to create a comprehensive
-                    and engaging learning experience for our students.</p>
-                <!--- find the link --->
-                <a href="https://www.mtendere.com/" target="_blank">Visit our website</a>
+                <p>We assist students in securing international university placements, provide scholarship guidance,
+                    career consulting, and pre-departure orientation.</p>
             </div>
-            <button class="accordion">What are the benefits of working with Mtendere Education Consult?</button>
+
+            <button class="accordion">How can I apply for a scholarship?</button>
             <div class="panel">
-                <p>Working with Mtendere Education Consult offers several benefits for both students and their
-                    parents:</p>
-                <ul>
-                    <li>Access to top-notch education resources and support</li>
-                    <li>Flexible scheduling and time management</li>
-                    <li>High-quality learning environment</li>
-                    <li>Personalized learning plans and progress tracking</li>
-                    <li>Student counseling and mentorship</li>
-                    <li>Parent and guardian support</li>
-                    <li>Affordable tuition and fees</li>
-                    <li>Transparent communication and accountability</li>
-                </ul>
+                <p>You can apply through our unified application portal. Make sure to upload all required documents such
+                    as transcripts, CV, and identification documents.</p>
             </div>
-            <button class="accordion">How can I get started with Mtendere Education Consult?</button>
+
+            <button class="accordion">What are the entry requirements for partner universities?</button>
             <div class="panel">
-                <p>To get started with Mtendere Education Consult, you can follow these steps:</p>
-                <ol>
-                    <li>Fill out a free application form online: <a href="https://www.mtendere.com/apply-online"
-                            target="_blank">https://www.mtendere.com/apply-online</a></li>
-                    <li>Submit your application to our admissions team</li>
-                    <li>Receive a confirmation email from Mtendere Education Consult</li>
-                    <li>Schedule a consultation with our admissions team</li>
-                    <li>Start your education journey with Mtendere Education Consult</li>
-                </ol>
+                <p>Entry requirements vary depending on the university and program. Generally, you’ll need academic
+                    transcripts, proof of English proficiency, and a valid passport.</p>
             </div>
+
+            <button class="accordion">Can I apply to more than one university?</button>
+            <div class="panel">
+                <p>Yes. Our system allows you to choose and submit applications to multiple partner universities within
+                    a single form.</p>
+            </div>
+
+            <button class="accordion">When are the intakes?</button>
+            <div class="panel">
+                <p>Most of our universities offer intakes in January, July, and September. Check the specific university
+                    page for details.</p>
+            </div>
+
+            <button class="accordion">Is Mtendere Education Consult affiliated with universities?</button>
+            <div class="panel">
+                <p>Yes. We have official partnerships with reputable institutions like Chandigarh University, Parul
+                    University, Jain University, and more.</p>
+            </div>
+
+            <button class="accordion">What is the process for submitting an application?</button>
+            <div class="panel">
+                <p>Submit your application through our unified application portal. Make sure to upload all required
+                    documents
+                    such as transcripts, CV, and identification documents.</p>
+                <p>Your application will be reviewed by our team and you will be notified if your application is
+                    selected
+                    for further processing.</p>
+                <p>If your application is selected, we will contact you for further details.</p>
+            </div>
+
+            <button class="accordion">How can I contact Mtendere Education Consult?</button>
+            <div class="panel">
+                <p>You can reach us through our website contact form, email us at
+                    <a href="mailto:info@mtendereeducationconsult.com">info@mtendereeducationconsult.com</a>.
+                </p>
+                <p>You can also reach us through our social media channels, such as Facebook, Twitter, and LinkedIn.</p>
+            </div>
+
+            <button class="accordion">What are the payment options for tuition fees?</button>
+            <div class="panel">
+                <p>Payment options vary by university. Most accept bank transfers, credit cards, and some offer
+                    installment plans. Check with the specific university for details.</p>
+                <p>Please note that you will need to provide proof of payment (e.g., bank statement, cheque) if you
+                    choose to
+                    pay by bank transfer.</p>
+            </div>
+
         </div>
     </div>
 
