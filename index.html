@@ -134,6 +134,31 @@
     </div>
     <!-- End Hero Section -->
 
+    <!---- Video--->
+    <div class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="text-white">
+                        Our Video Showcase
+                    </h2>
+                    <p class="text-white">
+                        Watch our video showcase to get a better understanding of our mission.
+                    </p>
+                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        Watch Video
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoFrame" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Video Modal -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -240,7 +265,6 @@
 
     <div class="services-section">
         <div class="container">
-
             <div class="row justify-content-between">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <p data-aos="fade-up" data-aos-delay="100">
@@ -260,7 +284,6 @@
                     <figure class="img-wrap-2">
                         <img src="assets/imgs/Application guidance.jpg" alt="Image" class="img-fluid">
                     </figure>
-
                 </div>
             </div>
         </div>
@@ -276,7 +299,8 @@
                 </span>
             </h1>
             <p>At Mtendere Education Consult, we offer a wide range of services to help students achieve their
-                educational goals.</p>
+                educational goals.
+            </p>
         </div>
         <div class="row">
             <div class="col-md-4 service-card" data-aos="fade-up" data-aos-delay="100">
@@ -414,8 +438,6 @@
                         </div>
                     </a>
                 </div>
-
-
             </div>
 
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="400">
@@ -564,10 +586,8 @@
                 <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <p>Mtendere Education Consult empowers students with trusted, transparent guidance to access top
                         global
-                        universities.<br>
-                        We simplify your journey through personalized support, scholarships, and end-to-end admission
-                        services. </p>
-
+                        universities.
+                    </p>
                     <div class="custom-accordion" id="accordion_1">
                         <div class="accordion-item">
                             <h2 class="mb-0">
@@ -587,16 +607,12 @@
                                             <p>Profession tutors are not only skilled in their subjects but also
                                                 understand the unique challenges faced by international students.
                                             </p>
-                                            </p>
-                                            <p>
-                                                Our tutors are not just educators; they are mentors who inspire and
-                                                motivate students to reach their full potential.</p>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- .accordion-item -->
+                        </div>
+                        <!-- .accordion-item -->
 
                         <div class="accordion-item">
                             <h2 class="mb-0">
@@ -616,10 +632,7 @@
                                             They help students build strong relationships, communicate effectively, and
                                             navigate challenges with resilience and integrity.
                                         </p>
-                                        <p>We believe that education is not just about acquiring knowledge; it's also
-                                            about developing the skills and values that will help students succeed in
-                                            life.
-                                        </p>
+                                        
                                         <div>
                                             <div class="col-lg-5" style="min-height: 500px;">
                                                 <div class="position-relative h-100">
@@ -634,6 +647,7 @@
                             </div>
                         </div>
                         <!-- .accordion-item -->
+
                         <div class="accordion-item">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
@@ -661,19 +675,36 @@
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
-                        </div> <!-- .accordion-item -->
-
+                        </div>
+                        <!-- .accordion-item -->
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- /.untree_co-section -->
+    <!--- End Accordion --->
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials-section" class="testimonials py-5">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5">
+                <h6 class="text-primary fw-bold">Testimonials</h6>
+                <h1 class="display-5"><span class="text-primary">What Our Students Say About Us</span></h1>
+                <p class="lead">Hear from our satisfied students</p>
+            </div>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
+                        <div class="testimonial-card text-center">
+                            <img src="assets/imgs/testimonials/Mrs. Nyagahara.jpg" class="img-fluid mb-3" alt="Mrs. Nyagahara">
+                            <p class="testimonial-text">I have always been fascinated by the opportunity to study abroad and attend universities abroad. Mtendere Education Consult has been an absolute delight. They provide excellent support, guidance, and opportunities to meet my dreams. I am grateful for their help and support.</p>
+                            <p class="testimonial-author">Mrs. Nyagahara, International Student</p>
+                        </div>
+                    </div>
+            </div>
 
     <!-- Success Stories Section -->
     <section id="success-section" class="success py-5">
@@ -910,51 +941,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Popup Overlay -->
-    <!----
-    <div id="popupContainer" class="popup-overlay" onclick="popup">
-        <div class="popup-box">
-            <div class="flip-card" id="flipCard">
-                 LOGIN FORM 
-                 
-                <div class="flip-face front">
-                    <h2>Login</h2>
-                    <form action="login.php" method="POST">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                        <button type="submit">Login</button>
-                        <div class="social-login">
-                            <button type="button" class="google">Login with Google</button>
-                            <button type="button" class="facebook">Login with Facebook</button>
-                            <button type="button" class="twitter">Login with Twitter</button>
-                        </div>
-                        <p onclick="flipCard()" class="switch-text">Don’t have an account? Register</p>
-                    </form>
-                </div>
-                 REGISTER FORM
-                <div class="flip-face back">
-                    <h2>Register</h2>
-                    <form action="register.php" method="POST">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                        <button type="submit">Register</button>
-                        <div class="social-login">
-                            <button type="button" class="google">Register with Google</button>
-                            <button type="button" class="facebook">Register with Facebook</button>
-                            <button type="button" class="twitter">Register with Twitter</button>
-                        </div>
-                        <p onclick="flipCard()" class="switch-text">Already have an account? Login</p>
-                    </form>
-                </div>
-            </div>
-            <span class="popup-close" onclick="closePopup()">×</span>
-        </div>
-    </div>
-    ---->
 
     <div id="faqModal" class="faq-modal">
         <div class="faq-content">
